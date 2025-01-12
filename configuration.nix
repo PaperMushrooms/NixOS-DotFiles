@@ -25,6 +25,9 @@
     # Include Custom Android Scripts
     ./system/Android-Scripts.nix
 
+    # Include Gaming Confiuration
+    ./gaming-configuration.nix
+    
   ];
 
   # Enabling Flakes
@@ -84,20 +87,6 @@
 
   # Force Plasma SSh Keypass Instead of GNOME
   programs.ssh.askPassword = lib.mkForce "/nix/store/awb6dzl5kcwi2910frjcw0b96988fp2b-ksshaskpass-6.2.4/bin/ksshaskpass";
-
-  # Enable Steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
-
-  # Enable Modern AMD Drivers
-  services.xserver.videoDrivers = [ "radeon" ];
-
-  # Ensure the necessary firmware is available for GPU
-  hardware.enableRedistributableFirmware = true;
 
   # Enable Zsh System-Wide
   programs.zsh.enable = true;
