@@ -4,7 +4,7 @@
 
   imports = [ 
 
-#    # Include Hardware Config
+    # Include Hardware Config
     ./hardware-configuration.nix
 
     # Include Locale Configuration
