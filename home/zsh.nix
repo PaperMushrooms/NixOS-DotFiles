@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.zsh = {
     enable = true;
@@ -18,7 +20,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs {
-    powerline-fonts;
-  };
+  home.packages = with pkgs; [
+    powerline-fonts
+  ];
 }
