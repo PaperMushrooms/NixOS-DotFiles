@@ -23,6 +23,8 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    starship
+    powerline
     powerline-fonts
   ];
 }
