@@ -1,18 +1,21 @@
 { pkgs, ... }:
 
 {
+  # Enable and Configure Zsh
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    # Zsh Aliases
     shellAliases = {
       update = "sudo nixos-rebuild switch";
       upgrade = "sudo nix flake update --flake /etc/nixos/ && sudo nixos-rebuild switch";
       newdots = "cd /etc/nixos && git add . && git commit -m 'Update' && git push -u origin main && cd ";
     };
 
+    # Enable and Configure Oh-My-Zsh Plugin
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "" ];
@@ -20,18 +23,21 @@
     };
   };
 
+  # Enable Font Configuration for NixOS
   fonts.fontconfig.enable = true;
 
+  # Install Terminal Add-on Packages
   home.packages = with pkgs; [
     starship
     powerline
     powerline-fonts
   ];
 
+  # Enable and Configure Starship
   programs.starship = {
     enable = true;
     settings = {
-      add_newline = true;
+      add_newline = false;
       command_timeout = 1300;
       scan_timeout = 50;
       format = "$all$nix_shell$nodejs$lua$golang$rust$php$git_branch$git_commit$git_state$git_status\n$username$hostname$directory";
