@@ -51,7 +51,7 @@
   users.users.nixon = {
     isNormalUser = true;
     description = "nixon";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" ];
     shell = pkgs.zsh;
   };
 

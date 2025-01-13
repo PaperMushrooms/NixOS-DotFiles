@@ -18,6 +18,7 @@
         rofi-wayland
         swww
         wineWowPackages.stable
+        ifuse
         libimobiledevice
         rustdesk
 	    anydesk
