@@ -27,4 +27,6 @@
     powerline
     powerline-fonts
   ];
+
+  programs.starship.enable = true;
 }
