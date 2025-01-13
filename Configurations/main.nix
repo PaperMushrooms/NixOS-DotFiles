@@ -5,28 +5,28 @@
   imports = [ 
 
 #    # Include Hardware Config
-    ./Configurations/hardware-configuration.nix
+    ./hardware-configuration.nix
 
     # Include Locale Configuration
-    ./system/locale-config.nix
+    ../system/locale-config.nix
 
     # Include Bootloader Configuration
-    ./system/bootloader-config.nix
+    ../system/bootloader-config.nix
     
     # Include Desktop Environment Configuration
-    ./system/desktop-config.nix
+    ../system/desktop-config.nix
 
     # Include Sound Configuration
-    ./system/audio-config.nix
+    ../system/audio-config.nix
 
     # Include System Packages
-    ./system/packages.nix
+    ../system/packages.nix
 
     # Include Custom Android Scripts
-    ./system/Android-Scripts.nix
+    ../system/Android-Scripts.nix
 
     # Include Gaming Confiuration
-    ./Configurations/gaming-configuration.nix
+    ./gaming-configuration.nix
     
   ];
 
