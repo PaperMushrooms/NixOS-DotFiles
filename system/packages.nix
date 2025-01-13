@@ -10,21 +10,14 @@
         wget
         curl
         gzip
+        wineWowPackages.stable
 	    scrcpy
         networkmanagerapplet
         openrazer-daemon
         polychromatic
-        waybar
-        rofi-wayland
-        swww
-        wineWowPackages.stable
         libimobiledevice
         rustdesk
 	    anydesk
         vscodium
-        vulkan-tools       # Vulkan utilities like vulkaninfo
-        vulkan-loader      # Vulkan loader
-        mesa               # Open-source AMD drivers
-        minicom
     ];
 }

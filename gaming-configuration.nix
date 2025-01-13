@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   # Enable Steam
   programs.steam = {
@@ -6,6 +8,14 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
+
+  # Enable Gaming Related Packages
+  environment.systemPackages = with pkgs; [
+  vulkan-tools       # Vulkan utilities like vulkaninfo
+  vulkan-loader      # Vulkan loader
+  mesa               # Open-source AMD drivers
+  minicom            # [To be listed...]
+  ];
 
   # Enable Modern AMD Drivers
   services.xserver.videoDrivers = [ "radeon" ];
