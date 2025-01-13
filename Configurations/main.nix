@@ -10,6 +10,9 @@
     # Include Locale Configuration
     ../system/locale-config.nix
 
+    # Include SSH Configuration
+    ../system/ssh.nix
+
     # Include Bootloader Configuration
     ../system/bootloader-config.nix
     
@@ -70,19 +73,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # Enable and Configure the OpenSSH daemon.
-  services.openssh = {
-  enable = true;
-  ports = [ 44906 ];
-    settings = {
-      PasswordAuthentication = true;
-      AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
-      UseDns = true;
-      X11Forwarding = false;
-      PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
-    };
-  };
 
   # Enable Bluetooth
   services.blueman.enable = true;
