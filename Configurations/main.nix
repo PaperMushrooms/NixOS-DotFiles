@@ -4,8 +4,8 @@
 
   imports = [ 
 
-    # Include Hardware Config
-    ./hardware-configuration.nix
+#    # Include Hardware Config
+    ./Configurations/hardware-configuration.nix
 
     # Include Locale Configuration
     ./system/locale-config.nix
@@ -26,7 +26,7 @@
     ./system/Android-Scripts.nix
 
     # Include Gaming Confiuration
-    ./gaming-configuration.nix
+    ./Configurations/gaming-configuration.nix
     
   ];
 
