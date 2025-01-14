@@ -5,6 +5,9 @@
      # Custom Script For Installing crDroid10-A14 To Google Pixel 5
      (import ../Android-Scripts/crDroid10-Pixel5.nix { inherit pkgs; })
 
+     # Custom Script For Installing crDroid9-A13 To Google Pixel 5
+     (import ../Android-Scripts/crDroid9-Pixel5.nix { inherit pkgs; })
+
      # Custom Script For Installing DerpFest-A14 To Google Pixel 6a
      (import ../Android-Scripts/DerpFest-A14-Pixel6a.nix { inherit pkgs; })
 
