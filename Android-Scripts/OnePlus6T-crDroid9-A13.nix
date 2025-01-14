@@ -1,7 +1,7 @@
 { pkgs }:
 
 pkgs.writeShellScriptBin "OnePlus6T-crDroid9-A13" ''
-    cd ~/Android/OnePlus6T/crDroid7-A11
+    cd ~/Android/OnePlus6T/crDroid9-A13
     bash install.sh
     cd 
 ''
