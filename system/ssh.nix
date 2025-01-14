@@ -13,5 +13,13 @@
   };
 
   # Start SSH Agent
-  programs.ssh.startAgent = true;
+  programs.ssh = {
+    enable = true;
+    startAgent = true;
+    agent = {
+      enableSSHAgent = true;
+      defaultKeyPaths = [ "~/.ssh/GitHub" ];
+      enableDefaultSSHConfig = true;
+    };
+  };
 }
