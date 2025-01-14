@@ -15,6 +15,9 @@
     # Custom Script For Installing crDroid10-A14 To Google Pixel 6
     (import ../Android-Scripts/Pixel6-crDroid10.nix { inherit pkgs; })
 
+    # Custom Script For Installing OEM-A13 To Google Pixel 6a
+    (import ../Android-Scripts/Pixel6a-OEM-A13.nix { inherit pkgs; })
+
     # Custom Script For Installing DerpFest-A14 To Google Pixel 6a
     (import ../Android-Scripts/Pixel6a-DerpFest-A14.nix { inherit pkgs; })
 
