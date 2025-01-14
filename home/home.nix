@@ -8,6 +8,7 @@
     ./Hyprland/hypr.nix
     ./Hyprland/keybindings.nix
     ./git.nix
+    ./ssh-home.nix
     ./zsh.nix
   ];
 
