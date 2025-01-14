@@ -24,6 +24,15 @@
     # Custom Script For Installing crDroid10-A14 To Google Pixel 7a
     (import ../Android-Scripts/Pixel7a-crDroid10.nix { inherit pkgs; })
 
+    # Custom Script For Installing crDroid7-A11 To OnePlus 6T
+    (import ../Android-Scripts/OnePlus6T-crDroid-A11.nix { inherit pkgs; })
+
+    # Custom Script For Installing crDroid7-A12 To OnePlus 6T
+    (import ../Android-Scripts/OnePlus6T-crDroid-A12.nix { inherit pkgs; })
+
+    # Custom Script For Installing crDroid7-A13 To OnePlus 6T
+    (import ../Android-Scripts/OnePlus6T-crDroid-A13.nix { inherit pkgs; })
+
     # Custom Script For Installing crDroid7-A11 To OnePlus Mclaren 7T Pro 5G
     (import ../Android-Scripts/McLaren-crDroid-A11.nix { inherit pkgs; })
 
