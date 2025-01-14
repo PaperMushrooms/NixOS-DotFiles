@@ -12,14 +12,9 @@
     };
   };
 
-  # Start SSH Agent
+  # Start Enable and Start SSH Agent On Startup
   programs.ssh = {
     enable = true;
     startAgent = true;
-    agent = {
-      enableSSHAgent = true;
-      defaultKeyPaths = [ "~/.ssh/GitHub" ];
-      enableDefaultSSHConfig = true;
-    };
   };
 }
