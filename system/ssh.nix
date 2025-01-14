@@ -14,7 +14,6 @@
 
   # Start Enable and Start SSH Agent On Startup
   programs.ssh = {
-    enable = true;
     startAgent = true;
   };
 }
