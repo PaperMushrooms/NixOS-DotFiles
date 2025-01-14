@@ -1,6 +1,6 @@
 { pkgs }:
 
-pkgs.writeShellScriptBin "crDroid10-Pixel7a" ''
+pkgs.writeShellScriptBin "Pixel7a-crDroid-A14" ''
     cd ~/Android/Pixel7a/crDroid10-A14
     bash install.sh
     cd 
