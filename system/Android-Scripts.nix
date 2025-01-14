@@ -9,7 +9,7 @@
     (import ../Android-Scripts/crDroid9-Pixel5.nix { inherit pkgs; })
 
     # Custom Script For Installing RisingOS-A13 To Google Pixel 6
-    (import ../Android-Scripts/crDroid10-Pixel6.nix { inherit pkgs; })
+    (import ../Android-Scripts/RisingOS-Pixel6-A13.nix { inherit pkgs; })
 
     # Custom Script For Installing crDroid10-A14 To Google Pixel 6
     (import ../Android-Scripts/crDroid10-Pixel6.nix { inherit pkgs; })
