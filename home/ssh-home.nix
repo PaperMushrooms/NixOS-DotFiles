@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   home.sessionVariables = {
     SSH_AUTH_SOCK = "${config.xdg.runtimeDir}/ssh-agent.socket";
