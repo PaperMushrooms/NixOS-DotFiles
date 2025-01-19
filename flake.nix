@@ -25,6 +25,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, plasma-manager, hyprland, ... }@inputs: {
+    
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -36,7 +37,6 @@
           home-manager.nixosModules.home-manager # Home-Manager Module
           plasma-manager.homeManagerModules.plasma-manager # Plasma-Manager Module
           {
-            username = "nixon";
 
             home-manager = {
               useGlobalPkgs = true;
@@ -45,10 +45,6 @@
               users = {
                 nixon = import ./home/home.nix;
               };
-            };
-            home = {
-              inherit username;
-              homeDirectory = "/home/${username}";
             };
           }
         ];
