@@ -15,5 +15,16 @@
   # Start Enable and Start SSH Agent On Startup
   programs.ssh = {
     startAgent = true;
+    extraConfig = ''
+      Host github.com
+        User git
+        IdentityFile ~/.ssh/GitHub
+        IdentitiesOnly yes
+
+      Host github.com
+        User git
+        IdentityFile ~/.ssh/GitHub
+        IdentitiesOnly yes
+    '';
   };
 }
