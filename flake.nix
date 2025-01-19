@@ -36,6 +36,8 @@
           home-manager.nixosModules.home-manager # Home-Manager Module
           plasma-manager.homeManagerModules.plasma-manager # Plasma-Manager Module
           {
+            username = "nixon";
+
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
@@ -45,7 +47,7 @@
               };
             };
             home = {
-              inherit nixon;
+              inherit username;
               homeDirectory = "/home/${username}";
             };
           }
