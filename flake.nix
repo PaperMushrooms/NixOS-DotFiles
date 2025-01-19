@@ -45,7 +45,7 @@
               };
             };
             home = {
-              inherit username;
+              inherit nixon;
               homeDirectory = "/home/${username}";
             };
           }
