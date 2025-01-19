@@ -16,12 +16,12 @@
   programs.ssh = {
     startAgent = true;
     extraConfig = ''
-      Host = github.com
+      Host github.com
         User git
         IdentityFile ~/.ssh/GitHub
         IdentitiesOnly yes
 
-      Host github.com
+      Host gitlab.com
         User git
         IdentityFile ~/.ssh/GitHub
         IdentitiesOnly yes
