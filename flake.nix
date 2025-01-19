@@ -34,7 +34,7 @@
         modules = [
           ./Configurations/main.nix
           home-manager.nixosModules.home-manager # Home-Manager Module
-          plasma-manager.homeManagerModules.plasma-manager # Plasma-Manager Module
+          plasma-manager.nixosModules.plasma-manager # Plasma-Manager Module
           {
             home-manager = {
               useGlobalPkgs = true;
