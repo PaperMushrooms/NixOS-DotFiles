@@ -10,6 +10,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
     hyprland.url = "github:hyprwm/Hyprland";
 
     firefox-addons = {
@@ -18,7 +24,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, hyprland, ... }@inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -27,7 +33,8 @@
 
         modules = [
           ./Configurations/main.nix
-          home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager # Home-Manager Module
+          plasma-manager.homeManagerModules.plasma-manager # Plasma-Manager Module
           {
             home-manager = {
               useGlobalPkgs = true;
