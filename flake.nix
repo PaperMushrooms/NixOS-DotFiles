@@ -44,6 +44,10 @@
                 nixon = import ./home/home.nix;
               };
             };
+            home = {
+              inherit username;
+              homeDirectory = "/home/${username}";
+            };
           }
         ];
       };
