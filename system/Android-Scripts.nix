@@ -15,6 +15,9 @@
     # Custom Script For Installing crDroid10-A14 To Google Pixel 5
     (import ../Android-Scripts/Pixel5-crDroid10.nix { inherit pkgs; })
 
+    # Custom Script For Installing GrapheneOS-A14 To Google Pixel 5
+    (import ../Android-Scripts/Pixel5-GrapheneOS-A14.nix { inherit pkgs; })
+
     # Custom Script For Installing OEM-A13 To Google Pixel 6
     (import ../Android-Scripts/Pixel6-OEM-A13.nix { inherit pkgs; })
 
