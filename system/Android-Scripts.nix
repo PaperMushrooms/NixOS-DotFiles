@@ -3,6 +3,12 @@
 {
   environment.systemPackages = with pkgs; [
 
+    # Custom Script For Installing OEM-A13 To Google Pixel 5
+    (import ../Android-Scripts/Pixel5-OEM-A13.nix { inherit pkgs; })
+
+    # Custom Script For Installing OEM-A14 To Google Pixel 5
+    (import ../Android-Scripts/Pixel5-OEM-A14.nix { inherit pkgs; })
+
     # Custom Script For Installing crDroid9-A13 To Google Pixel 5
     (import ../Android-Scripts/Pixel5-crDroid9.nix { inherit pkgs; })
 
