@@ -11,6 +11,11 @@
         curl
         gzip
         wineWowPackages.stable
+        winetricks
+        (wineWowPackages.full.override {                 # Wine config  
+     	  wineRelease = "staging";                       # for       
+     	  mingwSupport = true;                           # Windows compatibility.
+   	    })                    
 	    scrcpy
         networkmanagerapplet
         openrazer-daemon

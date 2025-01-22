@@ -16,12 +16,7 @@
       starship                                         # Terminal Customization
       powerline                                        # Terminal Customization
       powerline-fonts                                  # Terminal Customization
-      terminus_font  	                                 # Terminal Customization
-	    (wineWowPackages.full.override {                 # Wine config  
-     	  wineRelease = "staging";                       # for       
-     	  mingwSupport = true;                           # Windows compatibility.
-   	  })                                               #
-   	  winetricks                                       # extra Wine add-ons for Windows compatibility.
+      terminus_font  	                                 # Terminal Customization                           #                                     # extra Wine add-ons for Windows compatibility.
       qt6.qttools                                      # Add-ons for GNOME
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your

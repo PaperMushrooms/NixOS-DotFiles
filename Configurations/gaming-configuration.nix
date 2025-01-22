@@ -15,6 +15,11 @@
   vulkan-loader      # Vulkan loader
   mesa               # Open-source AMD drivers
   minicom            # [To be listed...]
+  mangohud
+  lutris
+  gamescope
+  vkd3d
+  dxvk
   ];
 
   # Enable Modern AMD Drivers
