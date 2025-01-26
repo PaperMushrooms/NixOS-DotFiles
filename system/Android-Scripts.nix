@@ -69,6 +69,9 @@
     # Custom Script For Installing crDroid10-A14 To OnePlus Mclaren 7T Pro 5G
     (import ../Android-Scripts/McLaren-crDroid-A14.nix { inherit pkgs; })
 
+    # Custom Script For Installing crDroid9-A13 To OnePlus 9
+    (import ../Android-Scripts/OnePlus9-crDroid9.nix { inherit pkgs; })
+
     # Custom Script For Installing crDroid10-A14 To OnePlus 9
     (import ../Android-Scripts/OnePlus9-crDroid10.nix { inherit pkgs; })
     
