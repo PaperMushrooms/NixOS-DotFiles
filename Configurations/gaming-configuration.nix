@@ -13,7 +13,6 @@
   environment.systemPackages = with pkgs; [
   xivlauncher        # Custom launcher for Final Fantasy XIV
   lutris             # Open-source game manager for Linux
-  bottles            # Tool for Windows software on Linux
   vulkan-tools       # Vulkan utilities like vulkaninfo
   vulkan-loader      # Vulkan loader
   mesa               # Open-source AMD drivers
