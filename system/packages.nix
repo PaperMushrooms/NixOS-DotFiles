@@ -24,6 +24,5 @@
         rustdesk
 	    anydesk
         vscodium
-        (python3.withPackages (ps: with ps; [ protobuf ]))
     ];
 }

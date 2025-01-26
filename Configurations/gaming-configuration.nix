@@ -16,6 +16,7 @@
   vulkan-tools       # Vulkan utilities like vulkaninfo
   vulkan-loader      # Vulkan loader
   mesa               # Open-source AMD drivers
+  mesadrivers
   minicom            # [ To be listed... ]
   mangohud           # System performance heads-up display for OpenGL and Vulkan applications
   gamescope
