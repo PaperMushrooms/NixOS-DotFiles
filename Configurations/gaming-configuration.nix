@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
   xivlauncher        # Custom launcher for Final Fantasy XIV
   lutris             # Open-source game manager for Linux
+  winePackages.ge    # 
   vulkan-tools       # Vulkan utilities like vulkaninfo
   vulkan-loader      # Vulkan loader
   mesa               # Open-source AMD drivers
@@ -22,6 +23,9 @@
   vkd3d
   dxvk
   ];
+
+  # Enable Game Mode for NixOS
+  services.gamemode.enable = true;
 
   # Enable Modern AMD Drivers
   services.xserver.videoDrivers = [ "radeon" ];
