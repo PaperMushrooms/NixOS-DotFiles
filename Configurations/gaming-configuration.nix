@@ -25,7 +25,7 @@
   ];
 
   # Enable Game Mode for NixOS
-  services.gamemode.enable = true;
+  programs.gamemode.enable = true;
 
   # Enable Modern AMD Drivers
   services.xserver.videoDrivers = [ "radeon" ];
