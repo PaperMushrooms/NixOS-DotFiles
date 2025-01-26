@@ -24,5 +24,6 @@
         rustdesk
 	    anydesk
         vscodium
+        python3Packages.protobuf_3_20
     ];
 }
