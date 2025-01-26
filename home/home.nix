@@ -19,9 +19,9 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-  ".steam".source = "/persist/home/nixon/.steam";
-  ".local/share/Steam".source = "/persist/home/nixon/.local/share/Steam";
-  ".config/Steam".source = "/persist/home/nixon/.config/Steam";
+#  ".steam".source = "/persist/home/nixon/.steam";
+#  ".local/share/Steam".source = "/persist/home/nixon/.local/share/Steam";
+#  ".config/Steam".source = "/persist/home/nixon/.config/Steam";
   };
 
   # Home Manager can also manage your environment variables through
