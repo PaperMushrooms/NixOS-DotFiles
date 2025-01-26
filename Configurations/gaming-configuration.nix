@@ -15,8 +15,9 @@
   lutris             # Open-source game manager for Linux
   vulkan-tools       # Vulkan utilities like vulkaninfo
   vulkan-loader      # Vulkan loader
+  vulkan-validation-layers
   mesa               # Open-source AMD drivers
-  mesadrivers
+  mesa_drivers
   minicom            # [ To be listed... ]
   mangohud           # System performance heads-up display for OpenGL and Vulkan applications
   gamescope
