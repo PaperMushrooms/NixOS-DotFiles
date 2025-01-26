@@ -88,6 +88,9 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Enable Flatpak
+  services.flatpak.enable = true;
+
   # Force Plasma SSh Keypass Instead of GNOME
   programs.ssh.askPassword = lib.mkForce "/nix/store/awb6dzl5kcwi2910frjcw0b96988fp2b-ksshaskpass-6.2.4/bin/ksshaskpass";
 
