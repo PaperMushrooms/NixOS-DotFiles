@@ -17,7 +17,7 @@
   vulkan-loader      # Vulkan loader
   vulkan-validation-layers
   mesa               # Open-source AMD drivers
-  mesa_drivers
+  mesa.drivers
   minicom            # [ To be listed... ]
   mangohud           # System performance heads-up display for OpenGL and Vulkan applications
   gamescope
