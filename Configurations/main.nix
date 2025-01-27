@@ -104,11 +104,11 @@
   programs.dconf.enable = true;
 
   # GNOME Desktop Integration
-#  qt = {
-#    enable = true;
-#    platformTheme = "gnome";
-#    style = "adwaita-dark";
-#  };
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 
   # Enable Zsh System-Wide
   programs.zsh.enable = true;
