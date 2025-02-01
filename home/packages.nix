@@ -7,6 +7,7 @@
       kitty                                            # Terminal preference
       dunst                                            # Notification Manager
       discord                                          # Messenger
+      notion                                           # Note Taking Software
       gimp                                             # Photo Editor
       ungoogled-chromium                               # Web Browser
       telegram-desktop                                 # Private Messenger
