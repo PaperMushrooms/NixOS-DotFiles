@@ -11,6 +11,7 @@
         wget
         curl
         gzip
+        gparted
         wineWowPackages.stable
         winetricks
         (wineWowPackages.full.override {                 # Wine config  
