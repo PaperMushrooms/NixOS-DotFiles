@@ -17,6 +17,6 @@
       cursor= {
         theme = "Breeze";
       };
-     };
+    };
   };
 }
