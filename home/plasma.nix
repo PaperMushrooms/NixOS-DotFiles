@@ -6,10 +6,10 @@
     enable = true;
     workspace = {
       colorScheme = "BreezeDark"; # Enables dark mode
-      lookAndFeel = "org.kde.breezeDark.desktop";
-      splashScreen = {
-        theme = "None";
-      };
-    };
+      windowDecorations = "org.kde.breeze";
+      splashScreen = "None"; # Declares Splash Screen
+      theme = "BreezeDark";
+      cursorTheme = "Breeze";
+     };
   };
 }
