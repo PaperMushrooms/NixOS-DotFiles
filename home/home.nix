@@ -38,11 +38,6 @@
      EDITOR = "nano";
   };
 
-  # Install World of Warcraft if not already installed.
-  home.activation.installWoW = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    lutris -i https://lutris.net/api/installers/world-of-warcraft || true
-  '';
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
