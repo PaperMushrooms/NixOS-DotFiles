@@ -7,5 +7,6 @@
       enable = true;
       devices = [ "nodev" ];
       efiSupport = true;
+      theme = pkgs.breeze-grub;
   };
 }
