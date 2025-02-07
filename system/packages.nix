@@ -26,5 +26,6 @@
         rustdesk
 	    anydesk
         vscodium
+        haskellPackages.sphero
     ];
 }
