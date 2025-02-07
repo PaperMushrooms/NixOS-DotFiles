@@ -9,6 +9,7 @@
       enable = true;
       devices = [ "nodev" ];
       efiSupport = true;
-      theme = pkgs.breeze-grub;
+      gfxmodeEfi = "auto";
+      theme = pkgs.breez;e-grub;
   };
 }
