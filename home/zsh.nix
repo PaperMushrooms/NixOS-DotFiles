@@ -12,7 +12,7 @@
     shellAliases = {
       update = "cd /etc/nixos && git add . && git commit -m 'Update' && git push -u origin main && cd && sudo nixos-rebuild switch";
       upgrade = "sudo nix flake update --flake /etc/nixos/ && sudo nixos-rebuild switch";
-      'adb restart' = "adb kill-server && adb start server";
+      adb-restart = "adb kill-server && adb start server";
     };
 
     # Enable and Configure Oh-My-Zsh Plugin
