@@ -28,7 +28,7 @@
         vscodium
     ];
 
-    notion = pkgs.notion-app-enhanced.overrideDerivation (oldAttrs: {
+    notion-app-enhanced = pkgs.notion-app-enhanced.overrideDerivation (oldAttrs: {
         name = "notion-3.0.0-1";
         src = pkgs.fetchurl {
               url = "https://github.com/aokellermann/notion-repackaged/releases/download/v3.0.0-1/Notion-3.0.0-1.AppImage";
