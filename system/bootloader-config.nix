@@ -14,6 +14,6 @@
       enable = true;
       devices = [ "nodev" ];
       efiSupport = true;
-      theme = pkgs.breeze;
+      theme = pkgs.breezy;
   };
 }
