@@ -10,6 +10,6 @@
       devices = [ "nodev" ];
       efiSupport = true;
       gfxmodeEfi = "auto";
-      theme = pkgs.breez;e-grub;
+      theme = pkgs.breeze-grub;
   };
 }
