@@ -28,7 +28,6 @@
 
   # Install Terminal Add-on Packages and Fontsv
   home.packages = with pkgs; [
-    starship
     powerline
     powerline-fonts
     jetbrains-mono
