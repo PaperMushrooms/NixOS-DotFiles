@@ -9,7 +9,7 @@
 
   # Exclude GNOME packages from KDE
   environment.plasma6.excludePackages = with pkgs; [
-    gnome.gnome-terminal
+    pkgs.gnome.gnome-terminal
     gnome.eog
   ];
 }
