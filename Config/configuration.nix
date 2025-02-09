@@ -5,7 +5,7 @@
   imports = [ 
 
     # Include Hardware Config
-    ../hardware-configuration.nix
+    ./hardware-configuration.nix
 
     # Include Locale Configuration
     ../Modules/System/locales.nix
