@@ -13,7 +13,7 @@
           "browser.theme.content-theme" = 1;
           "browser.theme.toolbar-theme" = 1;
           "ui.systemUsesDarkTheme" = 1;
-          "extensions.activeThemeID" = "firefox-alpenglow@mozilla.org";
+          "lightweightThemes.selectedThemeID" = "firefox-alpenglow@mozilla.org";
         };
 
         bookmarks = [
