@@ -7,7 +7,7 @@
   programs.firefox = {
     enable = true;
 
-    default.settings = {
+    settings = {
     "browser.theme.content-theme" = 1;
     "browser.theme.toolbar-theme" = 1;
     "ui.systemUsesDarkTheme" = 1;
