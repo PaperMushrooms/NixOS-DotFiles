@@ -28,14 +28,12 @@
     
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        nix.settings.experimental-features = [ "nix-command" "flakes" ];
-        
         system = "x86_64-linux";
 
         specialArgs = { inherit inputs; };
 
         modules = [
-          ./main.nix
+          ./Configurations/main.nix
           home-manager.nixosModules.home-manager # Home-Manager Module
           {
             home-manager = {
