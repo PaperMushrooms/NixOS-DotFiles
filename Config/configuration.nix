@@ -5,37 +5,37 @@
   imports = [ 
 
     # Include Hardware Config
-    ./hardware-configuration.nix
+    ../hardware-configuration.nix
 
     # Include Locale Configuration
-    ./Modules/System/locales.nix
+    ../Modules/System/locales.nix
 
     # Include System/SSH Configuration
-    ./Modules/System/ssh.nix
+    ../Modules/System/ssh.nix
 
     # Include System/Bootloader Configuration
-    ./Modules/System/bootloader.nix
+    ../Modules/System/bootloader.nix
     
     # Include System/Desktop Environment Configuration
-    ./Modules/System/desktop.nix
+    ../Modules/System/desktop.nix
 
     # Include Sound Configuration
-    ./Modules/System/audio.nix
+    ../Modules/System/audio.nix
 
     # Include System Packages
-    ./Modules/System/packages.nix
+    ../Modules/System/packages.nix
 
     # Include Custom Android Scripts
-    ./Modules/System/android.nix
+    ../Modules/System/android.nix
 
     # Include Gaming Confiuration
-    ./Modules/System/gaming.nix
+    ../Modules/System/gaming.nix
 
     # Include Plasma Config
-    ./Modules/System/plasma.nix
+    ../Modules/System/plasma.nix
 
     # Include GNOME Config
-    ./Modules/System/gnome.nix
+    ../Modules/System/gnome.nix
     
   ];
 
