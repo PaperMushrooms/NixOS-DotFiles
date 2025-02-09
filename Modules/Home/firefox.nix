@@ -5,7 +5,7 @@
 
   # Configure Firefox
   programs.firefox = {
-    enable = true;
+    enable = false;
     profiles = {
       default = {
         name = "default";
@@ -13,7 +13,6 @@
           "browser.theme.content-theme" = 1;
           "browser.theme.toolbar-theme" = 1;
           "ui.systemUsesDarkTheme" = 1;
-          "lightweightThemes.selectedThemeID" = "firefox-alpenglow@mozilla.org";
         };
 
         bookmarks = [
