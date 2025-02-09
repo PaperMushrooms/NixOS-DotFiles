@@ -11,12 +11,6 @@
   environment.systemPackages = with pkgs; [
     gnome-shell
     gnome-control-center
-    gnome-terminal
-    gnome-tweaks  
-  ];
-
-  # Exclude KDE packages from GNOME
-  environment.gnome.excludePackages = with pkgs.gnome [
-    ##
+    gnome-tweaks
   ];
 }
