@@ -1,5 +1,10 @@
+{ config, pkgs, ...}:
+
 {
-# Hyprland Configuration
+  # Enable the Hyprland Window Manager.
+  programs.hyprland.enable = true;
+
+  # Hyprland Configuration
   wayland.windowManager.hyprland = {
     enable = true;
 

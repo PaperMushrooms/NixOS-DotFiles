@@ -8,28 +8,28 @@
     ./hardware-configuration.nix
 
     # Include Locale Configuration
-    ../system/locale-config.nix
+    ./Modules/System/locales.nix
 
-    # Include SSH Configuration
-    ../system/ssh.nix
+    # Include System/SSH Configuration
+    ./Modules/System/ssh.nix
 
-    # Include Bootloader Configuration
-    ../system/bootloader-config.nix
+    # Include System/Bootloader Configuration
+    ./Modules/System/bootloader.nix
     
-    # Include Desktop Environment Configuration
-    ../system/desktop-config.nix
+    # Include System/Desktop Environment Configuration
+    ./Modules/System/desktop.nix
 
     # Include Sound Configuration
-    ../system/audio-config.nix
+    ./Modules/System/audio.nix
 
     # Include System Packages
-    ../system/packages.nix
+    ./Modules/System/packages.nix
 
     # Include Custom Android Scripts
-    ../system/Android-Scripts.nix
+    ./Modules/Android.nix
 
     # Include Gaming Confiuration
-    ./gaming-configuration.nix
+    ./Modules/gaming.nix
     
   ];
 
