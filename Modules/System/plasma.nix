@@ -6,10 +6,4 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Exclude GNOME packages from KDE
-  environment.plasma6.excludePackages = with pkgs; [
-    pkgs.gnome.gnome-terminal
-    gnome.eog
-  ];
 }
