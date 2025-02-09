@@ -10,7 +10,7 @@
         git-lfs
         wget
         curl
-        nvim
+        neovim
         gzip
         gparted
         wineWowPackages.stable
