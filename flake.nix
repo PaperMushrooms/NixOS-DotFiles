@@ -33,7 +33,7 @@
         specialArgs = { inherit inputs; };
 
         modules = [
-          ./configuration.nix
+          ./Config/configuration.nix
           home-manager.nixosModules.home-manager # Home-Manager Module
           {
             home-manager = {
@@ -42,7 +42,7 @@
               sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
               extraSpecialArgs = { inherit inputs; };
               users = {
-                nixon = import ./home.nix;
+                nixon = import ./Config/home.nix;
               };
             };
           }
