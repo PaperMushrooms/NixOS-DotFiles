@@ -6,15 +6,14 @@
   # Configure Firefox
   programs.firefox = {
     enable = true;
+
+    default.settings = {
+    "browser.theme.content-theme" = 1;
+    "browser.theme.toolbar-theme" = 1;
+    "ui.systemUsesDarkTheme" = 1;
     };
 
     profiles = {
-      default.settings = {
-      "browser.theme.content-theme" = 1;
-      "browser.theme.toolbar-theme" = 1;
-      "ui.systemUsesDarkTheme" = 1;
-      };
-
       nixon = {
         name = "nixon";
         bookmarks = [
