@@ -1,4 +1,3 @@
-#
 {
   description = "My home system flake c: ";
 
@@ -47,6 +46,13 @@
             };
           }
         ];
+      };
+
+      recovery = nixpkgs.lib.nixosSystem {
+      	specialArgs = { inherit inputs; };
+	modules = [
+	  ./recovery/configuration.nix
+	];
       };
     };
   };
