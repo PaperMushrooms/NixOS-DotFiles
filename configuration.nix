@@ -30,6 +30,12 @@
 
     # Include Gaming Confiuration
     ./Modules/System/gaming.nix
+
+    # Include Plasma Config
+    ./Modules/System/plasma.nix
+
+    # Include GNOME Config
+    ./Modules/System/gnome.nix
     
   ];
 
