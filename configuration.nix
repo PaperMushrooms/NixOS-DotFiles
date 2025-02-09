@@ -26,10 +26,10 @@
     ./Modules/System/packages.nix
 
     # Include Custom Android Scripts
-    ./Modules/Android.nix
+    ./Modules/System/android.nix
 
     # Include Gaming Confiuration
-    ./Modules/gaming.nix
+    ./Modules/System/gaming.nix
     
   ];
 
