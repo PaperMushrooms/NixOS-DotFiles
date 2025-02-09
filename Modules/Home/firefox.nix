@@ -5,7 +5,7 @@
 
   # Configure Firefox
   programs.firefox = {
-    enable = false;
+    enable = true;
     profiles = {
       default = {
         name = "default";
