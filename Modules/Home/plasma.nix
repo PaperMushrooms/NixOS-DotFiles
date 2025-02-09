@@ -16,8 +16,6 @@
         theme = "None";
       };
 
-      theme = "BreezeDark";
-
       cursor= {
         theme = "Breeze";
       };
