@@ -23,7 +23,8 @@
         networkmanagerapplet
         openrazer-daemon
         polychromatic
-        libimobiledevice
+	razer-cli
+	libimobiledevice
         rustdesk
 	    anydesk
         vscodium
