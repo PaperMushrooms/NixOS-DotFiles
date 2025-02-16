@@ -16,7 +16,6 @@
 
 	# Wine Packages
 	winePackages.full
-        wineWowPackages.stable
         winetricks
 
 	scrcpy
