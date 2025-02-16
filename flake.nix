@@ -36,7 +36,6 @@
           home-manager.nixosModules.home-manager # Home-Manager Module
           {
             home-manager = {
-              useGlobalPkgs = true;
               useUserPackages = true;
               sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
               extraSpecialArgs = { inherit inputs; };
