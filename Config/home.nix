@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ... }:
+{ inputs, config, lib, ... }:
 
 {
   
@@ -36,7 +36,7 @@
   };
 
   home.sessionVariables = {
-     EDITOR = "nano";
+     EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
