@@ -56,7 +56,10 @@
   };
 
   # Force NetworkManager to start at boot
-  systemd.services.NetworkManager.wantedBy = [ "multi-user.target" ];
+  systemd.services.NetworkManager {
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.pre.target" ];
+    before = [ "sshd.service" ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

@@ -11,6 +11,11 @@
     };
   };
 
+  # Start SSH Immediately
+  systemd.services.sshd = {
+    wantedBy = [ "network-online.target" ];
+    after = [ "network.target" "NetworkManager.service" ];
+
   # Start Enable and Start SSH Agent On Startup
   programs.ssh = {
     startAgent = true;
