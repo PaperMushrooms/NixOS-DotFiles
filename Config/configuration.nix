@@ -56,7 +56,7 @@
   };
 
   # Force NetworkManager to start at boot
-  systemd.services.NetworkManager {
+  systemd.services.NetworkManager = {
     wantedBy = [ "multi-user.target" ];
     after = [ "network.pre.target" ];
     before = [ "sshd.service" ];
