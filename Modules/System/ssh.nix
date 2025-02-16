@@ -8,7 +8,8 @@
         UseDns = true;
         X11Forwarding = false;
         PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
-    };
+      };
+  };
 
   # Start Enable and Start SSH Agent On Startup
   programs.ssh = {
