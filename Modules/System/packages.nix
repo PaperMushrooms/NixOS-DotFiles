@@ -13,6 +13,7 @@
         neovim
         gzip
         gparted
+	(wine.override { monoSupport = true; })
         wineWowPackages.stable
         winetricks
 	scrcpy
