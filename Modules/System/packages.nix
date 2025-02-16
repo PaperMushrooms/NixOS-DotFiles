@@ -13,9 +13,13 @@
         neovim
         gzip
         gparted
-	(wine.override { monoSupport = true; })
+
+	# Wine Packages
+	winePackages.full
+	wine-mono
         wineWowPackages.stable
         winetricks
+
 	scrcpy
         networkmanagerapplet
         openrazer-daemon
