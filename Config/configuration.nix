@@ -55,6 +55,9 @@
     enable = true;
   };
 
+  # Force NetworkManager to start at boot
+  systemd.services.NetworkManager.wantedBy = [ "multi-user.target" ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
