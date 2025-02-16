@@ -9,13 +9,6 @@
         X11Forwarding = false;
         PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
     };
-  };
-
-  # Start SSH Immediately
-  systemd.services.sshd = {
-    wantedBy = [ "network-online.target" ];
-    after = [ "network.target" "NetworkManager.service" ];
-  };
 
   # Start Enable and Start SSH Agent On Startup
   programs.ssh = {
