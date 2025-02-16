@@ -16,7 +16,6 @@
 
 	# Wine Packages
 	winePackages.full
-	wine-mono
         wineWowPackages.stable
         winetricks
 
