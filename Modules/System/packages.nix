@@ -15,18 +15,14 @@
         gparted
         wineWowPackages.stable
         winetricks
-        (wineWowPackages.full.override {                 # Wine config  
-     	  wineRelease = "staging";                       # for       
-     	  mingwSupport = true;                           # Windows compatibility.
-   	    })                    
-	    scrcpy
+	scrcpy
         networkmanagerapplet
         openrazer-daemon
         polychromatic
 	razer-cli
 	libimobiledevice
         rustdesk
-	    anydesk
+	anydesk
         vscodium
     ];
 }
