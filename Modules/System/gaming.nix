@@ -29,7 +29,7 @@
   programs.gamemode.enable = true;
 
   # Enable OpenGL
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   # Enable Modern AMD Drivers
   services.xserver.videoDrivers = [ "radeon" ];
