@@ -18,11 +18,14 @@
 
   home.stateVersion = "24.05";
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
-
-  };
+ 
+    # Configure Razer devices to stay on during screensaver
+    ".config/openrazer/razer.conf".text = ''
+    devices_off_on_screensaver = False
+    '';
+ 
+ };
 
   # Configure VScodium
   programs.vscode = {
