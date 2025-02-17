@@ -21,7 +21,7 @@
 	scrcpy
         networkmanagerapplet
         openrazer-daemon
-        unstable.polychromatic
+        polychromatic
 	razer-cli
 	libimobiledevice
         rustdesk
