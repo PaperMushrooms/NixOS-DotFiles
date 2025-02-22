@@ -69,6 +69,12 @@
       cd 
     '')
 
+    (pkgs.writeShellScriptBin "Pixel4-OEM-A11" ''
+      cd ~/Android/Pixel5/OEM-A13-Latest
+      bash install.sh
+      cd
+    '')
+
     (pkgs.writeShellScriptBin "Pixel5-crDroid9-A13" ''
       cd ~/Android/Pixel5/crDroid9-A13
       bash install.sh
