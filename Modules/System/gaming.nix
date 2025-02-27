@@ -20,10 +20,17 @@
   mesa.drivers
   minicom            # [ To be listed... ]
   mangohud           # System performance heads-up display for OpenGL and Vulkan applications
+  protonup
   gamescope
   vkd3d
   dxvk
   ];
+
+  # Configure Steam path for ProtonGE
+  environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+      "/home/user/.steam/root/compatibilitytools.d"
+  };
 
   # Enable Game Mode for NixOS
   programs.gamemode.enable = true;
