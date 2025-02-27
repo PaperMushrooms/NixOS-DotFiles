@@ -29,7 +29,7 @@
   # Configure Steam path for ProtonGE
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-      "/home/user/.steam/root/compatibilitytools.d"
+      "/home/user/.steam/root/compatibilitytools.d";
   };
 
   # Enable Game Mode for NixOS
