@@ -8,6 +8,7 @@
   services.usbmuxd.enable = true;
     
   environment.systemPackages = with pkgs; [
+    autopsy
 
     (pkgs.writeShellScriptBin "McLaren-crDroid7-A11" ''
         cd ~/Android/McLaren/crDroid7-A11/
