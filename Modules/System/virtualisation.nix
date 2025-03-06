@@ -1,9 +1,18 @@
-{
- programs.virt-manager.enable = true;
+{ config, lib, pkgs, ... };
 
- users.groups.libvirtd.members = ["nixon"];
+with lib;
 
- virtualisation.libvirtd.enable = true;
+let
+  cfg = config.virtualisation;
+in {
+  options = {
+    virtualisation = mkEnableOption "Enable Virtualisation module for virtual machines";
+  };
 
- virtualisation.spiceUSBRedirection.enable = true;
+  config = mkIf cfg {
+    programs.virt-manager.enable = true; 
+    users.groups.libvirtd.members = ["nixon"];
+    virtualisation.libvirtd.enable = true;
+    virtualisation.spiceUSBRedirection.enable = true;
+  };
 }

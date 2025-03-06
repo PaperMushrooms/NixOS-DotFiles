@@ -37,6 +37,7 @@
 	  {
 	    ssh = true;
 	    android = true;
+	    virtualisation = false;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
