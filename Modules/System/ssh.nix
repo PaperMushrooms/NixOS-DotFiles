@@ -1,24 +1,17 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }: with lib; { 
 
-with lib;
-
-let
-  cfg = config.System.ssh;
-in {
   options = {
-    System.ssh = mkOption {
-      type = types.bool;
-      default = false;
-      description = "OpenSSH and SSH Agent configuration";
+    System.ssh = 
+      mkEnableOption "Enables SSH" {
     };
   };
 
-  config = mkIf cfg {
+  config = mkIf config.System.ssh {
     services.openssh = {
       enable = true;
       ports = [ 44906 ];
         settings = {
-          PasswordAuthentication = false;
+          PasswordAuthentication = true;
           UseDns = true;
           X11Forwarding = false;
           PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
