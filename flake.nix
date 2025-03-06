@@ -35,7 +35,7 @@
           ./Config/configuration.nix
           ./Modules/System/default.nix
 	  {
-	    ssh = true;
+	    ssh = false;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
