@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }: with lib; {
 
   options = {
-    vscodium =
+    vscodium.enable =
       mkEnableOption "enables VSCodium";
   };
 
-  config = mkIf config.vscodium {
+  config = mkIf config.vscodium.enable {
 
   # Configure VScodium
     programs.vscode = {
