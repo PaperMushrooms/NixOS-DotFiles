@@ -10,10 +10,14 @@
     git
     neovim
     networkmanager
-    wpa_supplicant
   ];
-  
+
+  networking.networkmanager.enable = true;
+
+  networking.wireless.enable = false;
+
   systemd.services.NetworkManager.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
 }

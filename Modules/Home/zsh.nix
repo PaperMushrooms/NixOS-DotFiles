@@ -48,4 +48,11 @@
       };
     };
   };
+
+  #Auto-Start Zsh when logging into a graphical session
+  home.file.".bash_profile".text = ''
+    if [ -n "$DISPLAY" ] || [ -n "$WAYLAND_DISPLAY" ]; then
+      exec zsh
+    fi
+  '';
 }
