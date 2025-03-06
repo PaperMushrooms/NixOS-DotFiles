@@ -33,7 +33,11 @@
 
         modules = [
           ./Config/configuration.nix
-          home-manager.nixosModules.home-manager # Home-Manager Module
+          ./Modules/System/default.nix
+	  {
+	    ssh = true;
+	  }
+	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
             home-manager = {
               useUserPackages = true;

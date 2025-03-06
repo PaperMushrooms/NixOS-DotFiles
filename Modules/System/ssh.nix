@@ -1,29 +1,40 @@
-{
-  # Enable and Configure the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    ports = [ 44906 ];
-      settings = {
-        PasswordAuthentication = false;
-        UseDns = true;
-        X11Forwarding = false;
-        PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
-      };
+{ config, lib, pkgs, ... }:
+
+with lib;
+
+let
+  cfg = config.ssh
+in {
+  options = {
+    ssh = mkEnableOption "OpenSSH and SSH Agent configuration";
   };
 
-  # Start Enable and Start SSH Agent On Startup
-  programs.ssh = {
-    startAgent = true;
-    extraConfig = ''
-      Host github.com
-        User git
-        IdentityFile ~/.ssh/GitHub
-        IdentitiesOnly yes
+  config = mkIf cfg {
+    services.openssh = {
+      enable = true;
+      ports = [ 44906 ];
+        settings = {
+          PasswordAuthentication = false;
+          UseDns = true;
+          X11Forwarding = false;
+          PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
+        };
+    };
 
-      Host gitlab.com
-        User git
-        IdentityFile ~/.ssh/GitHub
-        IdentitiesOnly yes
-    '';
+  # Start Enable and Start SSH Agent On Startup
+    programs.ssh = {
+      startAgent = true;
+      extraConfig = ''
+        Host github.com
+          User git
+          IdentityFile ~/.ssh/GitHub
+          IdentitiesOnly yes
+
+        Host gitlab.com
+          User git
+          IdentityFile ~/.ssh/GitHub
+          IdentitiesOnly yes
+      '';
+    };
   };
 }
