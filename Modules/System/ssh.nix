@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.ssh;
+  cfg = config.System.ssh;
 in {
   options = {
     System.ssh = mkEnableOption "OpenSSH and SSH Agent configuration";
