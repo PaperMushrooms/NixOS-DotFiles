@@ -36,7 +36,7 @@
           ./Modules/System/default.nix
 	  {
 	    ssh = true;
-	    #android = true;
+	    android = false;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
