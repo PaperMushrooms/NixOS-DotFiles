@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.virtualisation;
+  cfg = config.System.virtualisation;
 in {
   options = {
     System.virtualisation = mkEnableOption "Enable Virtualisation module for virtual machines";
