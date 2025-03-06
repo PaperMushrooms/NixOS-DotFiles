@@ -52,4 +52,5 @@ in {
   
     # Ensure the necessary firmware is available for GPU
     hardware.enableRedistributableFirmware = true;
+  };
 }
