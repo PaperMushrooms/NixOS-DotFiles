@@ -14,7 +14,9 @@
     ../Modules/Home/zsh.nix
   ];
 
-  vscodium.enable = false;
+  vscodium.enable = true;
+
+  git.enable = true;
 
   home.username = "nixon";
   home.homeDirectory = "/home/nixon";
