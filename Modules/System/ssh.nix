@@ -1,12 +1,11 @@
 { config, lib, pkgs, ... }: with lib; { 
 
   options = {
-    System.ssh = 
-      mkEnableOption "Enables SSH" {
-    };
+    ssh.enable = 
+      mkEnableOption "Enables SSH";
   };
 
-  config = mkIf config.System.ssh {
+  config = mkIf config.ssh.enable {
     services.openssh = {
       enable = true;
       ports = [ 44906 ];
