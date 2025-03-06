@@ -39,7 +39,7 @@
 	    System.android = true;
 	    System.virtualisation = true;
 	    System.gaming = true;
-	    System.gnome = false;
+	    #System.gnome = true;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
