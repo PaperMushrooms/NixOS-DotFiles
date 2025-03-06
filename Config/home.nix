@@ -3,15 +3,18 @@
 {
   
   imports = [
-   ../Modules/Home/firefox.nix
-   ../Modules/Home/packages.nix
-   ../Modules/Home/plasma.nix
-   ../Modules/Home/gnome.nix
-   ../Modules/Home/Hyprland/hypr.nix
-   ../Modules/Home/Hyprland/keybindings.nix
-   ../Modules/Home/git.nix
-   ../Modules/Home/zsh.nix
+    ../Modules/Home/default.nix
+    ../Modules/Home/firefox.nix
+    ../Modules/Home/packages.nix
+    ../Modules/Home/plasma.nix
+    ../Modules/Home/gnome.nix
+    ../Modules/Home/Hyprland/hypr.nix
+    ../Modules/Home/Hyprland/keybindings.nix
+    ../Modules/Home/git.nix
+    ../Modules/Home/zsh.nix
   ];
+
+  vscodium.enable = true;
 
   home.username = "nixon";
   home.homeDirectory = "/home/nixon";
