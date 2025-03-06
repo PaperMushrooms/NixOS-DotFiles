@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.ssh
+  cfg = config.ssh;
 in {
   options = {
     ssh = mkEnableOption "OpenSSH and SSH Agent configuration";
