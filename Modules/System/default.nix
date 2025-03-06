@@ -1,5 +1,6 @@
 {
- imports = [
-   ./ssh.nix
- ];
+  imports = [
+    ./ssh.nix
+    ./android.nix
+  ];
 }
