@@ -14,7 +14,7 @@
     ../Modules/Home/zsh.nix
   ];
 
-  vscodium = false;
+  vscodium.enable = false;
 
   home.username = "nixon";
   home.homeDirectory = "/home/nixon";
