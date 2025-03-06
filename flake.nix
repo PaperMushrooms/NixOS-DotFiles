@@ -36,10 +36,10 @@
           ./Modules/System/default.nix
 	  {
 	    System.ssh = true;
-	    #System.android = true;
+	    System.android = true;
 	    System.virtualisation = true;
 	    System.gaming = true;
-	    #System.gnome = true;
+	    System.gnome = false;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
