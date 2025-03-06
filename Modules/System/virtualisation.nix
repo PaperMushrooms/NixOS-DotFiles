@@ -9,7 +9,7 @@ in {
     virtualisation = mkEnableOption "Enable Virtualisation module for virtual machines";
   };
 
-  config = mkIf cfg {
+  config = mkIf cfg.enable {
     programs.virt-manager.enable = true; 
     users.groups.libvirtd.members = ["nixon"];
     virtualisation.libvirtd.enable = true;
