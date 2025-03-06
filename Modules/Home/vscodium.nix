@@ -5,7 +5,7 @@
       mkEnableOption "enables VSCodium";
   };
 
-  config = mkIf config {
+  config = mkIf config.vscodium {
 
   # Configure VScodium
     programs.vscode = {
