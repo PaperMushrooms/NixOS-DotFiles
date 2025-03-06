@@ -16,6 +16,7 @@ in {
   config = mkIf cfg {
     programs.virt-manager.enable = true; 
     users.groups.libvirtd.members = ["nixon"];
+    virtualisation.waydroid.enable = true;
     virtualisation.libvirtd.enable = true;
     virtualisation.spiceUSBRedirection.enable = true;
   };
