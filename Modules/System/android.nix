@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.android
+  cfg = config.android;
 in {
   options = {
     android = mkEnableOption "Enable Android Work Environment"
