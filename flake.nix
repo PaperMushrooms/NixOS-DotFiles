@@ -35,9 +35,9 @@
           ./Config/configuration.nix
           ./Modules/System/default.nix
 	  {
-	    ssh = true;
-	    android = true;
-	    virtualisation = false;
+	    System.ssh = true;
+	    System.android = true;
+	    System.virtualisation = false;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
