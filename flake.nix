@@ -35,7 +35,6 @@
           ./Config/configuration.nix
           ./Modules/System/default.nix
 	  {
-	    System.ssh = true;
 	    System.android = true;
 	    System.virtualisation = true;
 	    System.gaming = true;

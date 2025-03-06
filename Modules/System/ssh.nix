@@ -6,7 +6,11 @@ let
   cfg = config.System.ssh;
 in {
   options = {
-    System.ssh = mkEnableOption "OpenSSH and SSH Agent configuration";
+    System.ssh = mkOption {
+      type = types.bool;
+      default = false;
+      description = "OpenSSH and SSH Agent configuration";
+    };
   };
 
   config = mkIf cfg {
