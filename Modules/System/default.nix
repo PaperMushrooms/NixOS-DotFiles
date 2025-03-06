@@ -4,5 +4,6 @@
     ./ssh.nix
     ./android.nix
     ./virtualisation.nix
+    ./gnome.nix
   ];
 }

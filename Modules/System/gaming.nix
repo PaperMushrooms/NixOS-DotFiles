@@ -6,7 +6,11 @@ let
   cfg = config.System.gaming;
 in {
   options = {
-    System.gaming = mkEnableOption "Enable Gaming Compatibility";
+    System.gaming = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Enable Gaming Compatibility";
+    };
   };
 
   config = mkIf cfg {

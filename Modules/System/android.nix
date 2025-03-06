@@ -6,7 +6,11 @@ let
   cfg = config.System.android;
 in {
   options = {
-    System.android = mkEnableOption "Enable Android Work Environment";
+    System.android = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Enable Android Work Environment";
+    };
   };
 
   config = lib.mkIf cfg {
