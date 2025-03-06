@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }: with lib {
+{ inputs, config, lib, pkgs, ... }: with lib; {
 
   options = {
     firefox.enable "Enable and Configure Firefox";
