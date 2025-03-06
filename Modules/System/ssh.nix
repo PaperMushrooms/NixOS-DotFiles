@@ -6,7 +6,7 @@ let
   cfg = config.ssh;
 in {
   options = {
-    ssh = mkEnableOption "OpenSSH and SSH Agent configuration";
+    System.ssh = mkEnableOption "OpenSSH and SSH Agent configuration";
   };
 
   config = mkIf cfg {

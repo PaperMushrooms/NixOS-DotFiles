@@ -6,7 +6,7 @@ let
   cfg = config.virtualisation;
 in {
   options = {
-    virtualisation = mkEnableOption "Enable Virtualisation module for virtual machines";
+    System.virtualisation = mkEnableOption "Enable Virtualisation module for virtual machines";
   };
 
   config = mkIf cfg {
