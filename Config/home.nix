@@ -18,6 +18,8 @@
 
   git.enable = true;
 
+  firefox.enable = true;
+
   home.username = "nixon";
   home.homeDirectory = "/home/nixon";
 
