@@ -6,7 +6,7 @@ let
   cfg = config.android;
 in {
   options = {
-    android = mkEnableOption "Enable Android Work Environment"
+    android = mkEnableOption "Enable Android Work Environment";
   };
 
   config = lib.mkIf cfg {
