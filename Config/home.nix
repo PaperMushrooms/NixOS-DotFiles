@@ -14,7 +14,7 @@
     ../Modules/Home/zsh.nix
   ];
 
-  vscodium.enable = true;
+  # vscodium.enable = true;
 
   git.enable = true;
 
