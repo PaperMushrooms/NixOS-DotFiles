@@ -2,7 +2,7 @@
 
   options = {
     plasma.enable = 
-      mkEnableOption; "Enable and configure Plasma6";
+      mkEnableOption "Enable and configure Plasma6";
   };
 
   config = mkIf config.plasma.enable { 
