@@ -19,7 +19,7 @@
   
         splashScreen = {
           theme = "None";
-        };:
+        };
   
         theme = "BreezeDark";
   
