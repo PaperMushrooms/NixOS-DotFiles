@@ -28,11 +28,9 @@
         };
       };
     };
-    services.displayManager.sddm.enable = true;
-    services.displayManager.sddm.settings = {
-    # Theme ={
-    #   Current = "breeze-dark";
-    # };
+
+    services.plasma6.enable = true;
+
     };
   };
 }
