@@ -5,7 +5,7 @@
       mkEnableOption "Enable Virtualisation module for virtual machines";
   };
 
-  config = mkIf config.virtualisation.enable {
+  config = mkIf config.virtualisationconf.enable {
     programs.virt-manager.enable = true; 
     users.groups.libvirtd.members = ["nixon"];
     virtualisation.waydroid.enable = true;
