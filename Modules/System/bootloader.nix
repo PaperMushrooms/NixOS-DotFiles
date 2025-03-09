@@ -15,4 +15,5 @@
       useOSProber = true;
      # theme = pkgs.breeze;
     };
+  };
 }
