@@ -35,6 +35,7 @@
           ./Config/configuration.nix
           ./Modules/System/default.nix
 	  {
+	    grubconf.enable = true;
 	    ssh.enable = true;
 	    androidenv.enable = true;
 	    virtualisationconf.enable = true;

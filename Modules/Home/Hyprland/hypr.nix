@@ -1,19 +1,17 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }: with lib; {
 
-{
-  # Enable the Hyprland Window Manager.
-#   programs.hyprland.enable = true;  (THIS OPTION MUST BE MOVED TO SYSTEM CONFIG)
 
-  # Hyprland Configuration
-  wayland.windowManager.hyprland = {
-    enable = true;
-
-    settings = {
-
-    # Monitor(s) Configuration
-      monitor = [
-	      "eDP-1, 1920x1200@60, 0x0, 1"
-      ];
-    };
+  options {
+    hyprconf.enable =
+      mkEnableOption "Enable and configure Hyprland for the system.";
   };
+
+  config = mkIf config.hyprconf.enable {
+
+    # Enable the Hyprland Window Manager
+    programs.hyprland.enable = true; 
+    
+  };
+
+
 }
