@@ -3,7 +3,6 @@
   options = {
     androidenv.enable = 
       mkEnableOption "Enable Android Work Environment";
-    };
   };
 
   config = lib.mkIf config.androidenv.enable {
