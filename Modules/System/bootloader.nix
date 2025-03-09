@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: with lib {
+{ config, lib, pkgs, ... }: with lib; {
 
   options = {
     grubconf.enable = 
@@ -15,3 +15,4 @@
      # theme = pkgs.breeze;
     };
   };
+}
