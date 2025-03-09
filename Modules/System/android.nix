@@ -1,19 +1,12 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }: with lib; {
 
-with lib;
-
-let
-  cfg = config.System.android;
-in {
   options = {
-    System.android = mkOption {
-      type = types.bool;
-      default = false;
-      description = "Enable Android Work Environment";
+    androidenv.enable = 
+      mkEnableOption "Enable Android Work Environment";
     };
   };
 
-  config = lib.mkIf cfg {
+  config = lib.mkIf config.androidenv.enable {
 
     # Install Android Tools.
     programs.adb.enable = true;

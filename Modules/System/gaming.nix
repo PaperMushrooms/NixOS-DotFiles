@@ -1,19 +1,12 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }: with lib; {
 
-with lib;
-
-let
-  cfg = config.System.gaming;
-in {
   options = {
-    System.gaming = mkOption {
-      type = types.bool;
-      default = false;
-      description = "Enable Gaming Compatibility";
+    gaming.enable = 
+      mkEnableOption "Enable Gaming Compatibility";
     };
   };
 
-  config = mkIf cfg {
+  config = mkIf config.gaming.enable {
     # Enable Steam
     programs.steam = {
       enable = true;

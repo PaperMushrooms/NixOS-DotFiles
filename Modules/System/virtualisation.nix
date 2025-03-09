@@ -1,19 +1,12 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }: with lib; {
 
-with lib;
-
-let
-  cfg = config.System.virtualisation;
-in {
   options = {
-    System.virtualisation = mkOption {
-      type = types.bool;
-      default = false;
-      description = "Enable Virtualisation module for virtual machines";
+    virtualisationconf.enable = 
+      mkEnableOption "Enable Virtualisation module for virtual machines";
     };
   };
 
-  config = mkIf cfg {
+  config = mkIf config.virtualisation.enable {
     programs.virt-manager.enable = true; 
     users.groups.libvirtd.members = ["nixon"];
     virtualisation.waydroid.enable = true;

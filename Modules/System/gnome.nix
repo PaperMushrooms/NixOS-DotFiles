@@ -1,19 +1,12 @@
-{ config, lib, pkgs, ... }:
-
-with lib;
-
-let
-  cfg = config.System.gnome;
-in {
+{ config, lib, pkgs, ... }: with lib; {
+  
   options = {
-    System.gnome = mkOption {
-      type = types.bool;
-      default = false;
-      description = "Enable Gnome desktop environment";
+    gnomeconf.enable = 
+      mkEnableOption "Enable Gnome desktop environment";
     };  
   };
 
-  config = mkIf cfg {
+  config = mkIf config.gnomeconf.enable {
     # Enable GNOME Desktop Environment.
     services.xserver.desktopManager.gnome.enable = true;
   
