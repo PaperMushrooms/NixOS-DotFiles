@@ -3,7 +3,6 @@
   options = {
     gnomeconf.enable = 
       mkEnableOption "Enable Gnome desktop environment";
-    };  
   };
 
   config = mkIf config.gnomeconf.enable {
