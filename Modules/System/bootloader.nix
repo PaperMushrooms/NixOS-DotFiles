@@ -1,6 +1,5 @@
 { config, lib, pkgs, ... }: with lib {
 
-
   options = {
     grubconf.enable = 
       mkEnableOption "Enable and configure GRUB";
@@ -16,4 +15,4 @@
      # theme = pkgs.breeze;
     };
   };
-}
+};
