@@ -3,7 +3,6 @@
   options = {
     gaming.enable = 
       mkEnableOption "Enable Gaming Compatibility";
-    };
   };
 
   config = mkIf config.gaming.enable {
