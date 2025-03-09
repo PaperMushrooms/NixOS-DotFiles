@@ -3,7 +3,6 @@
   options = {
     virtualisationconf.enable = 
       mkEnableOption "Enable Virtualisation module for virtual machines";
-    };
   };
 
   config = mkIf config.virtualisation.enable {
