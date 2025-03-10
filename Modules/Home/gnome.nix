@@ -5,7 +5,7 @@
       mkEnableOption "Enable Gnome Home-Manager configuration";
   };
 
-  config = mkIf config.gnomehome.enable = true;
+  config = mkIf config.gnomehome.enable {
     # Enable Dark Mode for GNOME
     dconf.settings = {
       "org/gnome/desktop/interface" = {
@@ -13,4 +13,5 @@
         gtk-theme = "Adwaita-dark";
       };
     };
+  };
 }
