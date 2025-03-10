@@ -6,7 +6,6 @@
     ../Modules/Home/default.nix
     ../Modules/Home/packages.nix
     ../Modules/Home/gnome.nix
-    ../Modules/Home/Hyprland/hypr.nix
     ../Modules/Home/Hyprland/keybindings.nix
     ../Modules/Home/zsh.nix
   ];
