@@ -22,7 +22,7 @@
     };
 
       # Install extras for better Hyprland user experience
-    environment.systemPackages = with pkgs; [
+    home.packages= with pkgs; [
       waybar
       rofi-wayland
       swww
