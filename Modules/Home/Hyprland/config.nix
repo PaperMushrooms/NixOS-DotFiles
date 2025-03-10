@@ -25,7 +25,7 @@
         rofi-wayland
         swww
         networkmanagerapplet
-      ];
+      ]
     };
   };
 }

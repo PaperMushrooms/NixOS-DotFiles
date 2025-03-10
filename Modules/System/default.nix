@@ -5,7 +5,7 @@
     ./ssh.nix
     ./android.nix
     ./virtualisation.nix
-    ./Modules/Home/Hyprland/config.nix
+    ../Home/Hyprland/config.nix
     ./gnome.nix
   ];
 }
