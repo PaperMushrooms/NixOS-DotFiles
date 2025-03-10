@@ -22,15 +22,9 @@
   myshell.enable = true;
   ## FOR ORGANIZATION SAKE, PLEASE KEEP ALL MODULES IN BETWEEN THESE TWO COMMENTS
 
- # home.username = "nixon";
- # home.homeDirectory = "/home/nixon";
- # home.stateVersion = "24.05";
-
-  home = {
-    username = nixon;
-    homeDirectory = "/home/nixon";
-    stateVersion = "24.05";
-  };
+  home.username = "nixon";
+  home.homeDirectory = "/home/nixon";
+  home.stateVersion = "24.05";
 
   home.file = {
  
