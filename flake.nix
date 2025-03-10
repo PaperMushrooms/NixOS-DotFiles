@@ -41,7 +41,7 @@
 	    virtualisationconf.enable = true;
 	    gaming.enable = true;
 	    gnomeconf.enable = true;
-	    hyprconf.enable;
+	    hyprconf.enable = true;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
