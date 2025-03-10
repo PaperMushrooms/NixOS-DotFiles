@@ -18,14 +18,16 @@
         monitor = [
           "eDP-1, 1920x1200@60, 0x0, 1"
         ];
+      };
+    };
 
       # Install extras for better Hyprland user experience
-      environment.systemPackages = with pkgs; [
-        waybar
-        rofi-wayland
-        swww
-        networkmanagerapplet
-      ];
-    };
+    environment.systemPackages = with pkgs; [
+      waybar
+      rofi-wayland
+      swww
+      networkmanagerapplet
+    ];
   };
 }
+
