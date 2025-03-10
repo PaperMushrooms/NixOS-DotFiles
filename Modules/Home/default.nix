@@ -2,7 +2,7 @@
   imports = [
     ./git.nix
     ./gnome.nix 
-    ./Hyprland/hypr.nix
+    ./Hyprland/config.nix
     ./plasma.nix
     ./firefox.nix
     ./vscodium.nix
