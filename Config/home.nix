@@ -11,18 +11,26 @@
     ../Modules/Home/zsh.nix
   ];
 
-  # vscodium.enable = true;
+  ## ENABLE AND DISABLE MODULES HERE
 
-  #plasma.enable = true;
-
+  vscodium.enable = true;
+  plasmahome.enable = true;
+  gnomehome.enable = true;
+  hyprhome.enable = true;
   git.enable = true;
-
   firefox.enable = true;
+  myshell.enable = true;
+  ## FOR ORGANIZATION SAKE, PLEASE KEEP ALL MODULES IN BETWEEN THESE TWO COMMENTS
 
-  home.username = "nixon";
-  home.homeDirectory = "/home/nixon";
+ # home.username = "nixon";
+ # home.homeDirectory = "/home/nixon";
+ # home.stateVersion = "24.05";
 
-  home.stateVersion = "24.05";
+  home = {
+    username = nixon;
+    homeDirectory = "/home/nixon";
+    stateVersion = "24.05";
+  };
 
   home.file = {
  

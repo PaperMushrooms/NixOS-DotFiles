@@ -8,13 +8,5 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  };
-
-  # System-wide GNOME packages
-   # gnome-shell
-   # gnome-control-center
-   # gnome-terminal
-   # gnome-tweaks  
-  ];
-  
+  }
 }

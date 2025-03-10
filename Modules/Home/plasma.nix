@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }: with lib; {
 
   options = {
-    plasma.enable = 
-      mkEnableOption "Enable and configure Plasma6";
+    plasmahome.enable = 
+      mkEnableOption "Enable and configure Plasma6 Home-Manager config";
   };
 
-  config = mkIf config.plasma.enable { 
+  config = mkIf config.plasmahome.enable { 
     # Configure Plasma Theme
     programs.plasma = {
       enable = true;
