@@ -5,7 +5,7 @@
       mkEnableOption "Enable LibreOffice";
   };
 
-  config = config.libreoffice.enable = {
+  config = config.libreoffice.enable {
     environment.systemPackages = with pkgs; [
       libreoffice-qt
       hunspell
