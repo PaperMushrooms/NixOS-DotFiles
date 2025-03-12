@@ -7,5 +7,6 @@
     ./virtualisation.nix
     ../Home/Hyprland/hypr.nix
     ./gnome.nix
+    ./libreoffice.nix
   ];
 }
