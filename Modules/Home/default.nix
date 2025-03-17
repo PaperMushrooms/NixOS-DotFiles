@@ -3,7 +3,7 @@
     ./git.nix
     ./gnome.nix 
     ./Hyprland/config.nix
-    #./plasma.nix
+    #../System/plasma.nix
     ./firefox.nix
     ./vscodium.nix
   ];
