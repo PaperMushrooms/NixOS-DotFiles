@@ -10,8 +10,14 @@
     services.xserver.desktopManager.gnome.enable = true;
   
     # Enable the X11 windowing system.
-    services.xserver.enable = true;
-  
+    services.xserver = {
+      enable = true;
+      xkb = {
+        layout = "us";
+	variant = "";
+      };
+    };
+
     # System-wide GNOME packages
     environment.systemPackages = with pkgs; [
       gnome-shell

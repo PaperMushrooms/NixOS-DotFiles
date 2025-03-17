@@ -7,9 +7,6 @@
     # Include System/Desktop Environment Configuration
     ../Modules/System/desktop.nix
 
-    # Include Sound Configuration
-    ../Modules/System/audio.nix
-
     # Include System Packages
     ../Modules/System/packages.nix
 
