@@ -2,7 +2,7 @@
   imports = [
     ./gaming.nix
     ./bootloader.nix
-    ../modules/plasma.nix
+    ../../modules/plasma.nix
     ./ssh.nix
     ./android.nix
     ./virtualisation.nix
