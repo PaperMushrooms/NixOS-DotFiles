@@ -13,7 +13,6 @@
   ## ENABLE AND DISABLE MODULES HERE
 
   vscodium.enable = true;
-  plasmahome.enable = true;
   gnomehome.enable = true;
   hyprhome.enable = true;
   git.enable = true;
