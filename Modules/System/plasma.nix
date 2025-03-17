@@ -13,25 +13,27 @@
 
     # Home-Manager configuration
     home-manager.users.${config.home.username} = mkIf (config ? home-manager) {
-      # Configure Plasma Theme
-      programs.plasma = {
-        enable = true;
-        workspace = {
-          colorScheme = "BreezeDark"; # Enables dark mode
-          
-          windowDecorations = {
-            library = "org.kde.breeze";
-            theme = "Breeze";
-          };
+      ${config.users.users.nixon.name} = {
+        # Configure Plasma Theme
+        programs.plasma = {
+          enable = true;
+          workspace = {
+            colorScheme = "BreezeDark"; # Enables dark mode
+            
+            windowDecorations = {
+              library = "org.kde.breeze";
+              theme = "Breeze";
+            };
   
-          splashScreen = {
-            theme = "None";
-          };
+            splashScreen = {
+              theme = "None";
+            };
   
-          theme = "BreezeDark";
+            theme = "BreezeDark";
   
-          cursor= {
-            theme = "Breeze";
+            cursor= {
+              theme = "Breeze";
+            };
           };
         };
       };
