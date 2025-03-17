@@ -38,6 +38,9 @@
 
 	    # Enable Grub Bootloader Configuration
 	    grubconf.enable = true;
+
+	    # Enable Audio
+	    audio.enable = true;
 	    
 	    # Enable SSH Configuration
 	    ssh.enable = true;
@@ -52,7 +55,7 @@
 	    gaming.enable = true;
 
 	    # Enable Gnome System-Level Configuration
-	    gnomeconf.enable = true;
+	    gnomesys.enable = true;
 
 	    # Enable LibreOffice Toolbox
 	    libreoffice.enable = true;

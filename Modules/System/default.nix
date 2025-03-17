@@ -1,5 +1,6 @@
 {
   imports = [
+    ./../../Config/hardware-configuration.nix
     ./gaming.nix
     ./bootloader.nix
     ./plasma.nix

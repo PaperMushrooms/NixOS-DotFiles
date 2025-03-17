@@ -4,12 +4,6 @@
 
   imports = [ 
 
-    # Include Hardware Config
-    ./hardware-configuration.nix
-
-    # Include System/Bootloader Configuration
-    ../Modules/System/bootloader.nix
-    
     # Include System/Desktop Environment Configuration
     ../Modules/System/desktop.nix
 
@@ -18,12 +12,6 @@
 
     # Include System Packages
     ../Modules/System/packages.nix
-
-    # Include Custom Android Scripts
-    ../Modules/System/android.nix
-
-    # Include Plasma Config
-    ../Modules/System/plasma.nix
 
   ];
 

@@ -5,7 +5,7 @@
       mkEnableOption "Enable Gnome desktop environment";
   };
 
-  config = mkIf config.gnomeconf.enable {
+  config = mkIf config.gnomesys.enable {
     # Enable GNOME Desktop Environment.
     services.xserver.desktopManager.gnome.enable = true;
   
