@@ -5,9 +5,7 @@
   imports = [
     ../Modules/Home/default.nix
     ../Modules/Home/packages.nix
-    ../Modules/Home/gnome.nix
     ../Modules/Home/Hyprland/keybindings.nix
-    ../Modules/Home/zsh.nix
   ];
 
   ## ENABLE AND DISABLE MODULES HERE
@@ -19,6 +17,7 @@
   firefox.enable = true;
   myshell.enable = true;
   plasmahome.enable = true;
+
   ## FOR ORGANIZATION SAKE, PLEASE KEEP ALL MODULES IN BETWEEN THESE TWO COMMENTS
 
   home.username = "nixon";
