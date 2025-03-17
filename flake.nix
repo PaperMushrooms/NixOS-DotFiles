@@ -43,7 +43,7 @@
 	    gnomeconf.enable = true;
 	    libreoffice.enable = true;
 	    hyprconf.enable = true;
-	    plasmahome.enable = true;
+	    plasmasys.enable = true;
 	  }
 	  home-manager.nixosModules.home-manager # Home-Manager Module
           {
