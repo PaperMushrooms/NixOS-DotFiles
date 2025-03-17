@@ -1,6 +1,7 @@
 {
   imports = [
     ./../../Config/hardware-configuration.nix
+    ./audio.nix
     ./gaming.nix
     ./bootloader.nix
     ./plasma.nix
