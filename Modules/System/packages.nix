@@ -24,7 +24,9 @@
         polychromatic
 	razer-cli
 	libimobiledevice
-        rustdesk
+        (pkgs.rustdesk.overrideAttrs (oldAttrs: {
+	  nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [ pkgs.cargo pkgs. rustfmt ];
+	}))
 	anydesk
         vscodium
     ];
