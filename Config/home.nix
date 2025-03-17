@@ -18,6 +18,7 @@
   git.enable = true;
   firefox.enable = true;
   myshell.enable = true;
+  plasmahome.enable = true;
   ## FOR ORGANIZATION SAKE, PLEASE KEEP ALL MODULES IN BETWEEN THESE TWO COMMENTS
 
   home.username = "nixon";
