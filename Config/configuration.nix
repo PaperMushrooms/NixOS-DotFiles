@@ -4,9 +4,6 @@
 
   imports = [ 
 
-    # Include System/Desktop Environment Configuration
-    ../Modules/System/desktop.nix
-
     # Include System Packages
     ../Modules/System/packages.nix
 
