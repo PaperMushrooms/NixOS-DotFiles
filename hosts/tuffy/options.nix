@@ -12,9 +12,6 @@
   # Enable Virtualisation Compatibility
   virtualisationconf.enable = true;
 
-  # Enable Gaming Compatibility and Configuration
-  gaming.enable = true;
-
   # Enable Gnome System-Level Configuration
   gnomesys.enable = true;
 
