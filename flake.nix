@@ -33,7 +33,7 @@
 
         modules = [
           ./hosts/jealousy/configuration.nix
-          ./modules/system/default.nix
+          ./modules/system/common.nix
 	  {
 
 	    # Enable Grub Bootloader Configuration
