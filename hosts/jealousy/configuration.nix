@@ -32,7 +32,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set the hostname.
-  networking.hostName = "nixalot"; # Define your hostname.
+  networking.hostName = "jealousy"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager = {
