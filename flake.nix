@@ -26,14 +26,14 @@
   outputs = { self, nixpkgs, home-manager, plasma-manager, hyprland, ... }@inputs: {
     
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      jealousy = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = { inherit inputs; };
 
         modules = [
-          ./Config/configuration.nix
-          ./Modules/System/default.nix
+          ./hosts/jealousy/configuration.nix
+          ./modules/system/default.nix
 	  {
 
 	    # Enable Grub Bootloader Configuration
@@ -44,9 +44,6 @@
 	    
 	    # Enable SSH Configuration
 	    ssh.enable = true;
-
-	    # Enable Android Development Environment
-	    androidenv.enable = true;
 
 	    # Enable Virtualisation Compatibility
 	    virtualisationconf.enable = true;
@@ -65,6 +62,7 @@
 
 	    # Enable Plasma6 System-Level Configuration
 	    plasmasys.enable = true;
+	    
 	  }
 
 	  home-manager.nixosModules.home-manager # Home-Manager Module
@@ -75,11 +73,65 @@
               sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
               extraSpecialArgs = { inherit inputs; };
               users = {
-                nixon = import ./Config/home.nix;
+                jealousy = import ./hosts/jealousy/home.nix;
               };
             };
           }
         ];
+      };
+
+      tuffy = nixpkgs.lib.nixosSystem {
+        system = "x86-linux";
+
+	specialArgs = { inherit inputs; };
+
+	modules = [
+	  ./hosts/tuffy/configuration.nix
+	  ./modules/system/common.nix
+	  {
+
+	    # Enable Grub Bootloader Configuration
+	    grubconf.enable = true;
+
+	    # Enable Audio
+	    audio.enable = true;
+	    
+	    # Enable SSH Configuration
+	    ssh.enable = true;
+
+	    # Enable Virtualisation Compatibility
+	    virtualisationconf.enable = true;
+
+	    # Enable Gaming Configuration and Tools
+	    gaming.enable = true;
+
+	    # Enable Gnome System-Level Configuration
+	    gnomesys.enable = true;
+
+	    # Enable LibreOffice Toolbox
+	    libreoffice.enable = true;
+
+	    # Enable Hyprland Configuration
+	    hyprconf.enable = true;
+
+	    # Enable Plasma6 System-Level Configuration
+	    plasmasys.enable = true;
+	    
+	  }
+
+	  home-manager.nixosModules.home-manager # Home-Manager Module
+
+	  {
+	    home-manager = {
+	      useUserPackages = true;
+	      sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+	      extraSpecialArgs = { inherit inputs; };
+	      users = {
+	        tuffy = import ./hosts/tuffy/home.nix;
+	      };
+	    };
+          } 
+	];
       };
 
       recovery = nixpkgs.lib.nixosSystem {
@@ -91,3 +143,4 @@
     };
   };
 }
+
