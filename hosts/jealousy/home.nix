@@ -20,8 +20,8 @@
 
   ## FOR ORGANIZATION SAKE, PLEASE KEEP ALL MODULES IN BETWEEN THESE TWO COMMENTS
 
-  home.username = "tuffy";
-  home.homeDirectory = "/home/tuffy";
+  home.username = "jealousy";
+  home.homeDirectory = "/home/jealousy";
   home.stateVersion = "24.05";
 
   home.file = {
