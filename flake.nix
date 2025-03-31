@@ -35,33 +35,6 @@
           ./hosts/jealousy/configuration.nix
 	  ./hosts/jealousy/options.nix
           ./modules/system/common.nix
-	  {
-
-	    # Enable Grub Bootloader Configuration
-	    grubconf.enable = true;
-
-	    # Enable Audio
-	    audio.enable = true;
-	    
-	    # Enable SSH Configuration
-	    ssh.enable = true;
-
-	    # Enable Virtualisation Compatibility
-	    virtualisationconf.enable = true;
-
-	    # Enable Gnome System-Level Configuration
-	    gnomesys.enable = true;
-
-	    # Enable LibreOffice Toolbox
-	    # libreoffice.enable = true;
-
-	    # Enable Hyprland Configuration
-	    hyprconf.enable = true;
-
-	    # Enable Plasma6 System-Level Configuration
-	    plasmasys.enable = true;
-	    
-	  }
 
 	  home-manager.nixosModules.home-manager # Home-Manager Module
 	  
@@ -85,37 +58,8 @@
 
 	modules = [
 	  ./hosts/tuffy/configuration.nix
+	  ./hosts/tuffy/options.nix
 	  ./modules/system/common.nix
-	  {
-
-	    # Enable Grub Bootloader Configuration
-	    grubconf.enable = true;
-
-	    # Enable Audio
-	    audio.enable = true;
-	    
-	    # Enable SSH Configuration
-	    ssh.enable = true;
-
-	    # Enable Virtualisation Compatibility
-	    virtualisationconf.enable = true;
-
-	    # Enable Gaming Configuration and Tools
-	    gaming.enable = true;
-
-	    # Enable Gnome System-Level Configuration
-	    gnomesys.enable = true;
-
-	    # Enable LibreOffice Toolbox
-            libreoffice.enable = true;
-
-	    # Enable Hyprland Configuration
-	    hyprconf.enable = true;
-
-	    # Enable Plasma6 System-Level Configuration
-	    plasmasys.enable = true;
-	    
-	  }
 
 	  home-manager.nixosModules.home-manager # Home-Manager Module
 
