@@ -33,6 +33,7 @@
 
         modules = [
           ./hosts/jealousy/configuration.nix
+	  ./hosts/jealousy/options.nix
           ./modules/system/common.nix
 	  {
 
@@ -48,14 +49,11 @@
 	    # Enable Virtualisation Compatibility
 	    virtualisationconf.enable = true;
 
-	    # Enable Gaming Configuration and Tools
-	    gaming.enable = true;
-
 	    # Enable Gnome System-Level Configuration
 	    gnomesys.enable = true;
 
 	    # Enable LibreOffice Toolbox
-	    libreoffice.enable = true;
+	    # libreoffice.enable = true;
 
 	    # Enable Hyprland Configuration
 	    hyprconf.enable = true;
@@ -109,7 +107,7 @@
 	    gnomesys.enable = true;
 
 	    # Enable LibreOffice Toolbox
-	    libreoffice.enable = true;
+            libreoffice.enable = true;
 
 	    # Enable Hyprland Configuration
 	    hyprconf.enable = true;

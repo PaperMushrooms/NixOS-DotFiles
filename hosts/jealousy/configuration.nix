@@ -5,7 +5,7 @@
   imports = [ 
 
     # Include System Packages
-    /etc/nixos/hosts/jealousy/hardware-configuration.nix
+   ./hardware-configuration.nix
     ../../modules/system/packages.nix
 
   ];
