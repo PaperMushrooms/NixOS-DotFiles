@@ -12,6 +12,7 @@
       telegram-desktop                                 # Private Messenger
       neofetch                                         # System Specs Reader
       btop                                             # System Monitor
+      bambu-studio
       payload-dumper-go                                # Payload.bin dumper
       starship                                         # Terminal Customization
       powerline                                        # Terminal Customization
