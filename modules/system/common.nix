@@ -1,5 +1,6 @@
 {
   imports = [
+    ./../../hosts/tuffy/hardware-configuration.nix
     ./audio.nix
     ./gaming.nix
     ./bootloader.nix

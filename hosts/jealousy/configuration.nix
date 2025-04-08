@@ -5,7 +5,6 @@
   imports = [ 
 
     # Include System Packages
-   ./hardware-configuration.nix
     ../../modules/system/packages.nix
 
   ];
@@ -32,7 +31,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set the hostname.
-  networking.hostName = "jealousy"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager = {
@@ -43,9 +42,9 @@
   services.printing.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jealousy = {
+  users.users.tuffy = {
     isNormalUser = true;
-    description = "jealousy";
+    description = "tuffy";
     extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" ];
     shell = pkgs.zsh;
   };

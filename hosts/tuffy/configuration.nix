@@ -5,7 +5,6 @@
   imports = [ 
 
     # Include System Packages
-    ./hardware-configuration.nix
     ../../modules/system/packages.nix
 
   ];
@@ -76,6 +75,8 @@
     oxygen
     kate
   ];
+
+  boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
   # Enable dconf
   programs.dconf.enable = true;
