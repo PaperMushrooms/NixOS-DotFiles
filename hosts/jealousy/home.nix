@@ -3,22 +3,11 @@
 {
   
   imports = [
+    ./home-options.nix
     ../../modules/home
     ../../modules/home/packages.nix
     ../../modules/home/desktop/hyprland/keybindings.nix
   ];
-
-  ## ENABLE AND DISABLE MODULES HERE
-
-  vscodium.enable = true;
-  gnomehome.enable = true;
-  hyprhome.enable = true;
-  git.enable = true;
-  firefox.enable = true;
-  myshell.enable = true;
-  plasmahome.enable = true;
-
-  ## FOR ORGANIZATION SAKE, PLEASE KEEP ALL MODULES IN BETWEEN THESE TWO COMMENTS
 
   home.username = "tuffy";
   home.homeDirectory = "/home/tuffy";
