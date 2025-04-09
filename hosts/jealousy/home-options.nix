@@ -1,4 +1,4 @@
-}
+{
   vscodium.enable = true;
   gnomehome.enable = true;
   hyprhome.enable = true;
