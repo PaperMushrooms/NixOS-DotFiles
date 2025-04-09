@@ -32,7 +32,7 @@
         specialArgs = { inherit inputs; };
 
         modules = [
-          ./hosts/jealousy/configuration.nix
+	  ./hosts/jealousy
 	  ./hosts/jealousy/options.nix
           ./modules/system/common.nix
 
@@ -57,7 +57,7 @@
 	specialArgs = { inherit inputs; };
 
 	modules = [
-	  ./hosts/tuffy/configuration.nix
+	  ./hosts/tuffy
 	  ./hosts/tuffy/options.nix
 	  ./modules/system/common.nix
 
