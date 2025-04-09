@@ -9,8 +9,8 @@
     ../../modules/home/desktop/hyprland/keybindings.nix
   ];
 
-  home.username = "tuffy";
-  home.homeDirectory = "/home/tuffy";
+  home.username = "jealousy";
+  home.homeDirectory = "/home/jealousy";
   home.stateVersion = "24.05";
 
   home.file = {
