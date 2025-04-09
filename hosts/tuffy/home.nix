@@ -3,7 +3,7 @@
 {
   
   imports = [
-    ../../modules/home/common.nix
+    ../../modules/home
     ../../modules/home/packages.nix
     ../../modules/home/desktop/hyprland/keybindings.nix
   ];
