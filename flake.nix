@@ -34,7 +34,7 @@
         modules = [
 	  ./hosts/jealousy
 	  ./hosts/jealousy/options.nix
-          ./modules/system/common.nix
+          ./modules/system
 
 	  home-manager.nixosModules.home-manager # Home-Manager Module
 	  
@@ -59,7 +59,7 @@
 	modules = [
 	  ./hosts/tuffy
 	  ./hosts/tuffy/options.nix
-	  ./modules/system/common.nix
+	  ./modules/system
 
 	  home-manager.nixosModules.home-manager # Home-Manager Module
 
