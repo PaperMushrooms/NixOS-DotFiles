@@ -1,4 +1,4 @@
-}
+{
     # Enable Grub Bootloader Configuration
     grubconf.enable = true;
     
