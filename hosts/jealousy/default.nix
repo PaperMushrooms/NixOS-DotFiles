@@ -43,9 +43,9 @@
   services.printing.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.tuffy = {
+  users.users.jealousy = {
     isNormalUser = true;
-    description = "tuffy";
+    description = "jealousy";
     extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" ];
     shell = pkgs.zsh;
   };
