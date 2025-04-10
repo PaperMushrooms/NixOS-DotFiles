@@ -19,7 +19,7 @@
 
       alias adb="sudo adb"
       alias fastboot="sudo fastboot"
-      alias adb-restart="sudo adb kill-server && sudo adb-start-server"
+      alias adb-restart="sudo adb kill-server && sudo adb start-server"
     '';
   
   }
