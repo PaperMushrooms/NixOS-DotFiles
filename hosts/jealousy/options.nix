@@ -1,10 +1,4 @@
 {
-    # Enable Grub Bootloader Configuration
-    grubconf.enable = true;
-    
-    # Enable Audio
-    audio.enable = true;
-    	    
     # Enable SSH Configuration
     ssh.enable = true;
     
@@ -12,7 +6,7 @@
     virtualisationconf.enable = true;
     
     # Enable Gaming Configuration and Tools
-    gaming.enable = true;
+    # gaming.enable = true;
     
     # Enable Gnome System-Level Configuration
     gnomesys.enable = true;
