@@ -10,7 +10,7 @@
   ];
 
   home.username = "jealousy";
-  home.homeDirectory = "/home/jealousy";
+  home.homeDirectory = lib.mkForce "/home/jealousy";
   home.stateVersion = "24.05";
 
   home.file = {
