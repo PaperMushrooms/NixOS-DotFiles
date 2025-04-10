@@ -117,13 +117,13 @@
       '')
 
       (pkgs.writeShellScriptBin "Pixel6-OEM-A13" ''
-        cd /home/tuffy/Android/Pixel6/OEM-A13-Magisk
+        cd ~/Android/Pixel6/OEM-A13-Magisk
         bash install.sh
         cd 
       '')
 
       (pkgs.writeShellScriptBin "Pixel6-OEM-A15" ''
-        cd /home/tuffy/Android/Pixel6/OEM-A15-Magisk
+        cd ~/Android/Pixel6/OEM-A15-Magisk
         bash install.sh
         cd 
       '')
@@ -166,7 +166,7 @@
       '')
 
       (pkgs.writeShellScriptBin "PokeApps" ''
-        cd /home/tuffy/Android/Apps
+        cd ~/Android/Apps
         bash install.sh
         cd 
       '')  
