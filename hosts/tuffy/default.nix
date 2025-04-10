@@ -5,6 +5,7 @@
   imports = [ 
 
     # Include System Packages
+    ./hardware-configuration.nix
     ../../modules/system/packages.nix
 
   ];
