@@ -63,7 +63,7 @@
       '')
 
       (pkgs.writeShellScriptBin "Pixel4-OEM-A13" ''
-        cd ~/Android/Pixel4/OEM-A13-Latest
+        cd ~/Android/Pixel4/OEM-A13-Magisk
         bash install.sh
         cd
       '')
