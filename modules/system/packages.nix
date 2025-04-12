@@ -37,7 +37,6 @@
         polychromatic
 	razer-cli
 	libimobiledevice
-        rustdesk
 	anydesk
 	freecad
     ];
