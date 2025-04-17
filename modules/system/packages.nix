@@ -24,6 +24,8 @@
         gzip
         gparted
 
+        rpi-imager
+
 	# Wine Packages
 	winePackages.full
         winetricks
