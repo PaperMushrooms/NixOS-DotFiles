@@ -39,6 +39,5 @@
 	libimobiledevice
 	anydesk
 	freecad
-	bambu-studio
     ];
 }
