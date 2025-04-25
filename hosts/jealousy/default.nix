@@ -83,4 +83,7 @@
   # NixOS Version
   system.stateVersion = "24.05"; # Did you read the comment?
 
+  networking.enableIPv4Forwarding = true;
+
+
 }
