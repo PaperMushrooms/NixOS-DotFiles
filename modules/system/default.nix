@@ -1,6 +1,5 @@
 {
   imports = [
-    ./common.nix
     ./audio.nix
     ./gaming.nix
     ./bootloader.nix
