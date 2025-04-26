@@ -58,7 +58,7 @@
 
 	modules = [
 	  ./hosts/tuffy/system
-	  ./hosts/tuffy/options.nix
+	  ./hosts/tuffy/system/options.nix
 	  ./modules/system
 
 	  home-manager.nixosModules.home-manager # Home-Manager Module
