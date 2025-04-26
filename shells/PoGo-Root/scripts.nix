@@ -173,7 +173,7 @@
         cd 
       '')  
 
-      (pkgs.writeShellScriptBin "adb-bootloader-unlock" ''
+      (pkgs.writeShellScriptBin "bootloader-unlock" ''
         #!/bin/bash
 
         for device in $(adb devices | grep device$ | cut -f1); do
