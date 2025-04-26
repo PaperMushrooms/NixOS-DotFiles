@@ -171,11 +171,16 @@
         cd 
       '')  
 
-      (pkgs.writeShellScriptBin "adb-bootloader-all" ''
+      (pkgs.writeShellScriptBin "adb-bootloader-unlock" ''
         #!/bin/bash
+
         for device in $(adb devices | grep device$ | cut -f1); do
           adb -s "$device" reboot bootloader
         done
+
+        for device in $(fastboot devices | grep devices$ | cut -f1); do
+	  fastboot -s "$device" flashing unlock
+	done
       '')
               
 ]
