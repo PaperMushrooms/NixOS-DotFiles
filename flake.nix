@@ -57,7 +57,7 @@
 	specialArgs = { inherit inputs; };
 
 	modules = [
-	  ./hosts/tuffy
+	  ./hosts/tuffy/system
 	  ./hosts/tuffy/options.nix
 	  ./modules/system
 
@@ -69,7 +69,7 @@
 	      sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
 	      extraSpecialArgs = { inherit inputs; };
 	      users = {
-	        tuffy = import ./hosts/tuffy/home.nix;
+	        tuffy = import ./hosts/tuffy/home/home.nix;
 	      };
 	    };
           } 
