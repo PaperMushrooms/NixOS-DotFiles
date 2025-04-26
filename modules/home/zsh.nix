@@ -17,7 +17,6 @@
       shellAliases = {
         upload = "cd /etc/nixos && git add . && git commit -m 'Update' && git push -u origin main && cd ";
         update = "sudo nix flake update --flake /etc/nixos/";
-        adb-restart = "adb kill-server && adb start-server";
 	rootenv = "nix-shell /etc/nixos/shells/PoGo-Root/";
       };
 
