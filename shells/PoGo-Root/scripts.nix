@@ -168,8 +168,8 @@
       '')
 
       (pkgs.writeShellScriptBin "PokeApps" ''
-        cd ~/Android/Apps
-        bash install.sh
+        cd /Android/Apps
+        sudo bash install.sh
         cd 
       '')  
 
