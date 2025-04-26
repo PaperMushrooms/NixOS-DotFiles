@@ -171,4 +171,11 @@
         cd 
       '')  
 
+      (pkgs.writeShellScriptBin "adb-bootloader-all" ''
+        #!/bin/bash
+        for device in $(adb devices | grep device$ | cut -f1); do
+          adb -s "$device" reboot bootloader
+        done
+      '')
+              
 ]
