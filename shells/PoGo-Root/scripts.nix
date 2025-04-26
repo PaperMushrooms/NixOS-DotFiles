@@ -3,9 +3,9 @@
 [
 
       (pkgs.writeShellScriptBin "McLaren-crDroid7-A11" ''
-          cd ~/Android/McLaren/crDroid7-A11/
-          bash install.sh
-          cd 
+        cd ~/Android/McLaren/crDroid7-A11/
+        bash install.sh
+        cd 
       '')
 
       (pkgs.writeShellScriptBin "McLaren-crDroid8-A12" ''
@@ -63,7 +63,7 @@
       '')
 
       (pkgs.writeShellScriptBin "Pixel4-OEM-A13" ''
-        cd ~/Android/Pixel4/OEM-A13-Latest
+        cd ~/Android/Pixel4/OEM-A13-Magisk
         bash install.sh
         cd
       '')
@@ -76,7 +76,7 @@
 
       (pkgs.writeShellScriptBin "Pixel5-crDroid10-A14" ''
         cd ~/Android/Pixel5/crDroid10-A14
-        bash install.sh
+        sudo bash install.sh
         cd 
       '')
 
