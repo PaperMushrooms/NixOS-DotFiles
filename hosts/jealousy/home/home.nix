@@ -4,9 +4,9 @@
   
   imports = [
     ./home-options.nix
-    ../../modules/home
-    ../../modules/home/packages.nix
-    ../../modules/home/desktop/hyprland/keybindings.nix
+    ../../../modules/home
+    ../../../modules/home/packages.nix
+    ../../../modules/home/desktop/hyprland/keybindings.nix
   ];
 
   home.username = "jealousy";
