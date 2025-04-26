@@ -178,7 +178,7 @@
           adb -s "$device" reboot bootloader
         done
 
-        for device in $(fastboot devices | grep devices$ | cut -f1); do
+        for device in $(fastboot devices | grep device$ | cut -f1); do
 	  fastboot -s "$device" flashing unlock
 	done
       '')
