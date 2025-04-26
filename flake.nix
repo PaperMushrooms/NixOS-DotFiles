@@ -32,8 +32,8 @@
         specialArgs = { inherit inputs; };
 
         modules = [
-	  ./hosts/jealousy
-	  ./hosts/jealousy/options.nix
+	  ./hosts/jealousy/system
+	  ./hosts/jealousy/system/options.nix
           ./modules/system
 
 	  home-manager.nixosModules.home-manager # Home-Manager Module
@@ -44,7 +44,7 @@
               sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
               extraSpecialArgs = { inherit inputs; };
               users = {
-                jealousy = import ./hosts/jealousy/home.nix;
+                jealousy = import ./hosts/jealousy/home/home.nix;
               };
             };
           }
