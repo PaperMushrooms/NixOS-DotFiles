@@ -15,11 +15,6 @@
 
   home.file = {
  
-    # Configure Razer devices to stay on during screensaver
-    ".config/openrazer/razer.conf".text = ''
-    devices_off_on_screensaver = False
-    '';
- 
  };
 
   home.sessionVariables = {
