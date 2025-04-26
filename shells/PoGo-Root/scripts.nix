@@ -112,7 +112,7 @@
 
       (pkgs.writeShellScriptBin "Pixel6-crDroid10-A14" ''
         cd ~/Android/Pixel6/crDroid10-A14
-        bash install.sh
+        sudo bash install.sh
         cd 
       '')
 
@@ -175,10 +175,8 @@
         #!/bin/bash
 
         for device in $(adb devices | grep device$ | cut -f1); do
-          adb -s "$device" reboot bootloader
-
-        for device in $(fastboot devices | grep device$ | cut -f1); do
-	  fastboot -s "$device" flashing unlock
+          sudo adb -s "$device" reboot bootloader
+	  sudo fastboot -s "$device" flashing unlock
 	done
       '')
               
