@@ -22,6 +22,7 @@
 
     imports = [
       ./keybindings.nix
+      ./appearance.nix
     ];
 
   };
