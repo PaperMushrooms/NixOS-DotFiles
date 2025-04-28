@@ -6,6 +6,11 @@
   };
 
   config = mkIf config.hyprconf.enable {
+    
+    imports = [
+      ./keybindings.nix
+      ./appearance.nix
+    ];
 
     # Enable the Hyprland Window Manager
     programs.hyprland = { 
