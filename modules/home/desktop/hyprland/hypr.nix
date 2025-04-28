@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }: with lib; {
 
+  options = {
     hyprconf.enable =
       mkEnableOption "Enable and configure Hyprland for the system.";
   };
