@@ -20,10 +20,12 @@
         # "Ctrl+Alt, W, exec, killall waybar || waybar"   # toggle waybar without reloading
         
         # Application Shortcuts
-		"$mainMod, W, exec, kitty"                         # launch terminal emulator
-		"$mainMod, E, exec, dolphin"                         # launch file manager
-        "$mainMod, C, exec, codium"                       # launch text editor
-		"$mainMod, F, exec, firefox"                      # launch web browser
+		"$mainMod, W, exec, kitty"                                           # launch terminal emulator
+		"$mainMod, E, exec, dolphin"                                         # launch file manager
+                "$mainMod, C, exec, codium"                                          # launch text editor
+		"$mainMod, F, exec, firefox"                                         # launch web browser
+                "$mainMod, A, exec, rofi -show drun -show-icons"                     # launch application launcher
+
 	
 		# Move between grouped windows
 		"$mainMod CTRL , H, changegroupactive, b"
