@@ -9,8 +9,13 @@
   config = mkIf config.hyprconf.enable {
 
     # Enable the Hyprland Window Manager
-    programs.hyprland.enable = true; 
-    
+    programs.hyprland = { 
+      enable = true; 
+      nvidiaPatches = true;
+      xwayland.enable = true;
+
+    hardware = {
+      opengl.enable = true;
   };
 
 
