@@ -1,6 +1,11 @@
 { config, lib, pkgs, ... }: with lib; {
 
 
+  imports = [
+    ./keybindings.nix
+    ./appearance.nix
+  ];
+
   options = {
     hyprhome.enable = 
       mkEnableOption "Enable Hyprland Home-Manager settings";
@@ -14,12 +19,6 @@
 
       settings = {
       
-        imports = [
-          ./keybindings.nix
-          ./appearance.nix
-        ];
-
-      # Monitor(s) Configuration
         monitor = [
           "eDP-1, 1920x1200@60, 0x0, 1"
         ];
