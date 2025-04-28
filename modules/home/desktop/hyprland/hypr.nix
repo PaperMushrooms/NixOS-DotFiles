@@ -13,6 +13,7 @@
       enable = true; 
       nvidiaPatches = true;
       xwayland.enable = true;
+    };
 
     hardware = {
       opengl.enable = true;
