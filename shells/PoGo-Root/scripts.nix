@@ -177,8 +177,8 @@
         #!/bin/bash
 
         for device in $(adb devices | grep device$ | cut -f1); do
-          sudo adb -s "$device" reboot bootloader
-	  sudo fastboot -s "$device" flashing unlock
+          sudo adb -s "$device" reboot bootloader &
+	  sudo fastboot -s "$device" flashing unlock &
 	done
       '')
               
