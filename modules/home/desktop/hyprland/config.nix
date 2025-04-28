@@ -25,8 +25,10 @@
     home.packages= with pkgs; [
       waybar
       rofi-wayland
+      dunst
       swww
       networkmanagerapplet
+      libnotify
     ];
   };
 }
