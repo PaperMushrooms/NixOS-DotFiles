@@ -50,6 +50,12 @@
         cd 
       '')
 
+      (pkgs.writeShellScriptBin "OnePlus7T-crDroid9-A13" ''
+        cd /Android/OnePlus7T/crDroid9-A13
+	bash install.sh
+	cd
+      '')	
+
       (pkgs.writeShellScriptBin "OnePlus9-crDroid9-A13" ''
         cd ~/Android/OnePlus9/crDroid9-A13
         bash install.sh
@@ -173,11 +179,11 @@
         cd 
       '')  
 
-      (pkgs.writeShellScriptBin "bootloader-unlock" ''
+      (pkgs.writeShellScriptBin "pixel-bootloader-unlock" ''
         #!/bin/bash
 
         for device in $(adb devices | grep device$ | cut -f1); do
-          sudo adb -s "$device" reboot bootloader &
+          sudo adb -s "$device" reboot bootloader
 	  sudo fastboot -s "$device" flashing unlock &
 	done
       '')
