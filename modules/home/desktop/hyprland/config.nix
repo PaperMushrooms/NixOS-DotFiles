@@ -13,6 +13,11 @@
       enable = true;
 
       settings = {
+      
+        imports = [
+          ./keybindings.nix
+          ./appearance.nix
+        ];
 
       # Monitor(s) Configuration
         monitor = [
