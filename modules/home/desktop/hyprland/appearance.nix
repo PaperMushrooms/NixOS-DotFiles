@@ -6,13 +6,26 @@
       gaps_out = 15;
       layout = "dwindle"; # or master, or others
     };
-
+    
     decoration = {
-      rounding = 10;
+      rounding = 15;
+      active_opacity = 0.9;
+      inactive_opacity = 0.8;
+      fullscreen_opacity = 0.9;
+  
       blur = {
         enabled = true;
-        size = 8;
-        passes = 3;
+        xray = true;
+        special = false;
+        new_optimizations = true;
+        size = 14;
+        passes = 4;
+        brightness = 1;
+        noise = 0.01;
+        contrast = 1;
+        popups = true;
+        popups_ignorealpha = 0.6;
+        ignore_opacity = false;
       };
     };
   };
