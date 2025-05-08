@@ -9,6 +9,7 @@
     buildInputs = with pkgs; [
       android-tools
       usbmuxd
+      lolcat
     ] ++ scripts;
   
     inputsFrom = [ ];
