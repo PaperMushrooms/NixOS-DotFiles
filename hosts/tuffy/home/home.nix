@@ -22,6 +22,12 @@
  
  };
 
+  programs.zsh = {
+    shellAliases = {
+      rebuild = "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#jealousy && cd ";
+    };
+  };
+
   home.sessionVariables = {
      EDITOR = "nvim";
   };
