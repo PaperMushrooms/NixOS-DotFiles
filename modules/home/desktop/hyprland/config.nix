@@ -4,6 +4,7 @@
   imports = [
     ./keybindings.nix
     ./appearance.nix
+    ./waybar.nix
   ];
 
   options = {
