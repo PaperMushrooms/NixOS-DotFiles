@@ -1,6 +1,6 @@
 {
     # Enable Grub Bootloader Configuration
-    grubconf.enable = true;
+    bootloader.enable = true;
 
     # Enable Audio
     audio.enable = true;
