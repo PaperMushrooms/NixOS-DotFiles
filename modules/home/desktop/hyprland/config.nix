@@ -7,7 +7,7 @@
   ];
 
   options = {
-    hyprhome.enable = 
+    hyprhome.enable =
       mkEnableOption "Enable Hyprland Home-Manager settings";
   };
 
@@ -18,17 +18,17 @@
       enable = true;
 
       settings = {
-        
+
         monitor = [
           "eDP-1, 1920x1200@60, 0x0, 1"
         ];
 
-	exec-once = [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
+        exec-once = [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
       };
     };
 
-      # Install extras for better Hyprland user experience
-    home.packages= with pkgs; [
+    # Install extras for better Hyprland user experience
+    home.packages = with pkgs; [
       waybar
       rofi-wayland
       dunst
@@ -38,10 +38,10 @@
     ];
 
     programs.kitty = {
-    	enable = true;
-	settings = {
-	   confirm_os_window_close = "0";
-	};
+      enable = true;
+      settings = {
+        confirm_os_window_close = "0";
+      };
     };
   };
 }

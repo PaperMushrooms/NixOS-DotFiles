@@ -2,12 +2,12 @@
 
 {
 
-  imports = [ 
+  imports = [
 
     # Include System Packages
     ./hardware-configuration.nix
     ../../../modules/system/packages.nix
-    
+
   ];
 
   # Set your time zone.
@@ -26,7 +26,7 @@
     LC_PAPER = "en_US.UTF-8";
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
-    };
+  };
 
   # Enabling Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -58,9 +58,9 @@
 
   # Enable Bluetooth
   services.blueman.enable = true;
-  hardware.bluetooth.enable = true; 
+  hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-  
+
   # Enable Flatpak
   services.flatpak.enable = true;
 
@@ -77,8 +77,8 @@
     kate
   ];
 
- 
-  boot.kernelModules = [ "usbnet" "cdc_ether" ]; 
+
+  boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
   # Enable dconf
   programs.dconf.enable = true;

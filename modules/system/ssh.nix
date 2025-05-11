@@ -1,7 +1,7 @@
-{ config, lib, pkgs, ... }: with lib; { 
+{ config, lib, pkgs, ... }: with lib; {
 
   options = {
-    ssh.enable = 
+    ssh.enable =
       mkEnableOption "Enables SSH";
   };
 
@@ -9,15 +9,15 @@
     services.openssh = {
       enable = true;
       ports = [ 44906 ];
-        settings = {
-          PasswordAuthentication = false;
-          UseDns = true;
-          X11Forwarding = false;
-          PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
-        };
+      settings = {
+        PasswordAuthentication = false;
+        UseDns = true;
+        X11Forwarding = false;
+        PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
+      };
     };
 
-  # Start Enable and Start SSH Agent On Startup
+    # Start Enable and Start SSH Agent On Startup
     programs.ssh = {
       startAgent = true;
       extraConfig = ''

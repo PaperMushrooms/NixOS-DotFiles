@@ -2,42 +2,42 @@
 
 {
 
-    services = {
-      asusd = {
-        enable = true;
-	enableUserService = true;
-      };
-
-      supergfxd.enable = true;
+  services = {
+    asusd = {
+      enable = true;
+      enableUserService = true;
     };
 
-    # Allow Unfree Packages
-    nixpkgs.config.allowUnfree = true;
+    supergfxd.enable = true;
+  };
 
-    # List packages installed in system profile. To search, run: $ nix search wget
-    environment.systemPackages = with pkgs; [
-        git
-        git-lfs
-        wget
-        curl
-        neovim
-        gzip
-        gparted
+  # Allow Unfree Packages
+  nixpkgs.config.allowUnfree = true;
 
-	# Wine Packages
-	winePackages.full
-        winetricks
+  # List packages installed in system profile. To search, run: $ nix search wget
+  environment.systemPackages = with pkgs; [
+    git
+    git-lfs
+    wget
+    curl
+    neovim
+    gzip
+    gparted
 
-        asusctl
-	supergfxctl
+    # Wine Packages
+    winePackages.full
+    winetricks
 
-	scrcpy
-        networkmanagerapplet
-        openrazer-daemon
-        polychromatic
-	razer-cli
-	libimobiledevice
-	anydesk
-	freecad
-    ];
+    asusctl
+    supergfxctl
+
+    scrcpy
+    networkmanagerapplet
+    openrazer-daemon
+    polychromatic
+    razer-cli
+    libimobiledevice
+    anydesk
+    freecad
+  ];
 }
