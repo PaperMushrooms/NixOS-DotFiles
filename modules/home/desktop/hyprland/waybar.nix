@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  waybarCss = builtins.readFile waybar/style.css;
+  waybarCss = builtins.readFile waybar/;
 in
 {
   programs.waybar = {
