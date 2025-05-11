@@ -1,12 +1,12 @@
 { config, lib, pkgs, ... }: with lib; {
 
   options = {
-    grubconf.enable = 
-      mkEnableOption "Enable and configure GRUB";
+    bootloader.enable = 
+      mkEnableOption "Enable and configure bootloader";
   };
 
 
-  config = mkIf config.grubconf.enable {
+  config = mkIf config.bootloader.enable {
     boot.loader.grub = {
       enable = true;
       devices = [ "nodev" ];
