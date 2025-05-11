@@ -9,3 +9,5 @@ nm-applet --indicator &
 
 # Waybar Startup
 waybar &
+
+dunst

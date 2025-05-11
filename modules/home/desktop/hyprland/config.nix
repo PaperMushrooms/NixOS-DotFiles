@@ -23,7 +23,7 @@
           "eDP-1, 1920x1200@60, 0x0, 1"
         ];
 
-	exec-once = [ "sudo bash ./start.sh" ];
+	exec-once = [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
       };
     };
 
