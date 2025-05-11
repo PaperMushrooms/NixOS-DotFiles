@@ -4,7 +4,6 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-      kitty                                            # Terminal preference
       dunst                                            # Notification Manager
       discord                                          # Messenger
       gimp                                             # Photo Editor
