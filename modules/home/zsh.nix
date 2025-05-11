@@ -19,7 +19,7 @@
         update = "sudo nix flake update --flake /etc/nixos/";
         rootenv = "nix-shell /etc/nixos/shells/PoGo-Root/";
 
-	format = "nix-shell -p nixpkgs-fmt --command 'nixpkgs-fmt /etc/nixos/'";
+        format = "nix-shell -p nixpkgs-fmt --command 'nixpkgs-fmt /etc/nixos/'";
 
         rpi-imager = "nix-shell -p rpi-imager --command 'rpi-imager'";
       };
