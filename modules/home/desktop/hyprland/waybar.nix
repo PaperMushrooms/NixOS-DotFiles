@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  waybarCss = builtins.readFile ./etc/nixos/modules/home/desktop/hyprland/waybar/style.css;
+  waybarCss = builtins.readFile /etc/nixos/modules/home/desktop/hyprland/waybar/style.css;
 in
 {
   programs.waybar = {
