@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 
-let
-  waybarCss = builtins.readFile waybar/;
-in
 {
   programs.waybar = {
     enable = true;
@@ -19,8 +16,5 @@ in
         };
       };
     };
-
-    # Inject the external CSS file as a string
-    style = waybarCss;
   };
 }
