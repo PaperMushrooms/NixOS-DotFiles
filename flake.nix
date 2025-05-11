@@ -24,7 +24,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, plasma-manager, hyprland, ... }@inputs: {
-    
+
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -32,12 +32,12 @@
         specialArgs = { inherit inputs; };
 
         modules = [
-	  ./hosts/jealousy/system
-	  ./hosts/jealousy/system/options.nix
+          ./hosts/jealousy/system
+          ./hosts/jealousy/system/options.nix
           ./modules/system
 
-	  home-manager.nixosModules.home-manager # Home-Manager Module
-	  
+          home-manager.nixosModules.home-manager # Home-Manager Module
+
           {
             home-manager = {
               useUserPackages = true;
@@ -54,33 +54,33 @@
       tuffy = nixpkgs.lib.nixosSystem {
         system = "x86-linux";
 
-	specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs; };
 
-	modules = [
-	  ./hosts/tuffy/system
-	  ./hosts/tuffy/system/options.nix
-	  ./modules/system
+        modules = [
+          ./hosts/tuffy/system
+          ./hosts/tuffy/system/options.nix
+          ./modules/system
 
-	  home-manager.nixosModules.home-manager # Home-Manager Module
+          home-manager.nixosModules.home-manager # Home-Manager Module
 
-	  {
-	    home-manager = {
-	      useUserPackages = true;
-	      sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-	      extraSpecialArgs = { inherit inputs; };
-	      users = {
-	        tuffy = import ./hosts/tuffy/home/home.nix;
-	      };
-	    };
-          } 
-	];
+          {
+            home-manager = {
+              useUserPackages = true;
+              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              extraSpecialArgs = { inherit inputs; };
+              users = {
+                tuffy = import ./hosts/tuffy/home/home.nix;
+              };
+            };
+          }
+        ];
       };
 
       recovery = nixpkgs.lib.nixosSystem {
-      	specialArgs = { inherit inputs; };
-	modules = [
-	  ./recovery/configuration.nix
-	];
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./recovery/configuration.nix
+        ];
       };
     };
   };

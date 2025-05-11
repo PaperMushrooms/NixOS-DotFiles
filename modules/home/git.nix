@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: with lib; {
 
   options = {
-    git.enable = 
+    git.enable =
       mkEnableOption "Enables Git";
   };
 

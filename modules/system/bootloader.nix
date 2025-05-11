@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: with lib; {
 
   options = {
-    bootloader.enable = 
+    bootloader.enable =
       mkEnableOption "Enable and configure bootloader";
   };
 
@@ -12,7 +12,7 @@
       devices = [ "nodev" ];
       efiSupport = true;
       useOSProber = true;
-     # theme = pkgs.breeze;
+      # theme = pkgs.breeze;
     };
   };
 }

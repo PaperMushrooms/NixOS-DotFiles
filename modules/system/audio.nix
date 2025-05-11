@@ -1,12 +1,12 @@
 { config, lib, pkgs, ... }: with lib; {
 
   options = {
-   audio.enable =
-     mkEnableOption "Enable Audio";
+    audio.enable =
+      mkEnableOption "Enable Audio";
   };
 
   config = mkIf config.audio.enable {
-  
+
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;

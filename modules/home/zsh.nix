@@ -17,8 +17,8 @@
       shellAliases = {
         upload = "cd /etc/nixos && git add . && git commit -m 'Update' && git push -u origin main && cd ";
         update = "sudo nix flake update --flake /etc/nixos/";
-	rootenv = "nix-shell /etc/nixos/shells/PoGo-Root/";
-	rpi-imager = "nix-shell -p rpi-imager --command 'rpi-imager'";
+        rootenv = "nix-shell /etc/nixos/shells/PoGo-Root/";
+        rpi-imager = "nix-shell -p rpi-imager --command 'rpi-imager'";
       };
 
       # Enable and Configure Oh-My-Zsh Plugin
@@ -51,7 +51,7 @@
 
         hostname = {
           ssh_only = false;
-          format ="[$hostname](bold yellow) ";
+          format = "[$hostname](bold yellow) ";
           trim_at = ".";
           disabled = false;
         };
