@@ -10,7 +10,7 @@
         position = "top";
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "battery" "pulseaudio" ];
+        modules-right = [ "tray" "pulseaudio" "battery" ];
         clock = {
           format = "{:%I:%M %p}";
         };
