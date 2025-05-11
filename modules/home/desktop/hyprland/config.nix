@@ -19,13 +19,6 @@
 
       settings = {
         
-          programs.kitty = {
-              enable = true;
-              settings = {
-                 confirm_os_window_close = "0";
-              };
-          };
-
         monitor = [
           "eDP-1, 1920x1200@60, 0x0, 1"
         ];
@@ -43,6 +36,13 @@
       networkmanagerapplet
       libnotify
     ];
+
+    programs.kitty = {
+    	enable = true;
+	settings = {
+	   confirm_os_window_close = "0";
+	};
+    };
   };
 }
 
