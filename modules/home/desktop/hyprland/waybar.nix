@@ -1,6 +1,26 @@
+{ config, pkgs, ... }:
+
+let
+  waybarCss = builtins.readFile ./waybar/style.css;
+in
 {
   programs.waybar = {
     enable = true;
-    stylePath = ./waybar/style.css;
+
+    settings = {
+      mainBar = {
+        layer = "top";
+        position = "top";
+        modules-left = [ "hyprland/workspaces" ];
+        modules-center = [ "clock" ];
+        modules-right = [ "tray" "battery" "pulseaudio" ];
+        clock = {
+          format = "{:%I:%M %p}";
+        };
+      };
+    };
+
+    # Inject the external CSS file as a string
+    style = waybarCss;
   };
 }
