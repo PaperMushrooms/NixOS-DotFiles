@@ -26,6 +26,13 @@
      EDITOR = "nvim";
   };
 
+  # User Defined Aliases
+  programs.zsh = {
+    shellAliases = {
+      rebuild = "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#tuffy && cd ";
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
