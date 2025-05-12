@@ -24,7 +24,7 @@
 
   programs.zsh = {
     shellAliases = {
-      rebuild = "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#jealousy && cd ";
+      rebuild = "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#tuffy && cd ";
     };
   };
 
