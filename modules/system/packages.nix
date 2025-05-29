@@ -38,6 +38,7 @@
     razer-cli
     libimobiledevice
     anydesk
+    rustdesk
     freecad
   ];
 }
