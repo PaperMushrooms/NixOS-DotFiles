@@ -9,6 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +27,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, hyprland, ... }@inputs: {
+  outputs = { self, nixpkgs, nix-on-droid, home-manager, plasma-manager, hyprland, ... }@inputs: {
 
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
@@ -82,6 +86,11 @@
           ./recovery/configuration.nix
         ];
       };
+    };
+
+    nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
+      pkgs = import nixpkgs { system = "aarch64-linux"; };
+      modules = [ ./nix-on-droid.nix ];
     };
   };
 }
