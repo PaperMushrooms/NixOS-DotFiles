@@ -93,5 +93,6 @@
         modules = [ ./nix-on-droid.nix ];
       };
     };
-  }
+  };
+}
 
