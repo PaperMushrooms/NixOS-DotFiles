@@ -28,6 +28,8 @@
     winePackages.full
     winetricks
 
+    android-studio
+
     asusctl
     supergfxctl
 
