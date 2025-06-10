@@ -78,7 +78,7 @@
   ];
 
 
-  boot.kernelModules = [ "usbnet" "cdc_ether" ];
+  #  boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
   # Enable dconf
   programs.dconf.enable = true;
