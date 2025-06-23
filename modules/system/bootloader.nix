@@ -12,13 +12,13 @@
       devices = [ " nodev " ];
       efiSupport = true;
       useOSProber = true;
-
-      efi = {
-        canTouchEfiVariables = true;    # write boot entry into firmware NVRAM
-        efiSysMountPoint = "/boot"; # → make sure your ESP is mounted here
-      };
     };
 
+
+    boot.loader.efi = {
+        canTouchEfiVariables = true;    # write boot entry into firmware NVRAM
+        efiSysMountPoint = "/boot"; # → make sure your ESP is mounted here
+    };
 
       # theme = pkgs.breeze;
   };
