@@ -9,7 +9,7 @@
   config = mkIf config.bootloader.enable {
     boot.loader.grub = {
       enable = true;
-      devices = [ ];
+      devices = [ "/dev/nvme0n1" ];
       efiSupport = true;
       useOSProber = true;
     };
