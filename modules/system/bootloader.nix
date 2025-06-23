@@ -9,11 +9,10 @@
   config = mkIf config.bootloader.enable {
     boot.loader.grub = {
       enable = true;
-      devices = [ " nodev " ];
+      devices = [ ];
       efiSupport = true;
       useOSProber = true;
     };
-
 
     boot.loader.efi = {
         canTouchEfiVariables = true;    # write boot entry into firmware NVRAM
