@@ -9,9 +9,15 @@
   config = mkIf config.bootloader.enable {
     boot.loader.grub = {
       enable = true;
-      devices = [ "/dev/nvme0n1" ];
+      devices = [ " nodev " ];
       efiSupport = true;
       useOSProber = true;
+
+    efi = {
+      canTouchEfiVariables = true;    # write boot entry into firmware NVRAM
+      efiSysMountPoint     = "/boot"; # → make sure your ESP is mounted here
+    }
+
       # theme = pkgs.breeze;
     };
   };
