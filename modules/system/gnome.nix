@@ -7,7 +7,7 @@
 
   config = mkIf config.gnomesys.enable {
     # Enable GNOME Desktop Environment.
-    services.xserver.desktopManager.gnome.enable = true;
+    services.desktopManager.gnome.enable = true;
 
     # Enable the X11 windowing system.
     services.xserver = {
