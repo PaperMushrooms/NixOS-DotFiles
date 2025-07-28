@@ -25,7 +25,7 @@
           User git
           IdentityFile ~/.ssh/GitHub
           IdentitiesOnly yes
-
+    
         Host gitlab.com
           User git
           IdentityFile ~/.ssh/GitHub
