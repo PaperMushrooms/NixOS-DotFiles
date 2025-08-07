@@ -23,12 +23,12 @@
       extraConfig = ''
         Host github.com
           User git
-          IdentityFile /etc/ssh/GitHub.pub
+          IdentityFile /home/.ssh/GitHub
           IdentitiesOnly yes
     
         Host gitlab.com
           User git
-          IdentityFile /etc/ssh/GitHub.pub
+          IdentityFile /home/.ssh/GitHub
           IdentitiesOnly yes
       '';
     };
