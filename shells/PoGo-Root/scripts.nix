@@ -51,9 +51,9 @@
   '')
 
   (pkgs.writeShellScriptBin "OnePlus7T-crDroid9-A13" ''
-            cd /Android/OnePlus7T/crDroid9-A13
-    	bash install.sh
-    	cd
+    cd /Android/OnePlus7T/crDroid9-A13
+    bash install.sh
+    cd
   '')
 
   (pkgs.writeShellScriptBin "OnePlus9-crDroid9-A13" ''
@@ -175,17 +175,17 @@
 
   (pkgs.writeShellScriptBin "PokeApps" ''
     cd /Android/Apps
-    sudo bash install.sh
+    sudo bash installapps.sh
     cd 
   '')
 
   (pkgs.writeShellScriptBin "pixel-bootloader-unlock" ''
-            #!/bin/bash
+    #!/bin/bash
 
-            for device in $(adb devices | grep device$ | cut -f1); do
-              sudo adb -s "$device" reboot bootloader
-    	  sudo fastboot -s "$device" flashing unlock &
-    	done
+    for device in $(adb devices | grep device$ | cut -f1); do
+    sudo adb -s "$device" reboot bootloader
+    sudo fastboot -s "$device" flashing unlock &
+    done
   '')
 
 ]
