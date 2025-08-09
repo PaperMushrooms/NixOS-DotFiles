@@ -17,6 +17,8 @@
     # Enable Gaming Related Packages
     environment.systemPackages = with pkgs; [
       xivlauncher # Custom launcher for Final Fantasy XIV
+      runescape
+      runelite
       lutris # Open-source game manager for Linux
       vulkan-tools # Vulkan utilities like vulkaninfo
       vulkan-loader # Vulkan loader
@@ -29,6 +31,13 @@
       vkd3d
       dxvk
     ];
+
+
+    nixpkgs.config.permittedInsecurePackages = [
+      "openssl-1.1.1w"
+    ];
+
+
 
     # Configure Steam path for ProtonGE
     environment.sessionVariables = {
