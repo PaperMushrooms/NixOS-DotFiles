@@ -68,7 +68,7 @@
   programs.zsh.enable = true;
 
   # Force Plasma SSh Keypass Instead of GNOME
-  programs.ssh.askPassword = "";
+  programs.ssh.askPassword = "${pkgs.kdePackages.ksshaskpass.out}/bin/ksshaskpass";
 
   services.gnome.gcr-ssh-agent.enable = false;
 
