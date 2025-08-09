@@ -68,7 +68,7 @@
   programs.zsh.enable = true;
 
   # Force Plasma SSh Keypass Instead of GNOME
-  programs.ssh.askPassword = lib.mkForce "";
+  programs.ssh.askPassword = lib.mkForce "/nix/store/nwrf4rc178k920n90f2141chhwx4msj6-ksshaskpass-6.4.3/bin/ksshaskpass";
 
   services.gnome.gcr-ssh-agent.enable = false;
 
