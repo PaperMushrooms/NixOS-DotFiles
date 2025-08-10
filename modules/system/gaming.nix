@@ -17,7 +17,7 @@
     # Enable Gaming Related Packages
     environment.systemPackages = with pkgs; [
       xivlauncher # Custom launcher for Final Fantasy XIV
-      #runescape
+      runescape
       runelite
       lutris # Open-source game manager for Linux
       vulkan-tools # Vulkan utilities like vulkaninfo
