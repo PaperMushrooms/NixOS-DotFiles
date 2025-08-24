@@ -74,6 +74,7 @@
 
   environment.systemPackages = with pkgs; [
     autopsy
+    sleuthkit
   ];
 
   # Exclude unneccessary Plasma packages
