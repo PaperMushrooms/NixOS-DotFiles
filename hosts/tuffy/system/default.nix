@@ -72,6 +72,10 @@
 
   services.gnome.gcr-ssh-agent.enable = false;
 
+  environment.systemPackages = with pkgs; [
+    autopsy
+  ];
+
   # Exclude unneccessary Plasma packages
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     konsole
