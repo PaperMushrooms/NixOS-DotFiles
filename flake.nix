@@ -44,6 +44,7 @@
           home-manager.nixosModules.home-manager # Home-Manager Module
 
           {
+
             home-manager = {
               useUserPackages = true;
               sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
