@@ -44,6 +44,17 @@
           home-manager.nixosModules.home-manager # Home-Manager Module
 
           {
+
+            nixpkgs.overlays = [
+              (final: prev: {
+                python3Packages = prev.python3Packages.overrideScope (pyFinal: pyPrev: {
+                  i3ipc = pyPrev.i3ipc.overridePythonAttrs (old: {
+                    doCheck = false;
+                  });
+                });
+              })
+            ];
+
             home-manager = {
               useUserPackages = true;
               sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
