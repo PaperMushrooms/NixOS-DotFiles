@@ -40,10 +40,10 @@
       winetricks
     ];
 
-    nixpkgs.config.permittedInsecurePackages = [
-      "openssl-1.1.1w"
-    ];
-
+    nixpkgs.config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [ "openssl-1.1.1w" ];
+    };
 
 
     # Configure Steam path for ProtonGE
