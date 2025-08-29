@@ -28,11 +28,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-on-droid, home-manager, plasma-manager, hyprland, ... }@inputs:
-    let
-      overlays = import ./overlays; # ✅ loads overlays/default.nix
-    in
-    {
+  outputs = { self, nixpkgs, nix-on-droid, home-manager, plasma-manager, hyprland, ... }@inputs: {
 
       nixosConfigurations = {
         jealousy = nixpkgs.lib.nixosSystem {
@@ -85,10 +81,6 @@
             }
           ];
 
-          pkgs = import nixpkgs {
-            system = "x86_64-linux";
-            overlays = overlays;
-          };
         };
 
         recovery = nixpkgs.lib.nixosSystem {
