@@ -1,3 +1,3 @@
 [
-  (import.i3ipc.nix)
+  (import ./i3ipc.nix)
 ]
