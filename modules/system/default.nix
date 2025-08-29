@@ -1,6 +1,7 @@
 {
   imports = [
     ./common.nix
+    ./overlays.nix
     ./audio.nix
     ./gaming.nix
     ./bootloader.nix
