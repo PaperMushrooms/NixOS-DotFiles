@@ -28,72 +28,81 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-on-droid, home-manager, plasma-manager, hyprland, ... }@inputs: {
+  outputs = { self, nixpkgs, nix-on-droid, home-manager, plasma-manager, hyprland, ... }@inputs:
+    let
+      overlays = import ./overlays; # ✅ loads overlays/default.nix
+    in
+    {
 
-    nixosConfigurations = {
-      jealousy = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      nixosConfigurations = {
+        jealousy = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
 
-        specialArgs = { inherit inputs; };
+          specialArgs = { inherit inputs; };
 
-        modules = [
-          ./hosts/jealousy/system
-          ./hosts/jealousy/system/options.nix
-          ./modules/system
+          modules = [
+            ./hosts/jealousy/system
+            ./hosts/jealousy/system/options.nix
+            ./modules/system
 
-          home-manager.nixosModules.home-manager # Home-Manager Module
+            home-manager.nixosModules.home-manager # Home-Manager Module
 
-          {
+            {
 
-            home-manager = {
-              useUserPackages = true;
-              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-              extraSpecialArgs = { inherit inputs; };
-              users = {
-                jealousy = import ./hosts/jealousy/home/home.nix;
+              home-manager = {
+                useUserPackages = true;
+                sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+                extraSpecialArgs = { inherit inputs; };
+                users = {
+                  jealousy = import ./hosts/jealousy/home/home.nix;
+                };
               };
-            };
-          }
-        ];
+            }
+          ];
+        };
+
+        tuffy = nixpkgs.lib.nixosSystem {
+          system = "x86-linux";
+
+          specialArgs = { inherit inputs; };
+
+          modules = [
+            ./hosts/tuffy/system
+            ./hosts/tuffy/system/options.nix
+            ./modules/system
+
+            home-manager.nixosModules.home-manager # Home-Manager Module
+
+            {
+              home-manager = {
+                useUserPackages = true;
+                sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+                extraSpecialArgs = { inherit inputs; };
+                users = {
+                  tuffy = import ./hosts/tuffy/home/home.nix;
+                };
+              };
+            }
+          ];
+
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            overlays = overlays;
+          };
+        };
+
+        recovery = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./recovery/configuration.nix
+          ];
+        };
       };
 
-      tuffy = nixpkgs.lib.nixosSystem {
-        system = "x86-linux";
-
-        specialArgs = { inherit inputs; };
-
-        modules = [
-          ./hosts/tuffy/system
-          ./hosts/tuffy/system/options.nix
-          ./modules/system
-
-          home-manager.nixosModules.home-manager # Home-Manager Module
-
-          {
-            home-manager = {
-              useUserPackages = true;
-              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-              extraSpecialArgs = { inherit inputs; };
-              users = {
-                tuffy = import ./hosts/tuffy/home/home.nix;
-              };
-            };
-          }
-        ];
-      };
-
-      recovery = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./recovery/configuration.nix
-        ];
+      nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
+        pkgs = import nixpkgs { system = "aarch64-linux"; };
+        modules = [ ./nix-on-droid.nix ];
       };
     };
-
-    nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = import nixpkgs { system = "aarch64-linux"; };
-      modules = [ ./nix-on-droid.nix ];
-    };
-  };
 }
 
