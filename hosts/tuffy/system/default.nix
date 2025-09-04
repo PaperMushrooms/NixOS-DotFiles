@@ -75,7 +75,6 @@
   environment.systemPackages = with pkgs; [
     autopsy
     sleuthkit
-    pytest-asyncio
   ];
 
   # Exclude unneccessary Plasma packages
