@@ -2,7 +2,7 @@
   description = "My home system flake c: ";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/pull/438729/head";
 
     home-manager = {
       url = "github:nix-community/home-manager";
