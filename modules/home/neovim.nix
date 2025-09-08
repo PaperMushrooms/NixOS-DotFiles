@@ -21,8 +21,8 @@
 
         theme = {
           enable = true;
-          name = "dwtokyonight";
-          style = "sdtorm";
+          name = "github";
+          style = "auto";
         };
       };
     };
