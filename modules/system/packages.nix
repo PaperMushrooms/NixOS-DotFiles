@@ -20,7 +20,6 @@
     git-lfs
     wget
     curl
-    neovim
     gzip
     gparted
 
