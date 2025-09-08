@@ -43,7 +43,7 @@
 
             home-manager = {
               useUserPackages = true;
-              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
               extraSpecialArgs = { inherit inputs; };
               users = {
                 jealousy = import ./hosts/jealousy/home/home.nix;
@@ -68,7 +68,7 @@
           {
             home-manager = {
               useUserPackages = true;
-              sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
               extraSpecialArgs = { inherit inputs; };
               users = {
                 tuffy = import ./hosts/tuffy/home/home.nix;
