@@ -22,7 +22,7 @@
         theme = {
           enable = true;
           name = "github";
-          style = "auto";
+          style = "dark";
         };
       };
     };
