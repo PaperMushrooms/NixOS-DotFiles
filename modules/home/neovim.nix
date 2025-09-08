@@ -21,8 +21,8 @@
 
         theme = {
           enable = true;
-          name = "tokyonight";
-          style = "storm";
+          name = "dwtokyonight";
+          style = "sdtorm";
         };
       };
     };
