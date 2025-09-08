@@ -78,7 +78,11 @@
           {
             home-manager = {
               useUserPackages = true;
-              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+              sharedModules = [
+                plasma-manager.homeModules.plasma-manager
+                nvf.homeManagerModules.default
+              ];
+
               extraSpecialArgs = { inherit inputs; };
               users = {
                 tuffy = import ./hosts/tuffy/home/home.nix;
@@ -106,7 +110,11 @@
 
             home-manager = {
               useUserPackages = true;
-              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+              sharedModules = [
+                plasma-manager.homeModules.plasma-manager
+                nvf.homeManagerModules.default
+              ];
+
               extraSpecialArgs = { inherit inputs; };
               users = {
                 school = import ./hosts/school/home/home.nix;
