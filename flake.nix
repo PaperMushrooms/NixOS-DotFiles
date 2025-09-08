@@ -78,6 +78,32 @@
         ];
       };
 
+      school = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        specialArgs = { inherit inputs; };
+
+        modules = [
+          ./hosts/school/system
+          ./hosts/school/system/options.nix
+          ./modules/system
+
+          home-manager.nixosModules.home-manager # Home-Manager Module
+
+          {
+
+            home-manager = {
+              useUserPackages = true;
+              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+              extraSpecialArgs = { inherit inputs; };
+              users = {
+                school = import ./hosts/school/home/home.nix;
+              };
+            };
+          }
+        ];
+      };
+
       recovery = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
