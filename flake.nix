@@ -41,7 +41,7 @@
           ./hosts/jealousy/system/options.nix
           ./modules/system
 
-          nvf.nixosModules.default
+          nvf.homeModules.default
 
           home-manager.nixosModules.home-manager # Home-Manager Module
 
