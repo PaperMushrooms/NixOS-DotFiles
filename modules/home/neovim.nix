@@ -21,7 +21,7 @@
 
         theme = {
           enable = true;
-          name = "dracula";
+          name = "";
           style = "";
         };
       };
