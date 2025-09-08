@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.Packages = with pkgs; [
+  home.packages = with pkgs; [
     neovim
   ];
 }
