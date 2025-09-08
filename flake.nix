@@ -1,5 +1,4 @@
 {
-  description = "My home system flake c: ";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
