@@ -21,8 +21,8 @@
 
         theme = {
           enable = true;
-          name = "";
-          style = "";
+          name = "base16";
+          style = "fd";
         };
       };
     };
