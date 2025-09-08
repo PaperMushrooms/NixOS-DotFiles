@@ -41,15 +41,17 @@
           ./hosts/jealousy/system/options.nix
           ./modules/system
 
-          nvf.homeManagerModules.default
-
           home-manager.nixosModules.home-manager # Home-Manager Module
 
           {
 
             home-manager = {
               useUserPackages = true;
-              sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+              sharedModules = [
+                plasma-manager.homeModules.plasma-manager
+                nvf.homeManagerModules.default
+              ];
+
               extraSpecialArgs = { inherit inputs; };
               users = {
                 jealousy = import ./hosts/jealousy/home/home.nix;
