@@ -22,7 +22,7 @@
         theme = {
           enable = true;
           name = "dracula";
-          style = "dark_high_contrast";
+          style = "";
         };
       };
     };
