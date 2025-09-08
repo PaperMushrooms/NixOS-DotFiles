@@ -6,10 +6,18 @@
     enable = true;
 
     settings = {
-      vim.viAlias = false;
-      vim.vimAlias = false;
-      vim.lsp = {
-        enable = true;
+      vim = {
+        viAlias = false;
+        vimAlias = false;
+
+        lsp = {
+          enable = true;
+        };
+
+        languages = {
+          nix.enable = true;
+          python.enable = true;
+        };
       };
     };
   };
