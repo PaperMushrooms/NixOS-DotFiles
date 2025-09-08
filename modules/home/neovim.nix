@@ -19,13 +19,16 @@
           python.enable = true;
         };
 
-        theme.enable;
-        treesitter.enable;
+        theme = {
+          enable = true;
+          name = "gruvbox";
+          style = "dark";
         };
-        };
-        };
+      };
+    };
+  };
 
-        home.packages = with pkgs; [
-          neovim
-        ];
-      }
+  home.packages = with pkgs; [
+    neovim
+  ];
+}
