@@ -22,7 +22,7 @@
         theme = {
           enable = true;
           name = "catppuccin";
-          style = "dark";
+          style = "auto";
         };
       };
     };
