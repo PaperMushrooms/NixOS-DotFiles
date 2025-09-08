@@ -22,7 +22,7 @@
         theme = {
           enable = true;
           name = "base16";
-          style = "fd";
+          style = "";
         };
       };
     };
