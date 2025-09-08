@@ -19,13 +19,13 @@
           python.enable = true;
         };
 
-        theme = enable;
-        treesitter = enable;
-      };
-    };
-  };
+        theme.enable;
+        treesitter.enable;
+        };
+        };
+        };
 
-  home.packages = with pkgs; [
-    neovim
-  ];
-}
+        home.packages = with pkgs; [
+          neovim
+        ];
+      }
