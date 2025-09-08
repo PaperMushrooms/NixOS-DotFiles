@@ -21,7 +21,7 @@
 
         theme = {
           enable = true;
-          name = "github";
+          name = "dracula";
           style = "dark_high_contrast";
         };
       };
