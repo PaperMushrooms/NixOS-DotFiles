@@ -15,6 +15,11 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hyprland.url = "github:hyprwm/Hyprland";
 
     firefox-addons = {
@@ -23,7 +28,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, hyprland, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, nvf, hyprland, ... }@inputs: {
 
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
@@ -35,6 +40,8 @@
           ./hosts/jealousy/system
           ./hosts/jealousy/system/options.nix
           ./modules/system
+
+          nvf.nixosModules.default
 
           home-manager.nixosModules.home-manager # Home-Manager Module
 
@@ -62,6 +69,8 @@
           ./hosts/tuffy/system/options.nix
           ./modules/system
 
+          nvf.nixosModules.default
+
           home-manager.nixosModules.home-manager # Home-Manager Module
 
           {
@@ -86,6 +95,8 @@
           ./hosts/school/system
           ./hosts/school/system/options.nix
           ./modules/system
+
+          nvf.nixosModules.default
 
           home-manager.nixosModules.home-manager # Home-Manager Module
 
