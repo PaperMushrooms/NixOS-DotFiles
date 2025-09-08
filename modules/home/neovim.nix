@@ -21,7 +21,7 @@
 
         theme = {
           enable = true;
-          name = "gruvbox";
+          name = "Catpuccin";
           style = "dark";
         };
       };
