@@ -18,6 +18,9 @@
           nix.enable = true;
           python.enable = true;
         };
+
+        theme = enable;
+        treesitter = enable;
       };
     };
   };
