@@ -21,7 +21,7 @@
 
         theme = {
           enable = true;
-          name = "auto";
+          name = "catppuccin";
           style = "dark";
         };
       };
