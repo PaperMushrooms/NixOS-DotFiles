@@ -22,7 +22,8 @@
         theme = {
           enable = true;
           name = "base16";
-          style = "";
+          base16-colors.base00 = "";
+          # style = "";
         };
       };
     };
