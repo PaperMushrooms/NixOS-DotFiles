@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Wallpaper Startup
-swww init &
+swww-daemon &
 swww img ../../../../wallpapers/cubone.jpg &
 
 # Network-Manager Startup
