@@ -1,10 +1,11 @@
-{
+{ config, lib, ... }: with lib; {
+
   options = {
     asus.enable =
       mkEnableOption "Enable ASUS plugins";
   };
 
-  config = mkIf config.gaming.enable {
+  config = mkIf config.asus.enable {
     services = {
       asusd = {
         enable = true;
