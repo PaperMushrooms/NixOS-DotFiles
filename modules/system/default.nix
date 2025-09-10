@@ -3,6 +3,7 @@
     ./common.nix
     ./audio.nix
     ./gaming.nix
+    ./asus.nix
     ./bootloader.nix
     ./plasma.nix
     ./ssh.nix
