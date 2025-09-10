@@ -2,15 +2,6 @@
 
 {
 
-  services = {
-    asusd = {
-      enable = true;
-      enableUserService = true;
-    };
-
-    supergfxd.enable = true;
-  };
-
   # Allow Unfree Packages
   nixpkgs.config.allowUnfree = true;
 
