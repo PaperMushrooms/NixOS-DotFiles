@@ -23,7 +23,7 @@
         "$mainMod, W, exec, kitty" # launch terminal emulator
         "$mainMod, D, exec, discord" # launch discord 
         "$mainMod, E, exec, dolphin" # launch file manager
-        "$mainMod, C, exec, codium" # launch text editor
+        "$mainMod, C, exec, nvim" # launch text editor
         "$mainMod, F, exec, firefox" # launch web browser
         "$mainMod, A, exec, rofi -show drun -show-icons" # launch application launcher
 
