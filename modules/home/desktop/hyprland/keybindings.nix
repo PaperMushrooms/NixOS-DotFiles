@@ -21,6 +21,7 @@
 
         # Application Shortcuts
         "$mainMod, W, exec, kitty" # launch terminal emulator
+        "$mainMod, D, exec, discord" # launch discord 
         "$mainMod, E, exec, dolphin" # launch file manager
         "$mainMod, C, exec, codium" # launch text editor
         "$mainMod, F, exec, firefox" # launch web browser
