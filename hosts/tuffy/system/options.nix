@@ -8,6 +8,9 @@
   # Enable Gaming Configuration and Tools
   gaming.enable = true;
 
+  # Enable ASUS Plugins
+  asus.enable = true;
+
   # Enable Gnome System-Level Configuration
   gnomesys.enable = true;
 
