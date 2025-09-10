@@ -11,7 +11,7 @@
       rounding = 15;
       active_opacity = 0.75;
       inactive_opacity = 0.8;
-      fullscreen_opacity = 0;
+      fullscreen_opacity = 100;
 
       blur = {
         enabled = true;
