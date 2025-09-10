@@ -2,6 +2,7 @@
 
 
   imports = [
+    ./monitors.nix
     ./keybindings.nix
     ./appearance.nix
     ./waybar.nix
