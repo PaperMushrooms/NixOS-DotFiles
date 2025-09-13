@@ -9,7 +9,7 @@
     # Enable Dark Mode for GNOME
     dconf.settings = {
       "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
+        color-scheme = lib.mkDefault "prefer-dark";
         gtk-theme = "Adwaita-dark";
       };
     };
