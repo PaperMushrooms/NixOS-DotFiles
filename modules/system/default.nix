@@ -1,6 +1,7 @@
 {
   imports = [
     ./common.nix
+    ./time-and-date.nix
     ./audio.nix
     ./gaming.nix
     ./asus.nix
