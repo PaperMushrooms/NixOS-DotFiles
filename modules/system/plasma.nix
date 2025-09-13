@@ -15,5 +15,12 @@
         variant = "";
       };
     };
+
+    # Exclude unneccessary Plasma packages
+    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+      konsole
+      oxygen
+      kate
+    ];
   };
 }

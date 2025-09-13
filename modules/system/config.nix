@@ -1,42 +1,25 @@
 { inputs, config, pkgs, lib, ... }:
 
 {
-
-  imports = [
-
-    # Include System Packages
-    ./hardware-configuration.nix
-    ../../../modules/system/packages.nix
-
-  ];
-
   # Enabling Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set the hostname.
   networking.hostName = "nixos"; # Define your hostname.
 
-  # Enable networking
-  networking.networkmanager = {
-    enable = true;
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.tuffy = {
-    isNormalUser = true;
-    description = "tuffy";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" ];
-    shell = pkgs.zsh;
-  };
 
   # Enable Razer peripherals
   hardware.openrazer.enable = true;
 
   # Enable USBmuxd
   services.usbmuxd.enable = true;
+
+  # Enable networking
+  networking.networkmanager = {
+    enable = true;
+  };
 
   # Enable Bluetooth
   services.blueman.enable = true;
@@ -65,5 +48,4 @@
 
   # NixOS Version
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

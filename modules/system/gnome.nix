@@ -24,5 +24,9 @@
       gnome-control-center
       gnome-tweaks
     ];
+
+    # Enable dconf
+    programs.dconf.enable = true;
+
   };
 }
