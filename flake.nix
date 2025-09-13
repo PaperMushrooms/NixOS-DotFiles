@@ -135,6 +135,13 @@
           ./recovery/configuration.nix
         ];
       };
+
+      darwinConfigurations."Darwin" = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      modules = [
+
+      ];
+
     };
   };
 }
