@@ -29,5 +29,12 @@
         };
       };
     };
-  };
-}
+
+    fonts.packages = with pkgs;
+      font-awesome
+        font-awesome_4
+        font-awesome_5
+        font-awesome_6
+        font-awesome_7
+      };
+  }
