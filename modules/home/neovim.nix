@@ -20,12 +20,6 @@
           nix.enable = true;
           python.enable = true;
         };
-
-        #        theme = {
-        #          enable = true;
-        #          name = "catppuccin";
-        #          style = "mocha";
-        #        };
       };
     };
   };
