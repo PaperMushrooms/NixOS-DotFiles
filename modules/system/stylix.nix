@@ -6,7 +6,8 @@
     enable = true;
 
     targets = {
-      kde.enable = true;
+      qt.enable = true;
+      #     kde.enable = true;
     };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
