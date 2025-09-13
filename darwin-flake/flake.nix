@@ -13,18 +13,18 @@
       modules = [
         ({ pkgs, ... }: {
 
-	  nixpkgs.config.allowUnfree = true;
+          nixpkgs.config.allowUnfree = true;
 
-	  nixpkgs.config.allowUnsupportedSystem = true;
+          nixpkgs.config.allowUnsupportedSystem = true;
 
           environment.systemPackages = with pkgs; [
             neovim
             git
             discord
-	    neofetch
-	    android-tools
-	    scrcpy
-	  ];
+            neofetch
+            android-tools
+            scrcpy
+          ];
 
           nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

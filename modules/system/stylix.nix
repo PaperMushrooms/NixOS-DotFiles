@@ -7,6 +7,6 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    image = ../../wallpapers/cubone.jpg;
+    image = ../../wallpapers/catppuccin-mocha/purple-horizon.jpg;
   };
 }
