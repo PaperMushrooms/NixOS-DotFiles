@@ -10,7 +10,7 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
-      size = null;
+      size = 24;
     };
 
     targets = { };
