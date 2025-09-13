@@ -5,6 +5,8 @@
       gaps_in = 5;
       gaps_out = 15;
       layout = "dwindle"; # or master, or others
+
+      resize_on_border = true;
     };
 
     decoration = {
