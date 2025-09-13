@@ -3,12 +3,9 @@
 {
   stylix = {
 
-    enable = true;
+    autoEnable = true;
 
-    targets = {
-      qt.enable = true;
-      #     kde.enable = true;
-    };
+    targets = { };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
