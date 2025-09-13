@@ -20,6 +20,8 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    stylix.url = "github:danth/stylix";
+
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,6 +49,8 @@
           ./modules/system
 
           home-manager.nixosModules.home-manager # Home-Manager Module
+          inputs.stylix.nixosModules.stylix
+          nvf.nixosModules.default
 
           {
 
@@ -76,9 +80,9 @@
           ./hosts/tuffy/system/options.nix
           ./modules/system
 
-          nvf.nixosModules.default
-
           home-manager.nixosModules.home-manager # Home-Manager Module
+          inputs.stylix.nixosModules.stylix
+          nvf.nixosModules.default
 
           {
             home-manager = {
@@ -106,10 +110,6 @@
           ./hosts/school/system
           ./hosts/school/system/options.nix
           ./modules/system
-
-          nvf.nixosModules.default
-
-          home-manager.nixosModules.home-manager # Home-Manager Module
 
           {
 
