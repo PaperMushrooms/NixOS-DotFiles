@@ -17,6 +17,9 @@
       shellAliases = {
         upload = "cd /etc/nixos && git add . && git commit -m 'Update' && git push -u origin main && cd ";
         update = "sudo nix flake update --flake /etc/nixos/";
+        cleanup = "nix-collect-garbage -d";
+        cleanup-full = "sudo nix-collect-garbage -d";
+
         rootenv = "nix-shell /etc/nixos/shells/PoGo-Root/";
 
         format = "nix-shell -p nixpkgs-fmt --command 'nixpkgs-fmt /etc/nixos/'";
