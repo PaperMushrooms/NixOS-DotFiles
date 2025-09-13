@@ -11,23 +11,23 @@
 
         battery = {
           format = "{capacity}% {icon}";
-          format-icons = [ "", "", "", "", "" ];
-        };
+          format-icons = [ "", "", "", "", "" ]
+            };
 
-        modules-left = [ "hyprland/workspaces" ];
+          modules-left = [ "hyprland/workspaces" ];
 
-        modules-center = [ "clock" ];
+          modules-center = [ "clock" ];
 
-        modules-right = [
-          "tray"
-          "pulseaudio"
-          "battery"
-        ];
+          modules-right = [
+            "tray"
+            "pulseaudio"
+            "battery"
+          ];
 
-        clock = {
-          format = "{:%I:%M %p}";
+          clock = {
+            format = "{:%I:%M %p}";
+          };
         };
       };
     };
-  };
-}
+  }
