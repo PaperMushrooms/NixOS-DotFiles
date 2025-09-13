@@ -11,6 +11,7 @@
 
         battery = {
           format = "{capacity}% {icon}";
+          format-icons = [ "", "", "", "", "" ];
         };
 
         modules-left = [ "hyprland/workspaces" ];
