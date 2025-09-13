@@ -21,11 +21,11 @@
           python.enable = true;
         };
 
-        theme = {
-          enable = true;
-          name = "catppuccin";
-          style = "mocha";
-        };
+        #        theme = {
+        #          enable = true;
+        #          name = "catppuccin";
+        #          style = "mocha";
+        #        };
       };
     };
   };
