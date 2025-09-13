@@ -82,7 +82,7 @@
       ];
 
       bindd = [
-        "$mainMod, J, togglesplit"
+        "$mainMod, J, toggle split, togglesplit"
       ];
 
       binde = [
