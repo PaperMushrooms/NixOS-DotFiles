@@ -63,9 +63,6 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-        # Toggle focused window split
-        "$mainMod, J, togglesplit"
-
         # Move focused window to a workspace silently
         "$mainMod+Alt, 1, movetoworkspacesilent, 1"
         "$mainMod+Alt, 2, movetoworkspacesilent, 2"
@@ -84,7 +81,9 @@
         "$mainMod, S, togglespecialworkspace,"
       ];
 
-      bindd = [ "$mainMod, j, $d toggle split, togglesplit" ];
+      bindd = [
+        "$mainMod, J, togglesplit"
+      ];
 
       binde = [
         # Resize Windows
