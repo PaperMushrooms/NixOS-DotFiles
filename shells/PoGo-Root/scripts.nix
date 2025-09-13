@@ -136,6 +136,11 @@
     cd 
   '')
 
+  (pkgs.writeShellScriptBin "Pixel6Pro-OEM-A13" ''
+    cd ~/Android/Pixel6Pro/OEM-A13-Magisk
+    bash install.sh
+    cd 
+  '')
 
   (pkgs.writeShellScriptBin "Pixel6a-DerpFest-A14" ''
     cd ~/Android/Pixel6a/DerpFest-A14
