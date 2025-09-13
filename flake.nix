@@ -137,11 +137,11 @@
       };
 
       darwinConfigurations."Darwin" = nix-darwin.lib.darwinSystem {
-      system = "aarch64-darwin";
-      modules = [
+        system = "aarch64-darwin";
+        modules = [
 
-      ];
-
+        ];
+      };
     };
   };
 }
