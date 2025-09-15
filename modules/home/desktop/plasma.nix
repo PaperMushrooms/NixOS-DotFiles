@@ -10,22 +10,22 @@
     programs.plasma = {
       enable = true;
       workspace = {
-        colorScheme = "BreezeDark"; # Enables dark mode
+        #        colorScheme = "BreezeDark"; # Enables dark mode
 
-        windowDecorations = {
-          library = "org.kde.breeze";
-          theme = "Breeze";
-        };
-
-        splashScreen = {
-          theme = "None";
-        };
-
-        theme = "BreezeDark";
-
-        cursor = {
-          theme = "Breeze";
-        };
+        #        windowDecorations = {
+        #          library = "org.kde.breeze";
+        #          theme = "Breeze";
+        #        };
+        #
+        #        splashScreen = {
+        #          theme = "None";
+        #        };
+        #
+        #        theme = "BreezeDark";
+        #
+        #        cursor = {
+        #          theme = "Breeze";
+        #        };
       };
     };
   };
