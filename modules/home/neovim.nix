@@ -8,6 +8,7 @@
 
     plugins = with pkgs; [
       vimPlugins.nvim-tree-lua
+      vimPlugins.telescope
     ];
   };
 
