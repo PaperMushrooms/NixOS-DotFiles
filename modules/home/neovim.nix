@@ -20,6 +20,9 @@
         viAlias = true;
         vimAlias = true;
 
+        telescope.enable = true;
+        nvim-tree-lua.enable = true;
+
         lsp = {
           enable = true;
         };
