@@ -4,6 +4,7 @@
 
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
 
     plugins = with pkgs; [
       nvim-tree-lua
@@ -38,8 +39,6 @@
       };
     };
   };
-
-  environment.variables.EDITOR = "nvim";
 
   #  home.packages = with pkgs; [
   #    neovim
