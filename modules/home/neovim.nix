@@ -7,7 +7,7 @@
     defaultEditor = true;
 
     plugins = with pkgs; [
-      nvim-tree.enable = true;
+      vimPlugins.nvim-tree-lua
     ];
   };
 
