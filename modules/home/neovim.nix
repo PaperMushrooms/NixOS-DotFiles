@@ -15,9 +15,9 @@
         viAlias = true;
         vimAlias = true;
 
-        nvimtree.enable = true;
+        filetree.enable = true;
         telescope.enable = true;
-        nvim-cmp.enable = true;
+        autocomplete.nvim-cmp.enable = true;
 
         lsp = {
           enable = true;
