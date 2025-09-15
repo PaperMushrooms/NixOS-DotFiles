@@ -27,6 +27,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    flake-utils.url = "github:numtide/flake-utils";
+    rust-overlay.url = "github:oxalica/rust-overlay";
+
     hyprland.url = "github:hyprwm/Hyprland";
 
     firefox-addons = {
