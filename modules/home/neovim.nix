@@ -15,7 +15,7 @@
         viAlias = true;
         vimAlias = true;
 
-        nvim-tree.lua.enable = true;
+        plugins.nvim-tree.lua.enable = true;
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
 
