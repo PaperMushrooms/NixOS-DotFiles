@@ -5,11 +5,6 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-
-    plugins = with pkgs; [
-      vimPlugins.nvim-tree-lua
-      vimPlugins.telescope-nvim
-    ];
   };
 
   programs.nvf = {
@@ -21,6 +16,7 @@
         vimAlias = true;
 
         telescope.enable = true;
+        nvim-tree.enable = true;
 
         lsp = {
           enable = true;
