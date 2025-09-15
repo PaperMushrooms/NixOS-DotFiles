@@ -2,6 +2,14 @@
 
 {
 
+  programs.neovim = {
+    enable = true;
+
+    plugins = with pkgs; [
+      nvim-tree-lua
+    ];
+  };
+
   programs.nvf = {
     enable = true;
 
@@ -31,7 +39,9 @@
     };
   };
 
-  home.packages = with pkgs; [
-    neovim
-  ];
+  environment.variables.EDITOR = "nvim";
+
+  #  home.packages = with pkgs; [
+  #    neovim
+  #  ];
 }
