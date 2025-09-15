@@ -16,7 +16,7 @@
         vimAlias = true;
 
         telescope.enable = true;
-        nvim-tree.enable = true;
+        neotree.enable = true;
 
         lsp = {
           enable = true;
