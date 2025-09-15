@@ -13,6 +13,7 @@
 
   programs.nvf = {
     enable = true;
+    autoArchive = true;
 
     settings = {
       vim = {
