@@ -13,9 +13,10 @@
 
   programs.nvf = {
     enable = true;
-    autoArchive = true;
 
     settings = {
+      autoArchive = true;
+
       vim = {
         viAlias = true;
         vimAlias = true;
