@@ -13,7 +13,7 @@
         # # Window/Session Actions
         "$mainMod, Q, killactive" # close focused window
         "$mainMod, T, togglefloating" # toggle the window between focus and float
-        "$mainMod, J, togglesplit" # split the window
+        "$mainmod, j, togglesplit" # split the window
         "$mainMod, G, togglegroup" # toggle the window between focus and group
         "Alt, Return, fullscreen" # toggle the window between focus and fullscreen
         "$mainMod, L, exec, swaylock" # launch lock screen
@@ -80,6 +80,10 @@
         # Move/Switch to special workspace (scratchpad)
         "$mainMod+Alt, S, movetoworkspacesilent, special"
         "$mainMod, S, togglespecialworkspace,"
+      ];
+
+      bindd = [
+        "$mainmod, j, togglesplit" # split the window
       ];
 
       binde = [
