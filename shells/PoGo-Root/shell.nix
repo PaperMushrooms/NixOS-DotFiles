@@ -18,9 +18,9 @@ pkgs.mkShell {
     echo
     echo "Android Rooting and PoGo Spoofing Environment is running!"
 
-    alias adb="sudo adb"
-    alias fastboot="sudo fastboot"
-    alias adb-restart="sudo adb kill-server && sudo adb start-server"
+#    alias adb="sudo adb"
+#    alias fastboot="sudo fastboot"
+#    alias adb-restart="sudo adb kill-server && sudo adb start-server"
   '';
 
 }
