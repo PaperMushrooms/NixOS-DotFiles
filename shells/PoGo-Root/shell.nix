@@ -15,7 +15,7 @@ pkgs.mkShell {
   inputsFrom = [ ];
 
   shellHook = ''
-    alias exit = "adb kill-server && exit"
+    alias exit="adb kill-server && exit"
     adb start-server &> /dev/null
     echo
     echo "Android Rooting and PoGo Spoofing Environment is running!"
