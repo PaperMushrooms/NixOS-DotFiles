@@ -13,7 +13,8 @@
         # # Window/Session Actions
         "$mainMod, Q, killactive" # close focused window
         "$mainMod, T, togglefloating" # toggle the window between focus and float
-        "$mainMod, j, togglesplit" # split the window
+        "$mainMod, J, togglesplit" # split the window
+        "$mainMod, F, togglesplit"
         "$mainMod, G, togglegroup" # toggle the window between focus and group
         "Alt, Return, fullscreen" # toggle the window between focus and fullscreen
         "$mainMod, L, exec, swaylock" # launch lock screen
@@ -82,10 +83,6 @@
         "$mainMod, S, togglespecialworkspace,"
       ];
 
-      #      bindd = [
-      #        "$mainMod, j, togglesplit" # split the window
-      #      ];
-      #
       binde = [
         # Resize Windows
         "$mainMod+Shift, Right, resizeactive, 30 0"
