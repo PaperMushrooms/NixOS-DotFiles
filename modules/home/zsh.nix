@@ -20,7 +20,7 @@
         cleanup = "nix-collect-garbage -d";
         cleanup-full = "sudo nix-collect-garbage -d";
 
-        rootenv = "nix-shell /etc/nixos/shells/PoGo-Root/";
+        SDlab = "nix develop /etc/nixos/shells/PoGo-Root";
 
         format = "nix-shell -p nixpkgs-fmt --command 'nixpkgs-fmt /etc/nixos/'";
 
