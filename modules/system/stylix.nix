@@ -13,7 +13,7 @@
       size = 32;
     };
 
-    targets = {
+    config.targets = {
       firefox.profileNames = [ " default " ];
     };
 
