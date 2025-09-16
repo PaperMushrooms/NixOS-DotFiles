@@ -25,7 +25,7 @@
         "$mainMod, D, exec, discord" # launch discord 
         "$mainMod, E, exec, dolphin" # launch file manager
         "$mainMod, C, exec, kitty nvim" # launch text editor
-        "$mainMod, R, exec, kitty nix-shell /etc/nixos/shells/PoGo-Root/" # launch
+        "$mainMod, R, exec, kitty nix develop /etc/nixos/shells/PoGo-Root" # launch
         "$mainMod, B, exec, firefox" # launch web browser
         "$mainMod, A, exec, rofi -show drun -show-icons" # launch application launcher
 
