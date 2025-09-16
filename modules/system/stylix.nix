@@ -9,7 +9,7 @@
 
     cursor = {
       package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Modern";
+      name = "Bibata-Modern-Ice";
       size = 32;
     };
 
