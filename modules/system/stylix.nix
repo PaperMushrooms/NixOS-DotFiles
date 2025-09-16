@@ -14,7 +14,7 @@
     };
 
     targets = {
-      firefox.profiles = [ " default " ];
+      firefox.profile = [ " default " ];
     };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
