@@ -1,7 +1,7 @@
 { config, ... }:
 
 let
-  $
+
   moveactivewindow = grep - q "true" < << $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
   in
   {
