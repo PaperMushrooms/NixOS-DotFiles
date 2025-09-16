@@ -82,10 +82,10 @@
         "$mainMod, S, togglespecialworkspace,"
       ];
 
-      bindd = [
-        "$mainMod, j, togglesplit" # split the window
-      ];
-
+      #      bindd = [
+      #        "$mainMod, j, togglesplit" # split the window
+      #      ];
+      #
       binde = [
         # Resize Windows
         "$mainMod+Shift, Right, resizeactive, 30 0"
