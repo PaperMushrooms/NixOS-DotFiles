@@ -127,6 +127,6 @@
     };
 
     # Apply Stylix Theming
-    stylix.targets.firefox.profileNames = [ "default" ];
+    #    stylix.targets.firefox.profileNames = [ "default" ];
   };
 }
