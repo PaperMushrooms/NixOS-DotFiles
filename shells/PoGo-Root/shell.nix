@@ -15,7 +15,7 @@ pkgs.mkShell {
   inputsFrom = [ ];
 
   shellHook = ''
-    adb start-server
+    adb start-server >> /dev/null
     echo
     echo "Android Rooting and PoGo Spoofing Environment is running!"
   '';
