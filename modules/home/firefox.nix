@@ -125,5 +125,8 @@
         "x-scheme-handler/unknown" = [ "firefox.desktop" ];
       };
     };
+
+    # Apply Stylix Theming
+    stylix.targets.firefox.profileNames = [ "default" ];
   };
 }
