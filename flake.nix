@@ -53,7 +53,6 @@
 
           home-manager.nixosModules.home-manager # Home-Manager Module
           inputs.stylix.nixosModules.stylix
-          nvf.nixosModules.default
 
           {
 
@@ -85,7 +84,6 @@
 
           home-manager.nixosModules.home-manager # Home-Manager Module
           inputs.stylix.nixosModules.stylix
-          nvf.nixosModules.default
 
           {
             home-manager = {
