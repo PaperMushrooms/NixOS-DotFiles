@@ -13,6 +13,8 @@
       };
 
       supergfxd.enable = true;
+
+      # environment.systemPackages = [ pkgs.asusctl ];
     };
   };
 }

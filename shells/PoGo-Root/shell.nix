@@ -8,8 +8,8 @@ pkgs.mkShell {
 
   buildInputs = with pkgs; [
     android-tools
+    scrcpy
     usbmuxd
-    lolcat
   ] ++ scripts;
 
   inputsFrom = [ ];

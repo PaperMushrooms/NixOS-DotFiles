@@ -13,6 +13,8 @@
     curl
     gzip
     gparted
+    lolcat
+    fastfetch
 
     # Wine Packages
     winePackages.full
@@ -20,7 +22,6 @@
 
     android-studio
 
-    asusctl
     supergfxctl
 
     scrcpy
