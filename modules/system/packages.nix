@@ -10,7 +10,6 @@
 
     android-studio
     anydesk
-    rpi-imager
     bat
     curl
     fastfetch
