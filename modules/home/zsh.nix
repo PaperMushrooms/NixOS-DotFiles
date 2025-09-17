@@ -24,7 +24,7 @@
 
         format = "nix-shell -p nixpkgs-fmt --command 'nixpkgs-fmt /etc/nixos/'";
 
-        rpi-imager = "nix-shell -p rpi-imager --command 'rpi-imager'";
+        #        rpi-imager = "nix-shell -p rpi-imager --command 'rpi-imager'";
       };
 
       # Enable and Configure Oh-My-Zsh Plugin
