@@ -10,6 +10,7 @@
 
     android-studio
     anydesk
+    bat
     curl
     fastfetch
     freecad
