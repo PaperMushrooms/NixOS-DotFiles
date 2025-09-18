@@ -18,6 +18,7 @@
     git-lfs
     gparted
     gzip
+    exfatprogs
     libimobiledevice
     lolcat
     networkmanagerapplet
