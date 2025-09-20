@@ -23,6 +23,7 @@
     lolcat
     networkmanagerapplet
     openrazer-daemon
+    qFlipper
     polychromatic
     razer-cli
     rustdesk
