@@ -61,7 +61,7 @@
     kate
   ];
 
-  boot.kernelModules = [ "usbnet" "cdc_ether" ];
+  boot.kernelModules = [ "usbnet" "cdc_ether" "rndis_host" ];
 
   # NixOS Version
   system.stateVersion = "24.05"; # Did you read the comment?
