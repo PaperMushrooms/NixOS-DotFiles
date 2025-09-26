@@ -62,7 +62,7 @@
     echo && read -p "Again, on the device, select Apply Update, then Apply from ADB to begin sideload."
     adb sideload Gapps.zip
     echo && read -p "One more time, on the device, select Apply Update, then Apply from ADB to begin sideload."
-    adb sideload Magisk.apk 
+    adb sideload ~/Android/Apps/Magisk.apk 
     cd
   '')
 
