@@ -31,6 +31,7 @@
     rust-overlay.url = "github:oxalica/rust-overlay";
 
     hyprland.url = "github:hyprwm/Hyprland";
+    iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
