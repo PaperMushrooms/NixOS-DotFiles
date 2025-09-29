@@ -96,7 +96,7 @@
     cd ~/Android/Pixel4/DerpFest-A13
     fastboot -w
     fastboot flash boot boot.img --slot all
-    echo && read -p "On the device, Select "Recovery Using the volume buttons, then, while in recovery, tap Factory Reset, then Format data / factory reset, and continue. 
+    echo && read -p "On the device, Select Recovery Using the volume buttons, then, while in recovery, tap Factory Reset, then Format data / factory reset, and continue. 
 
     Again, select Apply Update, then Apply from ADB to put the device in ADB sideload mode.
 
