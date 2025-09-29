@@ -9,5 +9,6 @@ nm-applet --indicator &
 
 # Waybar Startup
 waybar &
+iio-hyprland &
 
 dunst
