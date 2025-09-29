@@ -32,8 +32,14 @@
     shell = pkgs.zsh;
   };
 
-  # Enable Razer peripherals
+  # Enable Razer peripherals 
   hardware.openrazer.enable = true;
+  hardware.sensor.iio.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    jq
+    inputs.iio-hyprland.packages.${pkgs.system}.default
+  ];
 
   # Enable USBmuxd
   services.usbmuxd.enable = true;
