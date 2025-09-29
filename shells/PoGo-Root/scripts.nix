@@ -51,8 +51,26 @@
   '')
 
   (pkgs.writeShellScriptBin "OnePlus7T-crDroid9-A13" ''
-    cd /Android/OnePlus7T/crDroid9-A13
-    bash install.sh
+    cd ~/Android/OnePlus7T/crDroid9-A13
+    fastboot flash dtbo dtbo.img
+    fastboot flash vbmeta vbmeta.img
+    fastboot flash recovery_a recovery.img
+    fastboot flash recovery_b recovery.img
+    fastboot reboot recovery
+    echo && read -p "On the device, tap Factory Reset, then Format data / factory reset, and continue. 
+
+    Then, select Apply Update, then Apply from ADB to put the device in ADB sideload mode.
+
+    Press Enter to Flash ROM."
+    adb sideload ROM.zip
+    echo && read -p "Again, on the device, select Apply Update, then Apply from ADB to begin sideload.
+
+    Press Enter to Flash Gapps."
+    adb sideload Gapps.zip
+    echo && read -p "One more time, on the device, select Apply Update, then Apply from ADB to begin sideload.
+
+    Press Enter to Flash Magisk."
+    adb sideload ~/Android/Apps/Magisk.apk
     cd
   '')
 
