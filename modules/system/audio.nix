@@ -1,25 +1,18 @@
-{ config, lib, pkgs, ... }: with lib; {
+{ config, lib, pkgs, ... }:
 
-  options = {
-    audio.enable =
-      mkEnableOption "Enable Audio";
+{
+  # Enable sound with pipewire.
+  services.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
   };
 
-  config = mkIf config.audio.enable {
-
-    # Enable sound with pipewire.
-    services.pulseaudio.enable = false;
-    security.rtkit.enable = true;
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      wireplumber.enable = true;
-    };
-
-    environment.systemPackages = with pkgs; [
-      pavucontrol
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    pavucontrol
+  ];
 }

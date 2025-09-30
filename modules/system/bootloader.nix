@@ -1,6 +1,6 @@
-{ config, lib, pkgs, ... }: with lib; {
+{ config, lib, pkgs, ... }:
 
-
+{
   boot.loader.grub = {
     enable = true;
     devices = [ "nodev" ];
