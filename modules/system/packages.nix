@@ -24,6 +24,7 @@
     networkmanagerapplet
     openrazer-daemon
     polychromatic
+    qFlipper
     razer-cli
     scrcpy
     wget
@@ -31,15 +32,7 @@
     # Wine Packages
     winePackages.full
     winetricks
-
-    (pkgs.qflipper.overrideAttrs (old: {
-      version = "1.4.1"; # or latest release
-      src = pkgs.fetchurl {
-        url = "https://update.flipperzero.one/builds/qFlipper/1.4.1/qFlipper-1.4.1-x86_64.AppImage";
-        sha256 = "sha256-of-latest"; # need nix-prefetch-url for this
-      };
-    }))
-  ];
+ ];
 
 
   # Inside configuration.nix or your flake's module
