@@ -11,14 +11,14 @@
       pname = "hyperfluent-grub-theme";
       version = "1.0";
 
-      src = builtins.fetchGit {
-        url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme/tree/main/linux-generic.git";
-        rev = "0ryvawxxkqvbgsfm14gbr1kilw966rh2dsb82ixpv4534sb8vpmx";
+      src = pkgs.fetchurl {
+        url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme/archive/refs/heads/main.zip";
+        sha256 = "sha256-16ai3nbscxq7gymadllp4gckaxy7w1vpp022b51zykl0ism1kalp";
       };
 
       installPhase = ''
         mkdir -p $out
-        cp -r HyperFluent $out/
+        cp -r HyperFluent-GRUB-Theme-main/linux-generic $out/
       '';
     };
   };
