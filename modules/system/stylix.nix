@@ -12,7 +12,7 @@
       name = "Bibata-Modern-Ice";
       size = 32;
     };
-    
+
     targets = {
       grub.enable = false;
     };
