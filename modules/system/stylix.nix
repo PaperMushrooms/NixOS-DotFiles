@@ -12,6 +12,10 @@
       name = "Bibata-Modern-Ice";
       size = 32;
     };
+    
+    targets = {
+      grub.enable = false
+    };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
