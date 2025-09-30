@@ -6,7 +6,7 @@
     devices = [ "nodev" ];
     efiSupport = true;
     useOSProber = true;
-    theme = "${hyperfluent-theme}/HyperFluent";
+    #   theme = "${hyperfluent-theme}/HyperFluent";
   };
 
   boot.loader.efi = {

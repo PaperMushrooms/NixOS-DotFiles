@@ -60,6 +60,10 @@
           home-manager.nixosModules.home-manager # Home-Manager Module
           inputs.stylix.nixosModules.stylix
 
+          ({ config, pkgs, ... }: {
+            boot.loader.grub.theme = "${hyperfluent-theme}/HyperFluent";
+          })
+
           {
 
             home-manager = {
