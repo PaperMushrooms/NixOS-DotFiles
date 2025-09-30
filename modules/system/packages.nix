@@ -31,9 +31,7 @@
     # Wine Packages
     winePackages.full
     winetricks
-  ];
 
-  environment.systemPackages = with pkgs; [
     (pkgs.qflipper.overrideAttrs (old: {
       version = "1.4.1"; # or latest release
       src = pkgs.fetchurl {
