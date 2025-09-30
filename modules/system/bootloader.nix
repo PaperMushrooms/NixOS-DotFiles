@@ -13,5 +13,5 @@
     efiSysMountPoint = "/boot"; # → make sure your ESP is mounted here
   };
 
-  theme = /home/jealousy/HyperFluent
-    }
+  theme = /home/jealousy/HyperFluent;
+}
