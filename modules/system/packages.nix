@@ -26,7 +26,6 @@
     qFlipper
     polychromatic
     razer-cli
-    rustdesk
     scrcpy
     wget
 
