@@ -6,16 +6,18 @@
     devices = [ "nodev" ];
     efiSupport = true;
     useOSProber = true;
+
     theme = pkgs.stdenv.mkDerivation {
-      pname = "distro-grub-themes";
-      version = "3.1";
-      src = pkgs.fetchFromGitHub {
-        owner = "AdisonCavani";
-        repo = "distro-grub-themes";
-        rev = "v3.1";
-        hash = "sha256-ZcoGbbOMDDwjLhsvs77C7G7vINQnprdfI37a9ccrmPs=";
+      pname = "hyperfluent-grub-theme";
+      version = "1.0";
+      src = builtins.fetchGit {
+        url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme.git";
+        rev = "main"; # Or specify a specific commit hash if desired
       };
-      installPhase = "cp -r customize/nixos $out";
+      installPhase = ''
+        mkdir -p $out
+        cp -r HyperFluent $out/
+      '';
     };
   };
 
