@@ -33,6 +33,11 @@
     hyprland.url = "github:hyprwm/Hyprland";
     iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
 
+    hyperfluent-theme = {
+      url = "github:Coopydood/HyperFluent-GRUB-Theme";
+      flake = false;
+    };
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
