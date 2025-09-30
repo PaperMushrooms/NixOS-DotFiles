@@ -7,6 +7,7 @@ in
 pkgs.mkShell {
 
   buildInputs = with pkgs; [
+    zsh
     android-tools
     scrcpy
     usbmuxd
@@ -14,12 +15,15 @@ pkgs.mkShell {
 
   inputsFrom = [ ];
 
+  shell = "${pkgs.zsh}/bin/zsh";
+
   shellHook = ''
     alias exit="adb kill-server && exit"
     adb start-server &> /dev/null
     echo
     echo "Android Rooting and PoGo Spoofing Environment is running!"
-  '';
+    sourch ~/.zshrc  
+'';
 
 }
 
