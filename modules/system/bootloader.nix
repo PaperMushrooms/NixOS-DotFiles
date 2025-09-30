@@ -13,7 +13,7 @@
 
       src = pkgs.fetchzip {
         url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme/archive/refs/heads/main.zip";
-        sha256 = "l6oZqo6ATv9DWUKAe3fgx3c12SOX0qaqfwd3ppcdUZk=";
+        sha256 = lib.fakeSha256;
       };
 
       installPhase = ''
