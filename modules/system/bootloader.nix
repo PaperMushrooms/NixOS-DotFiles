@@ -11,7 +11,7 @@
       pname = "hyperfluent-grub-theme";
       version = "1.0";
 
-      src = pkgs.fetchurl {
+      src = pkgs.fetchzip {
         url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme/archive/refs/heads/main.zip";
         sha256 = "DjMhwuTM0k5gJMCa2LJYlHs90Hbu5hzUgNJXS8spblQ=";
       };
