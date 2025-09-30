@@ -32,7 +32,7 @@
     # Wine Packages
     winePackages.full
     winetricks
- ];
+  ];
 
 
   # Inside configuration.nix or your flake's module
