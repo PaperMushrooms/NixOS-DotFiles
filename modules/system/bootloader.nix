@@ -6,7 +6,7 @@
     devices = [ "nodev" ];
     efiSupport = true;
     useOSProber = true;
-    theme = /home/jealousy/HyperFluent;
+    theme = ../../grub-themes/HyperFluent;
   };
 
   boot.loader.efi = {
