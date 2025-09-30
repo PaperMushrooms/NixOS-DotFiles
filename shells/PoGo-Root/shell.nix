@@ -15,7 +15,7 @@ pkgs.mkShell {
 
   inputsFrom = [ ];
 
-  shell = "${pkgs.zsh}/bin/zsh";
+  SHELL = "${pkgs.zsh}/bin/zsh";
 
   shellHook = ''
     alias exit="adb kill-server && exit"
