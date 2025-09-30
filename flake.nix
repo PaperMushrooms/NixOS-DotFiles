@@ -33,18 +33,13 @@
     hyprland.url = "github:hyprwm/Hyprland";
     iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
 
-    hyperfluent-theme = {
-      url = "github:Coopydood/HyperFluent-GRUB-Theme";
-      flake = false;
-    };
-
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, hyperfluent-theme, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, ... }@inputs: {
 
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
@@ -59,10 +54,6 @@
 
           home-manager.nixosModules.home-manager # Home-Manager Module
           inputs.stylix.nixosModules.stylix
-
-          ({ config, pkgs, ... }: {
-            boot.loader.grub.theme = "${hyperfluent-theme}/HyperFluent";
-          })
 
           {
 
