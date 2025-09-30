@@ -12,8 +12,8 @@
       version = "1.0";
 
       src = builtins.fetchGit {
-        url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme.git";
-        rev = "0xlk2fsb6fav08lyv1xzvhzid2nmbs6g5sdq57jmyfx1m26agyg3;";
+        url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme/tree/main/linux-generic.git";
+        rev = "0ryvawxxkqvbgsfm14gbr1kilw966rh2dsb82ixpv4534sb8vpmx";
       };
 
       installPhase = ''
