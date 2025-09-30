@@ -44,7 +44,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, hyperfluent-theme, ... }@inputs: {
 
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
