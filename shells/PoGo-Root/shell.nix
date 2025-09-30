@@ -7,15 +7,12 @@ in
 pkgs.mkShell {
 
   buildInputs = with pkgs; [
-    zsh
     android-tools
     scrcpy
     usbmuxd
   ] ++ scripts;
 
   inputsFrom = [ ];
-
-  SHELL = "${pkgs.zsh}/bin/zsh";
 
   shellHook = ''
     alias exit="adb kill-server && exit"
