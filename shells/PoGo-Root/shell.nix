@@ -19,7 +19,7 @@ pkgs.mkShell {
     adb start-server &> /dev/null
     echo
     echo "Android Rooting and PoGo Spoofing Environment is running!"
-'';
+  '';
 
 }
 
