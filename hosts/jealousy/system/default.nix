@@ -28,7 +28,7 @@
   users.users.jealousy = {
     isNormalUser = true;
     description = "jealousy";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" "dialout" ];
     shell = pkgs.zsh;
   };
 
