@@ -14,7 +14,7 @@
     };
 
     targets = {
-      grub.enable = false;
+      #     kde.enable = false;
     };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
