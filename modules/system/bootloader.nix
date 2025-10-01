@@ -6,21 +6,6 @@
     devices = [ "nodev" ];
     efiSupport = true;
     useOSProber = true;
-
-    theme = pkgs.stdenv.mkDerivation {
-      pname = "hyperfluent-grub-theme";
-      version = "1.0";
-
-      src = pkgs.fetchzip {
-        url = "https://github.com/Coopydood/HyperFluent-GRUB-Theme/archive/refs/heads/main.zip";
-        sha256 = lib.fakeSha256;
-      };
-
-      installPhase = ''
-        mkdir -p $out
-        cp -r HyperFluent-GRUB-Theme-main/linux-generic $out/
-      '';
-    };
   };
 
   boot.loader.efi = {
@@ -28,3 +13,4 @@
     efiSysMountPoint = "/boot";
   };
 }
+
