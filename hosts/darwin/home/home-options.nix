@@ -1,5 +1,9 @@
 {
-  git.enable = true;
-  firefox.enable = true;
-  myshell.enable = true;
+   vscodium.enable = false;
+   gnomehome.enable = false;
+   hyprhome.enable = false;
+   git.enable = false;
+   firefox.enable = false;
+   myshell.enable = true;
+   plasmahome.enable = false;
 }

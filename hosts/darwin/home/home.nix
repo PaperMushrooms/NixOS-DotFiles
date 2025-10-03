@@ -5,7 +5,7 @@
   imports = [
     ./home-options.nix
     ../../../modules/home
-    ../../../modules/home/packages.nix
+#   ../../../modules/home/packages.nix
   ];
 
   home.username = "Darwin";
