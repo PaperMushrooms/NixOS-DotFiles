@@ -143,7 +143,7 @@
       system = "aarch64-darwin";
       modules = [
         ./hosts/darwin/system
-
+        home-manager.darwinModules.home-manager
        {     
          home-manager = {
             useUserPackages = true;
