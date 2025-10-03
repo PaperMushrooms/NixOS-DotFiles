@@ -137,28 +137,27 @@
           ./recovery/configuration.nix
         ];
       };
+    };
 
-      darwinConfigurations."Darwin" = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = [
-          ({ pkgs, ... }: {
+    darwinConfigurations."Darwin" = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      modules = [
+        ({ pkgs, ... }: {
 
-            nixpkgs.config.allowUnfree = true;
+          nixpkgs.config.allowUnfree = true;
 
-            nixpkgs.config.allowUnsupportedSystem = true;
+          nixpkgs.config.allowUnsupportedSystem = true;
 
-            nix.settings.experimental-features = [ "nix-command" "flakes" ];
+          nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-            # Set Git commit hash for darwin-version.
-            system.configurationRevision = self.rev or self.dirtyRev or null;
+          # Set Git commit hash for darwin-version.
+          system.configurationRevision = self.rev or self.dirtyRev or null;
 
-            system.stateVersion = 6;
+          system.stateVersion = 6;
 
-            nixpkgs.hostPlatform = "aarch64-darwin";
-          })
-        ];
-      };
+          nixpkgs.hostPlatform = "aarch64-darwin";
+        })
+      ];
     };
   };
 }
-
