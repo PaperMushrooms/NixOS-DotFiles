@@ -6,6 +6,7 @@
     ../home/desktop/hyprland/config.nix
     ./plasma.nix
     ./firefox.nix
+    ./stylix.nix
     ./zsh.nix
     ./vscodium.nix
   ];
