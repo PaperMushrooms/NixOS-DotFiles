@@ -139,7 +139,7 @@
       };
     };
 
-    darwinConfigurations."Darwin" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
         ./hosts/darwin/system

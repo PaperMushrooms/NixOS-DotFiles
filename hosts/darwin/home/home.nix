@@ -3,13 +3,12 @@
 {
 
   imports = [
-    ./home-options.nix
-    ../../../modules/home
-#   ../../../modules/home/packages.nix
+    ../../../modules/home/zsh.nix
+    ../../../modules/home/neovim.nix
   ];
 
-  home.username = "Darwin";
-  home.homeDirectory = "/home/Darwin";
+  home.username = lib.mkForce "matthew";
+  home.homeDirectory = lib.mkForce "/Users/matthew";
   home.stateVersion = "24.05";
 
   home.file = { };
@@ -21,7 +20,7 @@
   # User Defined Aliases
   programs.zsh = {
     shellAliases = {
-      rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#Darwin";
+      rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#darwin";
     };
   };
 
