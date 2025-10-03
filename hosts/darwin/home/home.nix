@@ -3,8 +3,8 @@
 {
 
   imports = [
-    ../../../modules/home/zsh.nix
-    ../../../modules/home/neovim.nix
+    ../../../modules/home
+    ./home-options.nix
   ];
 
   home.username = lib.mkForce "matthew";
