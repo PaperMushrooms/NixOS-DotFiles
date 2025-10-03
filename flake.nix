@@ -153,7 +153,7 @@
 
             extraSpecialArgs = { inherit inputs; };
             users = {
-              # darwin = import ./hosts/darwin/home/home.nix;
+               darwin = import ./hosts/darwin/home/home.nix;
             };
           };
         }
