@@ -7,24 +7,26 @@
 
   config = mkIf config.plasmahome.enable {
     # Configure Plasma Theme
-    programs.plasma = {
-      enable = true;
-      workspace = {
-        colorScheme = "BreezeDark"; # Enables dark mode
+    programs = lib.mkIf pkgs.stdenv.isLinux {
+        plasma = {
+        enable = true;
+        workspace = {
+          colorScheme = "BreezeDark"; # Enables dark mode
 
-        windowDecorations = {
-          library = "org.kde.breeze";
-          theme = "Breeze";
-        };
+          windowDecorations = {
+            library = "org.kde.breeze";
+            theme = "Breeze";
+          };
 
-        splashScreen = {
-          theme = "None";
-        };
+          splashScreen = {
+            theme = "None";
+          };
 
-        theme = "BreezeDark";
+          theme = "BreezeDark";
 
-        cursor = {
-          theme = "Breeze";
+          cursor = {
+            theme = "Breeze";
+          };
         };
       };
     };
