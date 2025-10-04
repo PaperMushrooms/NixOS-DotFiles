@@ -118,7 +118,6 @@
             home-manager = {
               useUserPackages = true;
               sharedModules = [
-                plasma-manager.homeModules.plasma-manager
                 nvf.homeManagerModules.default
               ];
 
