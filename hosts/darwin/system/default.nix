@@ -10,7 +10,6 @@
       discord
     ];
 
-
     nixpkgs.config = { 
       hostPlatform = "aarch64-darwin";
       allowUnfree = true;
