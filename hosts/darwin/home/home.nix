@@ -12,7 +12,7 @@
   home.homeDirectory = lib.mkForce "/Users/matthew";
   home.stateVersion = "24.05";
 
-  home.file = { };
+  home.file = {  };
 
   home.sessionVariables = {
     EDITOR = "nvim";
