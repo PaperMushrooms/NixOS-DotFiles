@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ../../../neovim.nix
+    ../../../modules/home/eovim.nix
     ../../../modules/home/git.nix
     ../../../modules/home/zsh.nix
   ];
