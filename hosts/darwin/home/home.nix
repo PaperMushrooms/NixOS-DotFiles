@@ -20,13 +20,14 @@
 
   # User Defined Aliases
   programs.zsh = {
+    enable = true;
     shellAliases = {
       rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#darwin";
     };
   };
 
   home.packages = with pkgs; [ 
-  
+    rustdesk 
   ];
 
   nixpkgs.config = { 
