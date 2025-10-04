@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ./neovim.nix
+    ../../../neovim.nix
     ../../../modules/home/git.nix
     ../../../modules/home/zsh.nix
   ];
@@ -26,6 +26,7 @@
   };
 
   home.packages = with pkgs; [ 
+    neovim
     discord
   ];
 
