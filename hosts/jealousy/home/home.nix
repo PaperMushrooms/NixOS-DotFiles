@@ -1,7 +1,10 @@
-{ inputs, config, pkgs, lib, ... }:
-
 {
-
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./home-options.nix
     ../../../modules/home
@@ -13,7 +16,7 @@
   home.homeDirectory = "/home/jealousy";
   home.stateVersion = "24.05";
 
-  home.file = { };
+  home.file = {};
 
   home.sessionVariables = {
     EDITOR = "nvim";

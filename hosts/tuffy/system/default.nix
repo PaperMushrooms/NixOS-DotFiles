@@ -1,17 +1,18 @@
-{ inputs, config, pkgs, lib, ... }:
-
 {
-
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
-
     # Include System Packages
     ./hardware-configuration.nix
     ../../../modules/system/packages.nix
-
   ];
 
   # Enabling Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Set the hostname.
   networking.hostName = "nixos"; # Define your hostname.
@@ -28,7 +29,7 @@
   users.users.tuffy = {
     isNormalUser = true;
     description = "tuffy";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" ];
+    extraGroups = ["networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd"];
     shell = pkgs.zsh;
   };
 
@@ -61,9 +62,8 @@
     kate
   ];
 
-  boot.kernelModules = [ "usbnet" "cdc_ether" "rndis_host" ];
+  boot.kernelModules = ["usbnet" "cdc_ether" "rndis_host"];
 
   # NixOS Version
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
