@@ -1,5 +1,4 @@
 {
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs.url = "github:NixOS/nixpkgs?ref=master";
@@ -51,13 +50,24 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
-
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-darwin,
+    plasma-manager,
+    nvf,
+    hyprland,
+    nix-homebrew,
+    homebrew-core,
+    homebrew-cask,
+    ...
+  } @ inputs: {
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
 
         modules = [
           ./hosts/jealousy/system
@@ -68,7 +78,6 @@
           inputs.stylix.nixosModules.stylix
 
           {
-
             home-manager = {
               useUserPackages = true;
               sharedModules = [
@@ -76,7 +85,7 @@
                 nvf.homeManagerModules.default
               ];
 
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               users = {
                 jealousy = import ./hosts/jealousy/home/home.nix;
               };
@@ -88,7 +97,7 @@
       tuffy = nixpkgs.lib.nixosSystem {
         system = "x86-linux";
 
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
 
         modules = [
           ./hosts/tuffy/system
@@ -106,7 +115,7 @@
                 nvf.homeManagerModules.default
               ];
 
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               users = {
                 tuffy = import ./hosts/tuffy/home/home.nix;
               };
@@ -118,7 +127,7 @@
       school = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
 
         modules = [
           ./hosts/school/system
@@ -126,14 +135,13 @@
           ./modules/system
 
           {
-
             home-manager = {
               useUserPackages = true;
               sharedModules = [
                 nvf.homeManagerModules.default
               ];
 
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               users = {
                 school = import ./hosts/school/home/home.nix;
               };
@@ -143,7 +151,7 @@
       };
 
       recovery = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
         modules = [
           ./recovery/configuration.nix
         ];
@@ -156,16 +164,29 @@
         ./hosts/darwin/system
         home-manager.darwinModules.home-manager
         nix-homebrew.darwinModules.nix-homebrew
-       {     
-         home-manager = {
+        {
+          nix-homebrew = {
+            enable = true;
+            enableRosetta = true;
+            user = "matthew";
+
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+            };
+
+            mutableTaps = false;
+          };
+          
+          home-manager = {
             useUserPackages = true;
             sharedModules = [
               nvf.homeManagerModules.default
             ];
 
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = {inherit inputs;};
             users = {
-               darwin = import ./hosts/darwin/home/home.nix;
+              darwin = import ./hosts/darwin/home/home.nix;
             };
           };
         }

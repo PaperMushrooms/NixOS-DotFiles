@@ -1,26 +1,24 @@
-{ pkgs, ... }:
+{pkgs, ...}: {
+   
+  imports = [
+  
+  ];
 
- {  
+  environment.systemPackages = with pkgs; [
+    discord
+  ];
 
-    imports = [
-      ./homebrew.nix
-    ];
+  nixpkgs.config = {
+    hostPlatform = "aarch64-darwin";
+    allowUnfree = true;
+    allowUnsupportedSystem = false;
+  };
 
-    environment.systemPackages = with pkgs; [
-      discord
-    ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-    nixpkgs.config = { 
-      hostPlatform = "aarch64-darwin";
-      allowUnfree = true;
-      allowUnsupportedSystem = false;
-    };
-
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-    # Set Git commit hash for darwin-version.
-    system = { 
-      configurationRevision = null;
-      stateVersion = 6;
-    };
+  # Set Git commit hash for darwin-version.
+  system = {
+    configurationRevision = null;
+    stateVersion = 6;
+  };
 }

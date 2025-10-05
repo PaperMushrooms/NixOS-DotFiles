@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: with lib; {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   options = {
     ssh.enable =
       mkEnableOption "Enables SSH";
@@ -8,7 +13,7 @@
   config = mkIf config.ssh.enable {
     services.openssh = {
       enable = true;
-      ports = [ 44906 ];
+      ports = [44906];
       settings = {
         PasswordAuthentication = false;
         UseDns = true;
@@ -25,7 +30,7 @@
           User git
           IdentityFile ~/.ssh/GitHub
           IdentitiesOnly yes
-    
+
         Host gitlab.com
           User git
           IdentityFile ~/.ssh/GitHub

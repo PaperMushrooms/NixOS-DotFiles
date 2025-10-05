@@ -1,7 +1,10 @@
-{ inputs, config, pkgs, lib, ... }:
-
 {
-
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./home-options.nix
     ../../../modules/home
@@ -14,12 +17,10 @@
   home.stateVersion = "24.05";
 
   home.file = {
-
     # Configure Razer devices to stay on during screensaver
     ".config/openrazer/razer.conf".text = ''
       devices_off_on_screensaver = False
     '';
-
   };
 
   home.sessionVariables = {

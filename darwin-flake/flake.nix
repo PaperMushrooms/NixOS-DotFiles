@@ -7,12 +7,15 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }: {
+  outputs = inputs @ {
+    self,
+    nix-darwin,
+    nixpkgs,
+  }: {
     darwinConfigurations."Matthews-MacBook-Air" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
-        ({ pkgs, ... }: {
-
+        ({pkgs, ...}: {
           nixpkgs.config.allowUnfree = true;
 
           nixpkgs.config.allowUnsupportedSystem = true;
@@ -26,7 +29,7 @@
             scrcpy
           ];
 
-          nix.settings.experimental-features = [ "nix-command" "flakes" ];
+          nix.settings.experimental-features = ["nix-command" "flakes"];
 
           # Set Git commit hash for darwin-version.
           system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -39,4 +42,3 @@
     };
   };
 }
-

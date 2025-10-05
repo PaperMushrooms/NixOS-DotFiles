@@ -1,5 +1,9 @@
-{ config, lib, ... }: with lib; {
-
+{
+  config,
+  lib,
+  ...
+}:
+with lib; {
   options = {
     asus.enable =
       mkEnableOption "Enable ASUS plugins";

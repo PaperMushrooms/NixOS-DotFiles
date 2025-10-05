@@ -1,15 +1,10 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   # Hyprland Keybinds Configuration
   wayland.windowManager.hyprland = {
-
     settings = {
-
       "$mainMod" = "Super";
 
       bind = [
-
         # # Window/Session Actions
         "$mainMod, Q, killactive" # close focused window
         "$mainMod, T, togglefloating" # toggle the window between focus and float
@@ -22,13 +17,12 @@
 
         # Application Shortcuts
         "$mainMod, W, exec, kitty" # launch terminal emulator
-        "$mainMod, D, exec, discord" # launch discord 
+        "$mainMod, D, exec, discord" # launch discord
         "$mainMod, E, exec, dolphin" # launch file manager
         "$mainMod, C, exec, kitty nvim" # launch text editor
         "$mainMod, R, exec, kitty nix develop /etc/nixos/shells/PoGo-Root" # launch
         "$mainMod, B, exec, firefox" # launch web browser
         "$mainMod, A, exec, rofi -show drun -show-icons" # launch application launcher
-
 
         # Move between grouped windows
         "$mainMod CTRL , H, changegroupactive, b"
@@ -75,7 +69,6 @@
         "$mainMod+Alt, 8, movetoworkspacesilent, 8"
         "$mainMod+Alt, 9, movetoworkspacesilent, 9"
         "$mainMod+Alt, 0, movetoworkspacesilent, 10"
-
 
         # Move/Switch to special workspace (scratchpad)
         "$mainMod+Alt, S, movetoworkspacesilent, special"

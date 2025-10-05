@@ -1,12 +1,17 @@
-{ inputs, config, lib, pkgs, ... }: with lib; {
-
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   options = {
     firefox.enable =
       mkEnableOption "Enable and Configure Firefox";
   };
 
   config = mkIf config.firefox.enable {
-
     # Web Browser Configuration
 
     # Configure Firefox
@@ -26,37 +31,37 @@
             settings = [
               {
                 name = "Gmail";
-                tags = [ "Email" ];
+                tags = ["Email"];
                 keyword = "gmail";
                 url = "https://mail.google.com/";
               }
               {
                 name = "Google Drive";
-                tags = [ "Cloud" ];
+                tags = ["Cloud"];
                 keyword = "drive";
                 url = "https://drive.google.com/";
               }
               {
                 name = "Ebay";
-                tags = [ "Shopping" ];
+                tags = ["Shopping"];
                 keyword = "drive";
                 url = "https://www.ebay.com/";
               }
               {
                 name = "ChatGPT";
-                tags = [ "Artificial Intelligence" ];
+                tags = ["Artificial Intelligence"];
                 keyword = "GPT";
                 url = "https://chatgpt.com/";
               }
               {
                 name = "GitHub";
-                tags = [ "Development" ];
+                tags = ["Development"];
                 keyword = "Git";
                 url = "https://github.com/";
               }
               {
                 name = "NixOS & Flakes Book";
-                tags = [ "Education" ];
+                tags = ["Education"];
                 keyword = "NixManual";
                 url = "https://nixos-and-flakes.thiscute.world/";
               }
@@ -65,37 +70,37 @@
                 bookmarks = [
                   {
                     name = "Gmail";
-                    tags = [ "Email" ];
+                    tags = ["Email"];
                     keyword = "gmail";
                     url = "https://mail.google.com/";
                   }
                   {
                     name = "Google Drive";
-                    tags = [ "Cloud" ];
+                    tags = ["Cloud"];
                     keyword = "drive";
                     url = "https://drive.google.com/";
                   }
                   {
                     name = "Ebay";
-                    tags = [ "Shopping" ];
+                    tags = ["Shopping"];
                     keyword = "drive";
                     url = "https://www.ebay.com/";
                   }
                   {
                     name = "ChatGPT";
-                    tags = [ "Artificial Intelligence" ];
+                    tags = ["Artificial Intelligence"];
                     keyword = "GPT";
                     url = "https://chatgpt.com/";
                   }
                   {
                     name = "GitHub";
-                    tags = [ "Development" ];
+                    tags = ["Development"];
                     keyword = "Git";
                     url = "https://github.com/";
                   }
                   {
                     name = "NixOS & Flakes Book";
-                    tags = [ "Education" ];
+                    tags = ["Education"];
                     keyword = "NixManual";
                     url = "https://nixos-and-flakes.thiscute.world/";
                   }
@@ -116,17 +121,17 @@
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {
-        "text/html" = [ "firefox.desktop" ];
-        "application/xhtml+xml" = [ "firefox.desktop" ];
-        "application/x-www-browser" = [ "firefox.desktop" ];
-        "x-scheme-handler/http" = [ "firefox.desktop" ];
-        "x-scheme-handler/https" = [ "firefox.desktop" ];
-        "x-scheme-handler/about" = [ "firefox.desktop" ];
-        "x-scheme-handler/unknown" = [ "firefox.desktop" ];
+        "text/html" = ["firefox.desktop"];
+        "application/xhtml+xml" = ["firefox.desktop"];
+        "application/x-www-browser" = ["firefox.desktop"];
+        "x-scheme-handler/http" = ["firefox.desktop"];
+        "x-scheme-handler/https" = ["firefox.desktop"];
+        "x-scheme-handler/about" = ["firefox.desktop"];
+        "x-scheme-handler/unknown" = ["firefox.desktop"];
       };
     };
 
     # Apply Stylix Theming
-    stylix.targets.firefox.profileNames = [ "default" ];
+    stylix.targets.firefox.profileNames = ["default"];
   };
 }

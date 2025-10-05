@@ -1,7 +1,10 @@
-{ inputs, config, pkgs, lib, ... }:
-
 {
-
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ../../../modules/home/neovim.nix
     ../../../modules/home/git.nix
@@ -12,7 +15,7 @@
   home.homeDirectory = lib.mkForce "/Users/matthew";
   home.stateVersion = "24.05";
 
-  home.file = {  };
+  home.file = {};
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -26,12 +29,11 @@
     };
   };
 
-  home.packages = with pkgs; [ 
-
+  home.packages = with pkgs; [
   ];
 
-  nixpkgs.config = { 
-      allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
   };
 
   # Let Home Manager install and manage itself.

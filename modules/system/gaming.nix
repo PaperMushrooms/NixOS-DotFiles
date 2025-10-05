@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: with lib; {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   options = {
     gaming.enable =
       mkEnableOption "Enable Gaming Compatibility";
@@ -44,12 +49,9 @@
       "openssl-1.1.1w"
     ];
 
-
-
     # Configure Steam path for ProtonGE
     environment.sessionVariables = {
-      STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-        "/home/user/.steam/root/compatibilitytools.d";
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
     };
 
     # System Configuration
@@ -71,7 +73,6 @@
     programs.gamemode.enable = true;
 
     # Enable Modern Drivers
-    services.xserver.videoDrivers = [ "radeon" "amdgpu" "nvidia" ];
-
+    services.xserver.videoDrivers = ["radeon" "amdgpu" "nvidia"];
   };
 }

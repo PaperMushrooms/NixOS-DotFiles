@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: with lib; {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   options = {
     libreoffice.enable =
       mkEnableOption "Enable LibreOffice";
