@@ -9,6 +9,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,7 +51,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
 
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
@@ -143,6 +155,7 @@
       modules = [
         ./hosts/darwin/system
         home-manager.darwinModules.home-manager
+        nix-homebrew.darwinModules.nix-homebrew
        {     
          home-manager = {
             useUserPackages = true;
