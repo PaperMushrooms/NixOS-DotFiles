@@ -7,7 +7,7 @@
   environment.systemPackages = with pkgs; [
     discord
     notion-app
-   firefox
+    librewolf
   ];
 
   nixpkgs.config = {
