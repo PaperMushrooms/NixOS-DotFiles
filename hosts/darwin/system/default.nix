@@ -7,7 +7,7 @@
   environment.systemPackages = with pkgs; [
     discord
     notion-app
-#   firefox
+   firefox
   ];
 
   nixpkgs.config = {
