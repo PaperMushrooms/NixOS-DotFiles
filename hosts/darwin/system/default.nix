@@ -7,7 +7,6 @@
   environment.systemPackages = with pkgs; [
     discord
     notion-app
-    librewolf
   ];
 
   nixpkgs.config = {
@@ -25,6 +24,8 @@
     casks = [
       "rustdesk"
       "qflipper"
+      "librewolf"
+      "firefox"
       "bambu-studio"
     ];
   };
