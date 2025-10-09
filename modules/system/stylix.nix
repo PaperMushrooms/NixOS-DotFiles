@@ -2,7 +2,7 @@
   stylix = {
     enable = true;
 
-    autoEnable = false;
+    autoEnable = true;
 
     cursor = {
       package = pkgs.bibata-cursors;
