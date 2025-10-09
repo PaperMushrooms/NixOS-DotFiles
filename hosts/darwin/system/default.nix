@@ -24,16 +24,15 @@
     casks = [
       "rustdesk"
       "qflipper"
-      "librewolf"
       "firefox"
       "bambu-studio"
     ];
   };
 
-#  services.yabai = { 
-#    enable = true;
-#    config = {
-#      focus_follows_mouse = "autoraise";
+# services.yabai = { 
+#   enable = true;
+#   config = {
+#      focus_follows_mouse = "off";
 #      mouse_follows_focus = "off";
 #      window_placement    = "second_child";
 #      window_opacity      = "off";
@@ -42,8 +41,8 @@
 #      left_padding        = 10;
 #      right_padding       = 10;
 #      window_gap          = 10;
-#    };
-#  };
+#   };
+# };
 
   # Set Git commit hash for darwin-version.
   system = {
