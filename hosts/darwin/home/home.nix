@@ -8,7 +8,7 @@
 
 {
   imports = [
-#   ../../../modules/home/neovim.nix
+    ../../../modules/home/neovim.nix
     ../../../modules/home/git.nix
     ../../../modules/home/zsh.nix
   ];
