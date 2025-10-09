@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.waybar = {
     enable = true;
 
@@ -14,9 +16,9 @@
           #         format-icons = [ "" "" "" "" "" ];
         };
 
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = ["hyprland/workspaces"];
 
-        modules-center = [ "clock" ];
+        modules-center = ["clock"];
 
         modules-right = [
           "tray"

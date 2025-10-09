@@ -20,4 +20,3 @@
   # Enable Plasma6 System-Level Configuration
   plasmasys.enable = true;
 }
-

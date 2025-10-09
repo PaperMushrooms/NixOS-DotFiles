@@ -1,7 +1,5 @@
-{ pkgs ? import <nixpkgs> { config.allowUnfree = true; } }:
-
+{pkgs ? import <nixpkgs> {config.allowUnfree = true;}}:
 pkgs.mkShell {
-
   buildInputs = with pkgs; [
     powershell
   ];
@@ -10,5 +8,4 @@ pkgs.mkShell {
     echo
     echo "Time to learn some PowerShell!"
   '';
-
 }
