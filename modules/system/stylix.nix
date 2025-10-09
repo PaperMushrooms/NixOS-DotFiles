@@ -10,7 +10,8 @@
       size = 32;
     };
 
-    targets = {};
+    targets = {
+    };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
