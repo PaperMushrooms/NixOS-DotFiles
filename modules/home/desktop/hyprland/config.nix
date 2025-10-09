@@ -1,6 +1,10 @@
-{ config, lib, pkgs, ... }: with lib; {
-
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   imports = [
     ./monitors.nix
     ./keybindings.nix
@@ -13,14 +17,13 @@
       mkEnableOption "Enable Hyprland Home-Manager settings";
   };
 
-
   config = mkIf config.hyprhome.enable {
     # Hyprland Configuration
     wayland.windowManager.hyprland = {
       enable = true;
 
       settings = {
-        exec-once = [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
+        exec-once = ["bash /etc/nixos/modules/home/desktop/hyprland/start.sh"];
       };
     };
 
@@ -42,4 +45,3 @@
     };
   };
 }
-

@@ -1,6 +1,10 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+
 
   programs.neovim = {
     enable = true;
@@ -18,7 +22,7 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
 
-        lsp = {
+        lsp = { 
           enable = true;
         };
 

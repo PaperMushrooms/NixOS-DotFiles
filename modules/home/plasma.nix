@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: with lib; {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   options = {
     plasmahome.enable =
       mkEnableOption "Enable and configure Plasma6 Home-Manager config";

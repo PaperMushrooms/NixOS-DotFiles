@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: with lib; {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   options = {
     plasmasys.enable = mkEnableOption "Enable and Configure Plasma6";
   };

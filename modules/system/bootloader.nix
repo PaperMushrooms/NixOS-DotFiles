@@ -1,9 +1,12 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   boot.loader.grub = {
     enable = true;
-    devices = [ "nodev" ];
+    devices = ["nodev"];
     efiSupport = true;
     useOSProber = true;
   };
@@ -13,4 +16,3 @@
     efiSysMountPoint = "/boot";
   };
 }
-

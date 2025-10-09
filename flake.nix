@@ -1,5 +1,4 @@
 {
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs.url = "github:NixOS/nixpkgs?ref=master";
@@ -7,6 +6,18 @@
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
     };
 
     home-manager = {
@@ -39,13 +50,24 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, ... }@inputs: {
-
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-darwin,
+    plasma-manager,
+    nvf,
+    hyprland,
+    nix-homebrew,
+    homebrew-core,
+    homebrew-cask,
+    ...
+  } @ inputs: {
     nixosConfigurations = {
       jealousy = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
 
         modules = [
           ./hosts/jealousy/system
@@ -56,7 +78,6 @@
           inputs.stylix.nixosModules.stylix
 
           {
-
             home-manager = {
               useUserPackages = true;
               sharedModules = [
@@ -64,7 +85,7 @@
                 nvf.homeManagerModules.default
               ];
 
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               users = {
                 jealousy = import ./hosts/jealousy/home/home.nix;
               };
@@ -76,7 +97,7 @@
       tuffy = nixpkgs.lib.nixosSystem {
         system = "x86-linux";
 
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
 
         modules = [
           ./hosts/tuffy/system
@@ -94,7 +115,7 @@
                 nvf.homeManagerModules.default
               ];
 
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               users = {
                 tuffy = import ./hosts/tuffy/home/home.nix;
               };
@@ -106,7 +127,7 @@
       school = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
 
         modules = [
           ./hosts/school/system
@@ -114,15 +135,13 @@
           ./modules/system
 
           {
-
             home-manager = {
               useUserPackages = true;
               sharedModules = [
-                plasma-manager.homeModules.plasma-manager
                 nvf.homeManagerModules.default
               ];
 
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               users = {
                 school = import ./hosts/school/home/home.nix;
               };
@@ -132,19 +151,46 @@
       };
 
       recovery = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
         modules = [
           ./recovery/configuration.nix
         ];
       };
+    };
 
-      darwinConfigurations."Darwin" = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        modules = [
+    darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      modules = [
+        ./hosts/darwin/system
+        home-manager.darwinModules.home-manager
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            enable = true;
+            enableRosetta = true;
+            user = "matthew";
 
-        ];
-      };
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+            };
+
+            mutableTaps = false;
+          };
+          
+          home-manager = {
+            useUserPackages = true;
+            sharedModules = [
+              nvf.homeManagerModules.default
+            ];
+
+            extraSpecialArgs = {inherit inputs;};
+            users = {
+              darwin = import ./hosts/darwin/home/home.nix;
+            };
+          };
+        }
+      ];
     };
   };
 }
-

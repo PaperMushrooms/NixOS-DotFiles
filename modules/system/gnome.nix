@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: with lib; {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; {
   options = {
     gnomesys.enable =
       mkEnableOption "Enable Gnome desktop environment";
@@ -27,6 +32,5 @@
 
     # Enable dconf
     programs.dconf.enable = true;
-
   };
 }
