@@ -5,14 +5,14 @@
   ...
 }: {
 
-# home.packages = with pkgs; [
-#   neovim
-# ];
+  home.packages = with pkgs; [
+    neovim
+  ];
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+#  programs.neovim = {
+#    enable = true;
+#    defaultEditor = true;
+#  };
 
   programs.nvf = {
     enable = true;
