@@ -5,9 +5,6 @@
   ...
 }: {
 
-# home.packages = with pkgs; [
-#   neovim
-# ];
 
   programs.neovim = {
     enable = true;
@@ -25,7 +22,7 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
 
-        lsp = {
+        lsp = { 
           enable = true;
         };
 
