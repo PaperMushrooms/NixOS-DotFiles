@@ -17,7 +17,7 @@ with lib; {
       settings = {
         PasswordAuthentication = false;
         UseDns = true;
-        X11Forwarding = false;
+        X11Forwarding = true;
         PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
       };
     };
