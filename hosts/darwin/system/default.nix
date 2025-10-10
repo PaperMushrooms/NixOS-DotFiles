@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     discord
     notion-app
+    xquartz
   ];
 
   nixpkgs.config = {
