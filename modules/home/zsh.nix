@@ -23,7 +23,7 @@ with lib; {
         update = "sudo nix flake update --flake .";
         cleanup = "nix-collect-garbage -d";
         cleanup-full = "sudo nix-collect-garbage -d";
-        mkrecovery = "nix run nixpkgs#nixos-generators -- \ --format iso --flake .#recovery -o recovery";
+        mkrecovery = "nix build .#nixosConfigurations.recovery.config.system.build.isoImage";
 
         SDlab = "nix develop shells/PoGo-Root";
 
