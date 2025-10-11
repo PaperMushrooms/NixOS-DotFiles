@@ -1,7 +1,6 @@
-{
-  pkgs,
-  modulesPath,
-  ...
+{ pkgs
+, modulesPath
+, ...
 }: {
   imports = [
     "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
@@ -21,5 +20,5 @@
 
   systemd.services.NetworkManager.enable = true;
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

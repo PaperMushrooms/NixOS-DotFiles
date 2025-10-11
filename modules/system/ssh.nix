@@ -1,8 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 with lib; {
   options = {
@@ -13,7 +12,7 @@ with lib; {
   config = mkIf config.ssh.enable {
     services.openssh = {
       enable = true;
-      ports = [44906];
+      ports = [ 44906 ];
       settings = {
         PasswordAuthentication = false;
         UseDns = true;
