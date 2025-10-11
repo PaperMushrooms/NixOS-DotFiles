@@ -11,7 +11,6 @@ with lib; {
   config = mkIf config.plasmasys.enable {
     # System-level settings
     services.desktopManager.plasma6.enable = true;
-    services.displayManager.sddm.enable = true;
     services.xserver = {
       enable = true;
       xkb = {
