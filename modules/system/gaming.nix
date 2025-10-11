@@ -25,7 +25,7 @@ with lib; {
       runescape
       runelite
       lutris # Open-source game manager for Linux
-      heroric
+      heroic
       rpcs3
       vulkan-tools # Vulkan utilities like vulkaninfo
       vulkan-loader # Vulkan loader
