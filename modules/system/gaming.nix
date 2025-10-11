@@ -21,6 +21,7 @@ with lib; {
 
     # Enable Gaming Related Packages
     environment.systemPackages = with pkgs; [
+      zulu25
       xivlauncher # Custom launcher for Final Fantasy XIV
       pokemmo-installer
       runescape
