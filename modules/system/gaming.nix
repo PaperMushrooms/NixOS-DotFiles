@@ -46,12 +46,6 @@ with lib; {
       winetricks
     ];
 
-      (wineWowPackages.full.override {
-        wineRelease = "staging";
-        mingwSupport = true;
-      })
-      winetricks
-
     nixpkgs.config.permittedInsecurePackages = [
       "openssl-1.1.1w"
     ];
