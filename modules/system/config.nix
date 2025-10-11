@@ -47,14 +47,14 @@
     kate
   ];
 
-  services.logind.settings.Login = ''
-    HandleLidSwitch=ignore
-    HandleLidSwitchDocked=ignore
-  '';
+  services.logind.settings.Login = {
+    HandleLidSwitch = ignore
+      HandleLidSwitchDocked=ignore
+    };
 
 
-  boot.kernelModules = [ "usbnet" "cdc_ether" ];
+    boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
-  # NixOS Version
-  system.stateVersion = "24.05"; # Did you read the comment?
-}
+    # NixOS Version
+    system.stateVersion = "24.05"; # Did you read the comment?
+  }
