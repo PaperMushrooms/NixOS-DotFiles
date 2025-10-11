@@ -19,11 +19,11 @@ with lib; {
 
       # Zsh Aliases
       shellAliases = {
-        upload = "git add . && git commit -m 'Update' && git push -u origin main && cd ";
+        upload = "git add . && git commit -m 'Update' && git push -u origin main";
         update = "sudo nix flake update --flake .";
         cleanup = "nix-collect-garbage -d";
         cleanup-full = "sudo nix-collect-garbage -d";
-	mkrecovery = "nix run nixpkgs#nixos-generators -- \ --format iso --flake /path/to/flake#exampleIso -i result"
+        mkrecovery = "nix run nixpkgs#nixos-generators -- \ --format iso --flake /path/to/flake#exampleIso -i result";
 
         SDlab = "nix develop shells/PoGo-Root";
 
