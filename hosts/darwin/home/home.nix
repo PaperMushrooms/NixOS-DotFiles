@@ -9,7 +9,6 @@
 {
   imports = [
     ../../../modules/home/neovim.nix
-    ../../../modules/home/firefox.nix
     ../../../modules/home/git.nix
     ../../../modules/home/zsh.nix
   ];
