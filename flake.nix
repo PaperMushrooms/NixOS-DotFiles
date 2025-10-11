@@ -162,8 +162,10 @@
       system = "aarch64-darwin";
       modules = [
         ./hosts/darwin/system
+
         home-manager.darwinModules.home-manager
         nix-homebrew.darwinModules.nix-homebrew
+
         {
           nix-homebrew = {
             enable = true;
