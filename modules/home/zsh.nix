@@ -1,8 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 with lib; {
   options = {
@@ -33,7 +32,7 @@ with lib; {
       # Enable and Configure Oh-My-Zsh Plugin
       oh-my-zsh = {
         enable = true;
-        plugins = ["git" ""];
+        plugins = [ "git" "" ];
         theme = "agnoster";
       };
     };

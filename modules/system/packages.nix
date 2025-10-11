@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # Allow Unfree Packages
   nixpkgs.config.allowUnfree = true;
 

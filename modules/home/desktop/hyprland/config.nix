@@ -1,8 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 with lib; {
   imports = [
@@ -23,7 +22,7 @@ with lib; {
       enable = true;
 
       settings = {
-        exec-once = ["bash /etc/nixos/modules/home/desktop/hyprland/start.sh"];
+        exec-once = [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
       };
     };
 

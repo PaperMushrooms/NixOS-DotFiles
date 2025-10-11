@@ -1,12 +1,11 @@
-{
-  inputs,
-  config,
-  pkgs,
-  lib,
-  ...
+{ inputs
+, config
+, pkgs
+, lib
+, ...
 }: {
   # Enabling Flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set the hostname.
   networking.hostName = "nixos"; # Define your hostname.
@@ -48,7 +47,7 @@
     kate
   ];
 
-  boot.kernelModules = ["usbnet" "cdc_ether"];
+  boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
   # NixOS Version
   system.stateVersion = "24.05"; # Did you read the comment?

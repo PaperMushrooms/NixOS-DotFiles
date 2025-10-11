@@ -1,8 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 with lib; {
   options = {
@@ -75,6 +74,6 @@ with lib; {
     programs.gamemode.enable = true;
 
     # Enable Modern Drivers
-    services.xserver.videoDrivers = ["radeon" "amdgpu" "nvidia"];
+    services.xserver.videoDrivers = [ "radeon" "amdgpu" "nvidia" ];
   };
 }

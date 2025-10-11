@@ -1,9 +1,8 @@
-{
-  inputs,
-  config,
-  pkgs,
-  lib,
-  ...
+{ inputs
+, config
+, pkgs
+, lib
+, ...
 }: {
   imports = [
     # Include System Packages
@@ -12,7 +11,7 @@
   ];
 
   # enabling flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set the hostname.
   networking.hostName = "nixos"; # Define your hostname.
@@ -29,7 +28,7 @@
   users.users.jealousy = {
     isNormalUser = true;
     description = "jealousy";
-    extraGroups = ["networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" "dialout"];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" "dialout" ];
     shell = pkgs.zsh;
   };
 
@@ -68,7 +67,7 @@
     kate
   ];
 
-  boot.kernelModules = ["usbnet" "cdc_ether"];
+  boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
   # NixOS Version
   system.stateVersion = "24.05"; # Did you read the comment?

@@ -1,4 +1,4 @@
-{config, ...}: {
+{ config, ... }: {
   # Hyprland Keybinds Configuration
   wayland.windowManager.hyprland = {
     settings = {
