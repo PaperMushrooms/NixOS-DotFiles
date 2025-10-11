@@ -41,7 +41,7 @@ with lib; {
       dxvk
     ];
 
-    users.users.tuffy.packages = with pkgs; [
+    users.users.$USER.packages = with pkgs; [
       (wineWowPackages.full.override {
         wineRelease = "staging";
         mingwSupport = true;
