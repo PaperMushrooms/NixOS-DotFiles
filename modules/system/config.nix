@@ -47,6 +47,12 @@
     kate
   ];
 
+  services.logind.extraConfig = ''
+    HandleLidSwitch=ignore
+    HandleLidSwitchDocked=ignore
+  '';
+
+
   boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
   # NixOS Version
