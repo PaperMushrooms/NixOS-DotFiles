@@ -60,8 +60,7 @@ with lib; {
     # System Configuration
     hardware = {
       graphics.enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      graphics.enable32Bit = true;
       enableRedistributableFirmware = true;
       nvidia = {
         modesetting.enable = true;
