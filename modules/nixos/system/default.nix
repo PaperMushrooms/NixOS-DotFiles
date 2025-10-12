@@ -1,6 +1,7 @@
 {
   imports = [
     ./config.nix
+    ./users.nix
     ./stylix.nix
     ./time-and-date.nix
     ./audio.nix
