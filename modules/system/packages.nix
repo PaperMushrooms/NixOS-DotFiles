@@ -7,6 +7,8 @@
     android-studio
     anydesk
     bat
+    zip
+    unzip
     curl
     fastfetch
     freecad
