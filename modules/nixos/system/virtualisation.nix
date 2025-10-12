@@ -7,7 +7,7 @@ with lib; {
 
   config = mkIf config.virtualisationconf.enable {
     programs.virt-manager.enable = true;
-    users.groups.libvirtd.members = [ "tuffy" "jealousy" ];
+    users.groups.libvirtd.members = [ "dex" ];
     virtualisation.waydroid.enable = true;
     virtualisation.libvirtd.enable = true;
     virtualisation.spiceUSBRedirection.enable = true;

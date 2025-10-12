@@ -1,13 +1,12 @@
 { inputs, config, pkgs, lib, ... }: {
   imports = [
     ./home-options.nix
-    ../../../modules/home
-    ../../../modules/home/packages.nix
+    ../../../modules/nixos/home
     ../../../modules/home/desktop/hyprland/keybindings.nix
   ];
 
-  home.username = "tuffy";
-  home.homeDirectory = "/home/tuffy";
+  home.username = "dex";
+  home.homeDirectory = "/home/dex";
   home.stateVersion = "24.05";
 
   home.file = {
@@ -23,7 +22,7 @@
   programs.zsh = {
     shellAliases = {
       rebuild =
-        "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#tuffy && cd ";
+        "sudo nixos-rebuild switch --flake .";
     };
   };
 

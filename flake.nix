@@ -50,86 +50,67 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf
-    , hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
-      nixosConfigurations = {
-        jealousy = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-
-          specialArgs = { inherit inputs; };
-
-          modules = [
-            ./hosts/jealousy/system
-            ./hosts/jealousy/system/options.nix
-            ./modules/system
-
-            home-manager.nixosModules.home-manager # Home-Manager Module
-            inputs.stylix.nixosModules.stylix
-
-            {
-              home-manager = {
-                useUserPackages = true;
-                sharedModules = [
-                  plasma-manager.homeModules.plasma-manager
-                  nvf.homeManagerModules.default
-                ];
-
-                extraSpecialArgs = { inherit inputs; };
-                users = { jealousy = import ./hosts/jealousy/home/home.nix; };
-              };
-            }
-          ];
-        };
-
-        tuffy = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
+      nixosConfigurations = { 
+        default = nixpkgs.lib.nixosSystem {
           system = "x86-linux";
 
           specialArgs = { inherit inputs; };
 
           modules = [
-            ./hosts/tuffy/system
-            ./hosts/tuffy/system/options.nix
-            ./modules/system
+            ./hosts/satanix/system
+            ./hosts/satanix/system/options.nix
+            ./modules/satanix/system
+            ./modules/shared
 
-            home-manager.nixosModules.home-manager # Home-Manager Module
+            home-manager.nixosModules.home-manager 
             inputs.stylix.nixosModules.stylix
 
             {
               home-manager = {
                 useUserPackages = true;
+		backupFileExtension = "backup";
                 sharedModules = [
                   plasma-manager.homeModules.plasma-manager
                   nvf.homeManagerModules.default
                 ];
 
                 extraSpecialArgs = { inherit inputs; };
-                users = { tuffy = import ./hosts/tuffy/home/home.nix; };
+                users = { dex = import ./hosts/satanix/home/home.nix; };
               };
             }
           ];
         };
-
-        school = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+     
+	nixspawn = nixpkgs.lib.nixosSystem {
+          system = "x86-linux";
 
           specialArgs = { inherit inputs; };
 
           modules = [
-            ./hosts/school/system
-            ./hosts/school/system/options.nix
-            ./modules/system
+            ./hosts/nixspawn/system
+            ./hosts/nixspawn/system/options.nix
+            ./modules/nixspawn/system
+            ./modules/shared
+
+            home-manager.nixosModules.home-manager 
+            inputs.stylix.nixosModules.stylix
 
             {
               home-manager = {
                 useUserPackages = true;
-                sharedModules = [ nvf.homeManagerModules.default ];
+		backupFileExtension = "backup";
+                sharedModules = [
+                  plasma-manager.homeModules.plasma-manager
+                  nvf.homeManagerModules.default
+                ];
 
                 extraSpecialArgs = { inherit inputs; };
-                users = { school = import ./hosts/school/home/home.nix; };
+                users = { dex = import ./hosts/nixspawn/home/home.nix; };
               };
             }
           ];
-        };
+        }
 
         recovery = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
@@ -137,7 +118,7 @@
         };
       };
 
-      darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."default" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
           ./hosts/darwin/system

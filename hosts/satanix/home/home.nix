@@ -1,16 +1,20 @@
 { inputs, config, pkgs, lib, ... }: {
   imports = [
     ./home-options.nix
-    ../../../modules/home
-    ../../../modules/home/packages.nix
+    ../../../modules/nixos/home
     ../../../modules/home/desktop/hyprland/keybindings.nix
   ];
 
-  home.username = "jealousy";
-  home.homeDirectory = "/home/jealousy";
+  home.username = "dex";
+  home.homeDirectory = "/home/dex";
   home.stateVersion = "24.05";
 
-  home.file = { };
+  home.file = {
+    # Configure Razer devices to stay on during screensaver
+    ".config/openrazer/razer.conf".text = ''
+      devices_off_on_screensaver = False
+    '';
+  };
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
@@ -18,8 +22,13 @@
   programs.zsh = {
     shellAliases = {
       rebuild =
-        "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#jealousy && cd ";
+        "sudo nixos-rebuild switch --flake .";
     };
+  };
+
+  stylix.targets.kde = {
+    enable = false;
+    decorations.enable = false;
   };
 
   # Let Home Manager install and manage itself.

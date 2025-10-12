@@ -1,42 +1,20 @@
-{ inputs, config, pkgs, lib, ... }: {
-  imports = [
-    # Include System Packages
-    ./hardware-configuration.nix
-    ../../../modules/system/packages.nix
-  ];
+{ inputs, config, pkgs, lib, ... }: 
 
-  # enabling flakes
+{
+  # Enabling Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Set the hostname.
-  networking.hostName = "nixos"; # Define your hostname.
-
-  # Enable networking
-  networking.networkmanager = { enable = true; };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jealousy = {
-    isNormalUser = true;
-    description = "jealousy";
-    extraGroups =
-      [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" "dialout" ];
-    shell = pkgs.zsh;
-  };
-
   # Enable Razer peripherals
   hardware.openrazer.enable = true;
-  hardware.sensor.iio.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    jq
-    inputs.iio-hyprland.packages.${pkgs.system}.default
-  ];
 
   # Enable USBmuxd
   services.usbmuxd.enable = true;
+
+  # Enable networking
+  networking.networkmanager = { enable = true; };
 
   # Enable Bluetooth
   services.blueman.enable = true;
@@ -59,6 +37,18 @@
     konsole
     oxygen
     kate
+  ];
+
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
+
+  hardware.sensor.iio.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    jq
+    inputs.iio-hyprland.packages.${pkgs.system}.default
   ];
 
   boot.kernelModules = [ "usbnet" "cdc_ether" ];
