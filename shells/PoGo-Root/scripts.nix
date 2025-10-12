@@ -1,30 +1,30 @@
 { pkgs }: [
   (pkgs.writeShellScriptBin "McLaren-crDroid7-A11" ''
-    cd /home/{$USER}/Android/McLaren/crDroid7-A11/
+    cd /home/$USER/Android/McLaren/crDroid7-A11/
     bash install.sh
     cd
   '')
 
   (pkgs.writeShellScriptBin "McLaren-crDroid8-A12" ''
-    cd ~/Android/McLaren/crDroid8-A12/
+    cd /home/$USER/Android/McLaren/crDroid8-A12/
     bash install.sh
     cd
   '')
 
   (pkgs.writeShellScriptBin "McLaren-crDroid9-A13" ''
-    cd ~/Android/McLaren/crDroid9-A13/
+    cd /home/$USER/Android/McLaren/crDroid9-A13/
     bash install.sh
     cd
   '')
 
   (pkgs.writeShellScriptBin "McLaren-crDroid10-A14" ''
-    cd ~/Android/McLaren/crDroid10-A14/
+    cd /home/$USER/Android/McLaren/crDroid10-A14/
     bash install.sh
     cd
   '')
 
   (pkgs.writeShellScriptBin "OnePlus6T-crDroid9-A13" ''
-    cd ~/Android/OnePlus6T/crDroid9-A13
+    cd /home/$USER/Android/OnePlus6T/crDroid9-A13
     bash install.sh
     cd
   '')
