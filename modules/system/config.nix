@@ -52,6 +52,7 @@
     HandleLidSwitchDocked = "ignore";
   };
 
+  home-manager.backupFileExtension = "backup";
 
   boot.kernelModules = [ "usbnet" "cdc_ether" ];
 
