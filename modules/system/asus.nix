@@ -1,12 +1,6 @@
-{ config
-, lib
-, ...
-}:
+{ config, lib, ... }:
 with lib; {
-  options = {
-    asus.enable =
-      mkEnableOption "Enable ASUS plugins";
-  };
+  options = { asus.enable = mkEnableOption "Enable ASUS plugins"; };
 
   config = mkIf config.asus.enable {
     services = {

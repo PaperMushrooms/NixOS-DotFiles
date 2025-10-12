@@ -1,11 +1,4 @@
-{ inputs
-, config
-, pkgs
-, lib
-, ...
-}:
-
-{
+{ inputs, config, pkgs, lib, ... }: {
   imports = [
     ../../../modules/home/neovim.nix
     ../../../modules/home/git.nix
@@ -20,9 +13,7 @@
 
   home.file = { };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   # User Defined Aliases
   programs.zsh = {
@@ -32,12 +23,9 @@
     };
   };
 
-  home.packages = with pkgs; [
-  ];
+  home.packages = with pkgs; [ ];
 
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
+  nixpkgs.config = { allowUnfree = true; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

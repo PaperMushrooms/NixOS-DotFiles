@@ -1,9 +1,4 @@
-{ inputs
-, config
-, pkgs
-, lib
-, ...
-}: {
+{ inputs, config, pkgs, lib, ... }: {
   imports = [
     ./home-options.nix
     ../../../modules/home
@@ -17,14 +12,13 @@
 
   home.file = { };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   # User Defined Aliases
   programs.zsh = {
     shellAliases = {
-      rebuild = "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#jealousy && cd ";
+      rebuild =
+        "cd /etc/nixos/ && sudo nixos-rebuild switch --flake .#jealousy && cd ";
     };
   };
 

@@ -1,13 +1,6 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
+{ config, lib, pkgs, ... }:
 with lib; {
-  options = {
-    git.enable =
-      mkEnableOption "Enables Git";
-  };
+  options = { git.enable = mkEnableOption "Enables Git"; };
 
   config = mkIf config.git.enable {
     # Enable and Configure Git
@@ -17,9 +10,7 @@ with lib; {
       userEmail = "dreems2reality@gmail.com";
 
       # Set Default Branch as main
-      extraConfig = {
-        init.defaultBranch = "main";
-      };
+      extraConfig = { init.defaultBranch = "main"; };
     };
   };
 }

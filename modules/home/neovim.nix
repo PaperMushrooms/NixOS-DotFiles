@@ -1,12 +1,5 @@
-{ config
-, lib
-, pkgs
-, ...
-}: {
-
-  home.packages = with pkgs; [
-    neovim
-  ];
+{ config, lib, pkgs, ... }: {
+  home.packages = with pkgs; [ neovim ];
 
   programs.neovim = {
     enable = true;
@@ -24,9 +17,7 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
 
-        lsp = {
-          enable = true;
-        };
+        lsp = { enable = true; };
 
         languages = {
           enableTreesitter = true;

@@ -1,13 +1,7 @@
 { pkgs, config, lib, ... }: {
+  imports = [ ];
 
-  imports = [
-
-  ];
-
-  environment.systemPackages = with pkgs; [
-    discord
-    notion-app
-  ];
+  environment.systemPackages = with pkgs; [ discord notion-app ];
 
   nixpkgs.config = {
     hostPlatform = "aarch64-darwin";
@@ -21,15 +15,10 @@
 
   homebrew = {
     enable = true;
-    casks = [
-      "rustdesk"
-      "qflipper"
-      "firefox"
-      "bambu-studio"
-    ];
+    casks = [ "rustdesk" "qflipper" "firefox" "bambu-studio" ];
   };
 
-  # services.yabai = { 
+  # services.yabai = {
   #   enable = true;
   #   config = {
   #      focus_follows_mouse = "off";

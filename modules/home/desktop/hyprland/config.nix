@@ -1,19 +1,9 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
+{ config, lib, pkgs, ... }:
 with lib; {
-  imports = [
-    ./monitors.nix
-    ./keybindings.nix
-    ./appearance.nix
-    ./waybar.nix
-  ];
+  imports = [ ./monitors.nix ./keybindings.nix ./appearance.nix ./waybar.nix ];
 
   options = {
-    hyprhome.enable =
-      mkEnableOption "Enable Hyprland Home-Manager settings";
+    hyprhome.enable = mkEnableOption "Enable Hyprland Home-Manager settings";
   };
 
   config = mkIf config.hyprhome.enable {
@@ -22,7 +12,8 @@ with lib; {
       enable = true;
 
       settings = {
-        exec-once = [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
+        exec-once =
+          [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
       };
     };
 
@@ -38,9 +29,7 @@ with lib; {
 
     programs.kitty = {
       enable = true;
-      settings = {
-        confirm_os_window_close = "0";
-      };
+      settings = { confirm_os_window_close = "0"; };
     };
   };
 }

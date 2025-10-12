@@ -1,9 +1,4 @@
-{ inputs
-, config
-, pkgs
-, lib
-, ...
-}: {
+{ inputs, config, pkgs, lib, ... }: {
   imports = [
     # Include System Packages
     ./hardware-configuration.nix
@@ -17,9 +12,7 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   # Enable networking
-  networking.networkmanager = {
-    enable = true;
-  };
+  networking.networkmanager = { enable = true; };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

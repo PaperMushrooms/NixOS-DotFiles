@@ -1,12 +1,7 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
+{ config, lib, pkgs, ... }:
 with lib; {
   options = {
-    myshell.enable =
-      mkEnableOption "Enable and configure my terminal setup";
+    myshell.enable = mkEnableOption "Enable and configure my terminal setup";
   };
 
   config = mkIf config.myshell.enable {
@@ -19,11 +14,13 @@ with lib; {
 
       # Zsh Aliases
       shellAliases = {
-        upload = "git add . && git commit -m 'Update' && git push -u origin main";
+        upload =
+          "git add . && git commit -m 'Update' && git push -u origin main";
         update = "sudo nix flake update --flake .";
         cleanup = "nix-collect-garbage -d";
         cleanup-full = "sudo nix-collect-garbage -d";
-        mkrecovery = "nix build .#nixosConfigurations.recovery.config.system.build.isoImage";
+        mkrecovery =
+          "nix build .#nixosConfigurations.recovery.config.system.build.isoImage";
 
         SDlab = "nix develop shells/PoGo-Root";
 
@@ -56,7 +53,9 @@ with lib; {
         add_newline = true;
         command_timeout = 1300;
         scan_timeout = 50;
-        format = "$username@$hostname $directory$git_branch$git_state$git_status\n$character";
+        format = ''
+          $username@$hostname $directory$git_branch$git_state$git_status
+          $character'';
 
         hostname = {
           ssh_only = false;

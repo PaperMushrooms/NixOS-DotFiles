@@ -1,9 +1,4 @@
-{ inputs
-, config
-, pkgs
-, lib
-, ...
-}: {
+{ inputs, config, pkgs, lib, ... }: {
   # Enabling Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -20,9 +15,7 @@
   services.usbmuxd.enable = true;
 
   # Enable networking
-  networking.networkmanager = {
-    enable = true;
-  };
+  networking.networkmanager = { enable = true; };
 
   # Enable Bluetooth
   services.blueman.enable = true;

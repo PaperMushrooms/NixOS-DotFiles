@@ -1,7 +1,4 @@
-{ config
-, pkgs
-, ...
-}: {
+{ config, pkgs, ... }: {
   programs.waybar = {
     enable = true;
 
@@ -19,15 +16,9 @@
 
         modules-center = [ "clock" ];
 
-        modules-right = [
-          "tray"
-          "pulseaudio"
-          "battery"
-        ];
+        modules-right = [ "tray" "pulseaudio" "battery" ];
 
-        clock = {
-          format = "{:%I:%M %p}";
-        };
+        clock = { format = "{:%I:%M %p}"; };
       };
     };
   };

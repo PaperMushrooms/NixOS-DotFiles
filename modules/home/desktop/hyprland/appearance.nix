@@ -23,7 +23,7 @@
         size = 14;
         passes = 4;
         brightness = 1;
-        noise = 0.01;
+        noise = 1.0e-2;
         contrast = 1;
         popups = true;
         popups_ignorealpha = 0.6;

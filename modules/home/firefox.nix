@@ -1,14 +1,6 @@
-{ inputs
-, config
-, lib
-, pkgs
-, ...
-}:
+{ inputs, config, lib, pkgs, ... }:
 with lib; {
-  options = {
-    firefox.enable =
-      mkEnableOption "Enable and Configure Firefox";
-  };
+  options = { firefox.enable = mkEnableOption "Enable and Configure Firefox"; };
 
   config = mkIf config.firefox.enable {
     # Web Browser Configuration
@@ -107,11 +99,12 @@ with lib; {
               }
             ];
           };
-          extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
-            user-agent-string-switcher
-            adblocker-ultimate
-            stylus
-          ];
+          extensions.packages =
+            with inputs.firefox-addons.packages."x86_64-linux"; [
+              user-agent-string-switcher
+              adblocker-ultimate
+              stylus
+            ];
         };
       };
     };

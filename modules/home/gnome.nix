@@ -1,12 +1,7 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
+{ config, lib, pkgs, ... }:
 with lib; {
   options = {
-    gnomehome.enable =
-      mkEnableOption "Enable Gnome Home-Manager configuration";
+    gnomehome.enable = mkEnableOption "Enable Gnome Home-Manager configuration";
   };
 
   config = mkIf config.gnomehome.enable {

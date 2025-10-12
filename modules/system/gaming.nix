@@ -1,21 +1,17 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
+{ config, lib, pkgs, ... }:
 with lib; {
-  options = {
-    gaming.enable =
-      mkEnableOption "Enable Gaming Compatibility";
-  };
+  options = { gaming.enable = mkEnableOption "Enable Gaming Compatibility"; };
 
   config = mkIf config.gaming.enable {
     # Enable Steam
     programs.steam = {
       enable = true;
-      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-      localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+      remotePlay.openFirewall =
+        true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall =
+        true; # Open ports in the firewall for Source Dedicated Server
+      localNetworkGameTransfers.openFirewall =
+        true; # Open ports in the firewall for Steam Local Network Game Transfers
     };
 
     # Enable Gaming Related Packages
@@ -45,13 +41,12 @@ with lib; {
       winetricks
     ];
 
-    nixpkgs.config.permittedInsecurePackages = [
-      "openssl-1.1.1w"
-    ];
+    nixpkgs.config.permittedInsecurePackages = [ "openssl-1.1.1w" ];
 
     # Configure Steam path for ProtonGE
     environment.sessionVariables = {
-      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/user/.steam/root/compatibilitytools.d";
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+        "/home/user/.steam/root/compatibilitytools.d";
     };
 
     # System Configuration

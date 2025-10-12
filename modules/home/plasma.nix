@@ -1,8 +1,4 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
+{ config, lib, pkgs, ... }:
 with lib; {
   options = {
     plasmahome.enable =
@@ -21,15 +17,11 @@ with lib; {
           theme = "Breeze";
         };
 
-        splashScreen = {
-          theme = "None";
-        };
+        splashScreen = { theme = "None"; };
 
         theme = "BreezeDark";
 
-        cursor = {
-          theme = "Breeze";
-        };
+        cursor = { theme = "Breeze"; };
       };
     };
   };

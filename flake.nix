@@ -50,19 +50,8 @@
     };
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , home-manager
-    , nix-darwin
-    , plasma-manager
-    , nvf
-    , hyprland
-    , nix-homebrew
-    , homebrew-core
-    , homebrew-cask
-    , ...
-    } @ inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf
+    , hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
       nixosConfigurations = {
         jealousy = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -86,9 +75,7 @@
                 ];
 
                 extraSpecialArgs = { inherit inputs; };
-                users = {
-                  jealousy = import ./hosts/jealousy/home/home.nix;
-                };
+                users = { jealousy = import ./hosts/jealousy/home/home.nix; };
               };
             }
           ];
@@ -116,9 +103,7 @@
                 ];
 
                 extraSpecialArgs = { inherit inputs; };
-                users = {
-                  tuffy = import ./hosts/tuffy/home/home.nix;
-                };
+                users = { tuffy = import ./hosts/tuffy/home/home.nix; };
               };
             }
           ];
@@ -137,14 +122,10 @@
             {
               home-manager = {
                 useUserPackages = true;
-                sharedModules = [
-                  nvf.homeManagerModules.default
-                ];
+                sharedModules = [ nvf.homeManagerModules.default ];
 
                 extraSpecialArgs = { inherit inputs; };
-                users = {
-                  school = import ./hosts/school/home/home.nix;
-                };
+                users = { school = import ./hosts/school/home/home.nix; };
               };
             }
           ];
@@ -152,9 +133,7 @@
 
         recovery = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
-          modules = [
-            ./recovery/configuration.nix
-          ];
+          modules = [ ./recovery/configuration.nix ];
         };
       };
 
@@ -182,14 +161,10 @@
 
             home-manager = {
               useUserPackages = true;
-              sharedModules = [
-                nvf.homeManagerModules.default
-              ];
+              sharedModules = [ nvf.homeManagerModules.default ];
 
               extraSpecialArgs = { inherit inputs; };
-              users = {
-                darwin = import ./hosts/darwin/home/home.nix;
-              };
+              users = { darwin = import ./hosts/darwin/home/home.nix; };
             };
           }
         ];

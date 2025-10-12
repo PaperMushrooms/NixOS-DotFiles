@@ -1,13 +1,6 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
+{ config, lib, pkgs, ... }:
 with lib; {
-  options = {
-    ssh.enable =
-      mkEnableOption "Enables SSH";
-  };
+  options = { ssh.enable = mkEnableOption "Enables SSH"; };
 
   config = mkIf config.ssh.enable {
     services.openssh = {
@@ -17,7 +10,8 @@ with lib; {
         PasswordAuthentication = false;
         UseDns = true;
         X11Forwarding = true;
-        PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
+        PermitRootLogin =
+          "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
       };
     };
 
