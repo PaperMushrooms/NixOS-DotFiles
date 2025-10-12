@@ -39,12 +39,20 @@
   };
 
   # Let Home Manager install and manage itself.
+<<<<<<< HEAD
   <<<<<<< HEAD
     programs.home-manager.enable = true;
   =======
+=======
+  programs.home-manager.enable = true;
+>>>>>>> 9403e94 (Update)
   programs.home-manager = {
     enable = true;
     backupFileExtension = "backup";
   };
+<<<<<<< HEAD
   >>>>>>> refs/remotes/origin/main
   }
+=======
+}
+>>>>>>> 9403e94 (Update)
