@@ -43,5 +43,5 @@
     enable = true;
     backupFileExtension = "backup";
   };
-  }
+ };
 }
