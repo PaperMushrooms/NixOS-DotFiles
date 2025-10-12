@@ -2,7 +2,7 @@
   imports = [
     ./home-options.nix
     ../../../modules/nixos/home
-    ../../../modules/home/desktop/hyprland/keybindings.nix
+    ../../../modules/shared
   ];
 
   home.username = "dex";
