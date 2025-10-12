@@ -39,5 +39,12 @@
   };
 
   # Let Home Manager install and manage itself.
+<<<<<<< HEAD
   programs.home-manager.enable = true;
+=======
+  programs.home-manager = {
+    enable = true;
+    backupFileExtension = "backup";
+  };
+>>>>>>> refs/remotes/origin/main
 }

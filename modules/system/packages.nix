@@ -7,6 +7,11 @@
     android-studio
     anydesk
     bat
+<<<<<<< HEAD
+=======
+    zip
+    unzip
+>>>>>>> refs/remotes/origin/main
     curl
     fastfetch
     freecad
