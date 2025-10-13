@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   users.users.dex = {
     isNormalUser = true;
