@@ -6,4 +6,4 @@
       [ "networkmanager" "wheel" "adbusers" "openrazer" "usbmuxd" "dialout" ];
     shell = pkgs.zsh;
   };
-};
+}
