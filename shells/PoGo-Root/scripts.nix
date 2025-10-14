@@ -99,23 +99,18 @@
   '')
 
   (pkgs.writeShellScriptBin "Pixel6-OEM-A13" ''
-    #!/bin/bash
-
-    cd ~/Android/Pixel6/OEM-A13-Magisk
-    sudo bash install.sh
-    cd
+    cd Pixel6/OEM-A13-Magisk
+    bash install.sh
+    cd ../../
   '')
 
   (pkgs.writeShellScriptBin "Pixel6Pro-OEM-A13" ''
     cd ~/Android/Pixel6Pro/OEM-A13-Magisk
     bash install.sh
-    cd
   '')
 
   (pkgs.writeShellScriptBin "Pixel6a-OEM-A13" ''
-    cd ~/Android/Pixel6a/OEM-A13-Magisk
-    bash install.sh
-    cd
+    bash /Apps/install.sh
   '')
 
   (pkgs.writeShellScriptBin "Pixel7a-crDroid9-A13" ''
@@ -130,10 +125,10 @@
     cd
   '')
 
-  (pkgs.writeShellScriptBin "PokeApps" ''
-    cd ~/Android/Apps
-    bash installapps.sh
-    cd
+  (pkgs.writeShellScriptBin "PokeApps" '' 
+    cd Apps/
+    bash Apps/installapps.sh
+    cd ..
   '')
 
   (pkgs.writeShellScriptBin "pixel-bootloader-unlock" ''
