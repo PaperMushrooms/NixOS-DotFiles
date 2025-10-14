@@ -1,8 +1,8 @@
 { inputs, config, pkgs, lib, ... }: {
   imports = [
-    ../../../modules/home/neovim.nix
-    ../../../modules/home/git.nix
-    ../../../modules/home/zsh.nix
+    ../../../modules/nixos/home/neovim.nix
+    ../../../modules/nixos/home/git.nix
+    ../../../modules/nixos/home/zsh.nix
   ];
 
   myshell.enable = true;
