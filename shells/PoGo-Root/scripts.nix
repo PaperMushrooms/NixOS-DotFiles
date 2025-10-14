@@ -127,7 +127,7 @@
 
   (pkgs.writeShellScriptBin "PokeApps" '' 
     cd Apps/
-    bash Apps/installapps.sh
+    bash installapps.sh
     cd ..
   '')
 
