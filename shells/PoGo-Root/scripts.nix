@@ -69,20 +69,17 @@
     cd ~/Android/Pixel4/DerpFest-A13
     fastboot -w
     fastboot flash boot boot.img --slot all
-    echo && read -p "On the device, Select Recovery Using the volume buttons, then, while in recovery, tap Factory Reset, then Format data / factory reset, and continue.
 
     Again, select Apply Update, then Apply from ADB to put the device in ADB sideload mode.
 
-    Press Enter to Flash ROM."
-    adb sideload ROM.zip
+    adb wait-for-sideload ROM.zip
     echo && read -p "Now once again, on the device, select Apply Update, then Apply from ADB to begin sideload.
 
-    Press Enter to Flash Gapps."
-    adb sideload Gapps.zip
+    adb wait-for-sideload Gapps.zip
     echo && read -p "One more time, on the device, select Apply Update, then Apply from ADB to begin sideload.
 
     Press Enter to Flash Magisk."
-    adb sideload ~/Android/Apps/Magisk.apk
+    adb wait-for-sideload ~/Android/Apps/Magisk.apk
     cd
   '')
 
