@@ -3,8 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../../modules/nixos/system
-    ../../../modules/shared/system
   ];
 
   # Set the hostname.
