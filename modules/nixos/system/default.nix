@@ -2,6 +2,7 @@
   imports = [
     ./config.nix
     ./users.nix
+    ./packages.nix
     ./stylix.nix
     ./time-and-date.nix
     ./audio.nix

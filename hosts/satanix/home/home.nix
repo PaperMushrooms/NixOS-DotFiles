@@ -2,7 +2,6 @@
   imports = [
     ./home-options.nix
     ../../../modules/nixos/home
-    ../../../modules/home/desktop/hyprland/keybindings.nix
   ];
 
   home.username = "dex";
