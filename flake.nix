@@ -60,6 +60,7 @@
         modules = [
           ./hosts/satanix/system
           ./hosts/satanix/system/options.nix
+          ./modules/nixos/system
           ./modules/shared/system
 
           home-manager.nixosModules.home-manager
@@ -89,6 +90,7 @@
         modules = [
           ./hosts/nixspawn/system
           ./hosts/nixspawn/system/options.nix
+          ./modules/nixos/system
           ./modules/shared/system
 
           home-manager.nixosModules.home-manager
