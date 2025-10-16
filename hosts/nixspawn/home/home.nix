@@ -2,7 +2,6 @@
   imports = [
     ./home-options.nix
     ../../../modules/nixos/home
-    ../../../modules/shared
   ];
 
   home.username = "dex";
