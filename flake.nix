@@ -52,7 +52,7 @@
 
   outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
       nixosConfigurations = { 
-        default = nixpkgs.lib.nixosSystem {
+        satanix = nixpkgs.lib.nixosSystem {
           system = "x86-linux";
 
           specialArgs = { inherit inputs; };
@@ -114,6 +114,8 @@
           specialArgs = { inherit inputs; };
           modules = [ ./recovery/configuration.nix ];
         };
+
+        defaultPackage.x86_64-linux = self.nixosConfigurations.satanix.config.system.build.toplevel;
       };
 
       darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
