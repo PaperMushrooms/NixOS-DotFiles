@@ -60,9 +60,9 @@
   '')
 
   (pkgs.writeShellScriptBin "Pixel4-OEM-A13" ''
-    cd ~/Android/Pixel4/OEM-A13-Magisk
+    cd Pixel4/OEM-A13-Magisk
     bash install.sh
-    cd
+    cd ../../
   '')
 
   (pkgs.writeShellScriptBin "Pixel4-DerpFest-A13" ''
@@ -70,13 +70,12 @@
     fastboot -w
     fastboot flash boot boot.img --slot all
 
-    adb wait-for-sideload ROM.zip
+    adb wait-for-sideload sideload ROM.zip
 
-    adb wait-for-sideload Gapps.zip
+    adb wait-for-sideload sideload Gapps.zip
 
-    Press Enter to Flash Magisk."
-    adb wait-for-sideload ~/Android/Apps/Magisk.apk
-    cd
+    adb wait-for-sideload sideload ~/Android/Apps/Magisk.apk
+    cd ../../
   '')
 
   (pkgs.writeShellScriptBin "Pixel5-crDroid9-A13" ''
