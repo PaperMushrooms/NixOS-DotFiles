@@ -66,17 +66,13 @@
   '')
 
   (pkgs.writeShellScriptBin "Pixel4-DerpFest-A13" ''
-    cd ~/Android/Pixel4/DerpFest-A13
+    cd Pixel4/DerpFest-A13
     fastboot -w
     fastboot flash boot boot.img --slot all
 
-    Again, select Apply Update, then Apply from ADB to put the device in ADB sideload mode.
-
     adb wait-for-sideload ROM.zip
-    echo && read -p "Now once again, on the device, select Apply Update, then Apply from ADB to begin sideload.
 
     adb wait-for-sideload Gapps.zip
-    echo && read -p "One more time, on the device, select Apply Update, then Apply from ADB to begin sideload.
 
     Press Enter to Flash Magisk."
     adb wait-for-sideload ~/Android/Apps/Magisk.apk
