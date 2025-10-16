@@ -9,7 +9,7 @@
   gaming.enable = false;
 
   # Enable Gnome System-Level Configuration
-  gnomesys.enable = true;
+  gnomesys.enable = false;
 
   # Enable LibreOffice Toolbox
   libreoffice.enable = true;
@@ -18,5 +18,5 @@
   hyprconf.enable = true;
 
   # Enable Plasma6 System-Level Configuration
-  plasmasys.enable = true;
+  plasmasys.enable = false;
 }
