@@ -25,11 +25,6 @@
     };
 
   fileSystems."/mnt/e-Garage" =
-    { device = "/dev/sda2";
-      fsType = "exfat";
-    };
-
-  fileSystems."/mnt/e-Garage" =
     { device = "/dev/disk/by-uuid/68E9-5E19";
       fsType = "exfat";
     };
