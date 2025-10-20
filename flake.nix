@@ -116,8 +116,6 @@
         specialArgs = { inherit inputs; };
         modules = [ ./recovery/configuration.nix ];
       };
-
-      defaultPackage.x86_64-linux = self.nixosConfigurations.satanix.config.system.build.toplevel;
     };
 
     darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
