@@ -1,4 +1,7 @@
 {
+  # Enable Display Manager Configuration
+  displaymanager.enable = true;
+
   # Enable SSH Configuration
   ssh.enable = true;
 

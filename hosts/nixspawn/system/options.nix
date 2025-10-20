@@ -1,4 +1,7 @@
 {
+  # Enable Display Manager Configuration
+  displaymanager.enable = true;
+
   # Enable SSH Configuration
   ssh.enable = true;
 
@@ -9,7 +12,7 @@
   gaming.enable = false;
 
   # Enable Gnome System-Level Configuration
-  gnomesys.enable = false;
+  gnomesys.enable = true;
 
   # Enable LibreOffice Toolbox
   libreoffice.enable = true;
@@ -18,5 +21,5 @@
   hyprconf.enable = true;
 
   # Enable Plasma6 System-Level Configuration
-  plasmasys.enable = false;
+  plasmasys.enable = true;
 }

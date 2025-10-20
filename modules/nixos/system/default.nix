@@ -3,6 +3,7 @@
     ./config.nix
     ./users.nix
     ./packages.nix
+    ./displaymanager.nix
     ./stylix.nix
     ./time-and-date.nix
     ./audio.nix
