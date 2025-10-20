@@ -22,6 +22,7 @@ with lib; {
       gnome-shell
       gnome-control-center
       gnome-tweaks
+      gnomeExtensions.desktop-cube
     ];
 
     # Enable dconf
