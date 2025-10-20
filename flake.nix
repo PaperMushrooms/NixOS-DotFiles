@@ -104,7 +104,7 @@
               ];
 
               extraSpecialArgs = { inherit inputs; };
-              users = { dex = import ./hosts/nixspawn/home/home.nix; };
+              users = { dex = import ./hosts/nixspawn/home; };
             };
           }
         ];
