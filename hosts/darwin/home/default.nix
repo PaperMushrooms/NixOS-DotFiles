@@ -20,7 +20,7 @@
     enable = true;
     shellAliases = {
       rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#darwin";
-      update-hellnix = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh -t satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh -t nixspawn '/etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn'";
+      hellnix-update = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh -t satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh -t nixspawn 'cd /etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn'";
     };
   };
 
