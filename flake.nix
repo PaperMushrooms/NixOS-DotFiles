@@ -75,7 +75,7 @@
               ];
 
               extraSpecialArgs = { inherit inputs; };
-              users = { dex = import ./hosts/satanix/home/home.nix; };
+              users = { dex = import ./hosts/satanix/home; };
             };
           }
         ];
