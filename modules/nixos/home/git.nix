@@ -10,7 +10,10 @@ with lib; {
       userEmail = "dreems2reality@gmail.com";
 
       # Set Default Branch as main
-      settings = { init.defaultBranch = "main"; };
+      settings = { 
+      user.name = "PaperMushrooms";
+      user.email = "dreems2reality@gmail.com";
+      init.defaultBranch = "main"; };
     };
   };
 }
