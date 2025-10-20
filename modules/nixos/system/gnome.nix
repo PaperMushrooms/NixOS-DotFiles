@@ -23,7 +23,7 @@ with lib; {
       gnome-control-center
       gnome-tweaks
       gnomeExtensions.desktop-cube
-      gnomeExtensions.blur-my-shell
+      gnomeExtensions.burn-my-windows
     ];
 
     # Enable dconf
