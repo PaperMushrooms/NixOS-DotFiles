@@ -20,7 +20,7 @@
     enable = true;
     shellAliases = {
       rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#darwin";
-      update-hellnix = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh nixspawn '/etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn';
+      update-hellnix = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh nixspawn '/etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn'";
     };
   };
 
@@ -33,3 +33,4 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
+
