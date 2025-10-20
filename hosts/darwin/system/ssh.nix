@@ -10,11 +10,13 @@
   
       Host satanix
         User dex
+        Port 44906
         IdentityFile ~/.ssh/nixathon
         IdentitiesOnly yes
 
        Host spawnix
         User dex
+        Port 44906
         IdentityFile ~/.ssh/nixathon
         IdentitiesOnly yes
     '';
