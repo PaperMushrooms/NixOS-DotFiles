@@ -8,7 +8,7 @@
   myshell.enable = true;
 
   programs.zsh.shellAliases = {
-    update-hellnix = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh nixspawn '/etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn'
+    update-hellnix = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh nixspawn '/etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn';
   };
 
   home.username = lib.mkForce "matthew";
