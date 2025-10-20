@@ -7,10 +7,6 @@
 
   myshell.enable = true;
 
-  programs.zsh.shellAliases = {
-    update-hellnix = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh nixspawn '/etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn';
-  };
-
   home.username = lib.mkForce "matthew";
   home.homeDirectory = lib.mkForce "/Users/matthew";
   home.stateVersion = "24.05";
@@ -24,6 +20,7 @@
     enable = true;
     shellAliases = {
       rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#darwin";
+      update-hellnix = "cd /etc/nix-darwin && sudo nix flake update && sudo darwin-rebuild switch --flake .#darwin && ssh satanix 'cd /etc/nixos/ && git pull && sudo nixos-rebuild switch --flake .#satanix' && ssh nixspawn '/etc/nixos && git pull && sudo nixos-rebuild switch --flake .#nixspawn';
     };
   };
 
