@@ -14,7 +14,7 @@
         IdentityFile ~/.ssh/nixathon
         IdentitiesOnly yes
 
-       Host spawnix
+       Host nixspawn
         User dex
         Port 44906
         IdentityFile ~/.ssh/nixathon
