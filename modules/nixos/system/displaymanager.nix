@@ -5,6 +5,6 @@ with lib; {
   };
 
   config = mkIf config.displaymanager.enable {
-    service.xserver.displayManager.lightdm = { enable = true; };
+    services.xserver.displayManager.lightdm = { enable = true; };
   };
 }
