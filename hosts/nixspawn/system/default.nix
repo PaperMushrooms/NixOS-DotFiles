@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./options.nix
   ];
 
   # Set the hostname.
