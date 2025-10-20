@@ -143,7 +143,7 @@
             sharedModules = [ nvf.homeManagerModules.default ];
 
             extraSpecialArgs = { inherit inputs; };
-            users = { darwin = import ./hosts/darwin/home/home.nix; };
+            users = { darwin = import ./hosts/darwin/home; };
           };
         }
       ];
