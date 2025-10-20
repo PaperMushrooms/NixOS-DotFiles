@@ -2,7 +2,6 @@
 
 {
   programs.ssh = {
-    startAgent = true;
     extraConfig = ''
       Host github.com
         User git
