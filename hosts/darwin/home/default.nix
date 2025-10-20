@@ -23,7 +23,9 @@
     };
   };
 
-  home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [
+    xquartz
+  ];
 
   nixpkgs.config = { allowUnfree = true; };
 
