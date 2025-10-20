@@ -24,6 +24,7 @@ with lib; {
       gnome-tweaks
       gnomeExtensions.desktop-cube
       gnomeExtensions.burn-my-windows
+      gnomeExtensions.compiz-windows-effect
     ];
 
     # Enable dconf
