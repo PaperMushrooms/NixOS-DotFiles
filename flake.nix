@@ -61,7 +61,6 @@
           ./hosts/satanix/system
           ./modules/nixos/system
           ./modules/shared/system
-          ./modules/shared/home
 
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
@@ -76,7 +75,7 @@
               ];
 
               extraSpecialArgs = { inherit inputs; };
-              users = { dex = import ./hosts/satanix/home; };
+              users = { dex = import ./hosts/satanix/home ./modules/shared/home; };
             };
           }
         ];
@@ -91,7 +90,6 @@
           ./hosts/nixspawn/system
           ./modules/nixos/system
           ./modules/shared/system
-          ./modules/shared/home
 
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
@@ -106,7 +104,7 @@
               ];
 
               extraSpecialArgs = { inherit inputs; };
-              users = { dex = import ./hosts/nixspawn/home; };
+              users = { dex = import ./hosts/nixspawn/home ./modules/shared/home; };
             };
           }
         ];
@@ -146,7 +144,7 @@
             sharedModules = [ nvf.homeManagerModules.default ];
 
             extraSpecialArgs = { inherit inputs; };
-            users = { darwin = import ./hosts/darwin/home; };
+            users = { darwin = import ./hosts/darwin/home ./modules/shared/home; };
           };
         }
       ];
