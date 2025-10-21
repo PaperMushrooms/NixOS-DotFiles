@@ -75,7 +75,10 @@
               ];
 
               extraSpecialArgs = { inherit inputs; };
-              users = { dex = import ./hosts/satanix/home ./modules/shared/home; };
+              users.dex.imports = [
+                ./hosts/satanix/home 
+                ./modules/shared/home
+	      ];
             };
           }
         ];
@@ -104,7 +107,10 @@
               ];
 
               extraSpecialArgs = { inherit inputs; };
-              users = { dex = import ./hosts/nixspawn/home ./modules/shared/home; };
+              users.dex.imports = [
+                ./hosts/nixspawn/home 
+                ./modules/shared/home
+	      ];
             };
           }
         ];
@@ -120,7 +126,6 @@
       system = "aarch64-darwin";
       modules = [
         ./hosts/darwin/system
-        ./modules/shared/home
 
         home-manager.darwinModules.home-manager
         nix-homebrew.darwinModules.nix-homebrew
@@ -144,7 +149,10 @@
             sharedModules = [ nvf.homeManagerModules.default ];
 
             extraSpecialArgs = { inherit inputs; };
-            users = { darwin = import ./hosts/darwin/home ./modules/shared/home; };
+            users.darwin.imports = [
+              ./hosts/darwin/home 
+              ./modules/shared/home
+	    ];
           };
         }
       ];
