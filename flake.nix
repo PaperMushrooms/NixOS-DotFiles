@@ -61,6 +61,7 @@
           ./hosts/satanix/system
           ./modules/nixos/system
           ./modules/shared/system
+          ./modules/shared/home
 
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
@@ -90,6 +91,7 @@
           ./hosts/nixspawn/system
           ./modules/nixos/system
           ./modules/shared/system
+          ./modules/shared/home
 
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
