@@ -3,8 +3,6 @@
     ./home-options.nix
   ];
 
-  myshell.enable = true;
-
   home.username = lib.mkForce "matthew";
   home.homeDirectory = lib.mkForce "/Users/matthew";
   home.stateVersion = "24.05";
