@@ -151,7 +151,7 @@
 
             extraSpecialArgs = { inherit inputs; };
             users.matthew.imports = [
-              ./hosts/matthew/home 
+              ./hosts/darwin/home 
               ./modules/shared/home
 	    ];
           };
