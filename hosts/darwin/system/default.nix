@@ -22,10 +22,6 @@
     home = "/Users/matthew";
   };
 
-  home-manager.users.matthew = {
-    home.homeDirectory = lib.mkDefault "/home/matthew";
-  };
-
   # services.yabai = {
   #   enable = true;
   #   config = {
