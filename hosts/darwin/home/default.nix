@@ -4,7 +4,7 @@
   ];
 
   home.username = "matthew";
-  home.homeDirectory = "/Users/matthew/";
+  home.homeDirectory = "/Users/matthew";
   home.stateVersion = "24.05";
 
   home.file = { };
