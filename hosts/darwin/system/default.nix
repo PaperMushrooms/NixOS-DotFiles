@@ -33,7 +33,6 @@
   #   };
   # };
 
-  # Set Git commit hash for darwin-version.
   system = {
     primaryUser = "matthew";
     configurationRevision = null;
