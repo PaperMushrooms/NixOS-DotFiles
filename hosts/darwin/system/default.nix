@@ -1,5 +1,5 @@
 { pkgs, config, lib, ... }: {
-  imports = [ ./ssh ];
+  imports = [ ./ssh.nix ];
 
   environment.systemPackages = with pkgs; [ discord notion-app ];
 
