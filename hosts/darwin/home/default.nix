@@ -3,8 +3,8 @@
     ./home-options.nix
   ];
 
-  home.username = "matthew";
-  home.homeDirectory = /Users/matthew;
+  home.username = lib.mkDefault "matthew";
+  home.homeDirectory = lib.mkDefault /Users/matthew;
   home.stateVersion = "24.05";
 
   home.file = { };
