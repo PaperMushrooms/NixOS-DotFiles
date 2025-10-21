@@ -8,7 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
     homebrew-core = {
@@ -127,6 +126,7 @@
       system = "aarch64-darwin";
       modules = [
         ./hosts/darwin/system
+        ./modules/shared/system
 
         home-manager.darwinModules.home-manager
         nix-homebrew.darwinModules.nix-homebrew
