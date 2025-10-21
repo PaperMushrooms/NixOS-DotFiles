@@ -3,8 +3,8 @@
     ./home-options.nix
   ];
 
-  home.username = lib.mkForce "matthew";
-  home.homeDirectory = lib.mkForce "/Users/matthew";
+  home.username = "matthew";
+  home.homeDirectory = "/Users/matthew";
   home.stateVersion = "24.05";
 
   home.file = { };
