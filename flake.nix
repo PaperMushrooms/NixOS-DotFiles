@@ -122,6 +122,7 @@
       system = "aarch64-darwin";
       modules = [
         ./hosts/darwin/system
+        ./modules/shared/home
 
         home-manager.darwinModules.home-manager
         nix-homebrew.darwinModules.nix-homebrew
