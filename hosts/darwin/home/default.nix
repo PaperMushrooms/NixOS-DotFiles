@@ -24,7 +24,6 @@ hellnix-push = "cd /etc/nix-darwin && upload && sudo darwin-rebuild switch --fla
 
       hellnix-cleanup = "cleanup-full && ssh -t satanix 'sudo nix-collect-garbage -d' && ssh -t nixspawn 'sudo nix-collect-garbage -d'";
     };
-    };
   };
 
   home.packages = with pkgs; [
