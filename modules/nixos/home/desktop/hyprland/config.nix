@@ -13,7 +13,7 @@ with lib; {
 
       settings = {
         exec-once =
-          [ "bash /etc/nixos/modules/home/desktop/hyprland/start.sh" ];
+          [ "bash /etc/nixos/modules/nixos/home/desktop/hyprland/start.sh" ];
       };
     };
 

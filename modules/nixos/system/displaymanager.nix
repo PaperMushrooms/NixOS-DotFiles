@@ -5,6 +5,6 @@ with lib; {
   };
 
   config = mkIf config.displaymanager.enable {
-   services.displayManager.sddm = { enable = true; };
+    services.displayManager.sddm = { enable = true; };
   };
 }

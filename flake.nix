@@ -76,9 +76,9 @@
 
               extraSpecialArgs = { inherit inputs; };
               users.dex.imports = [
-                ./hosts/satanix/home 
+                ./hosts/satanix/home
                 ./modules/shared/home
-	      ];
+              ];
             };
           }
         ];
@@ -108,9 +108,9 @@
 
               extraSpecialArgs = { inherit inputs; };
               users.dex.imports = [
-                ./hosts/nixspawn/home 
+                ./hosts/nixspawn/home
                 ./modules/shared/home
-	      ];
+              ];
             };
           }
         ];
@@ -151,9 +151,9 @@
 
             extraSpecialArgs = { inherit inputs; };
             users.matthew.imports = [
-              ./hosts/darwin/home 
+              ./hosts/darwin/home
               ./modules/shared/home
-	    ];
+            ];
           };
         }
       ];
