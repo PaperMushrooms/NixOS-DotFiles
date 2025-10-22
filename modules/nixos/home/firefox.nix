@@ -92,12 +92,11 @@ in
               }
             ];
           };
-          extensions.packages =
-            with addons; [
-              user-agent-string-switcher
-              adblocker-ultimate
-              stylus
-            ];
+          extensions.packages = with addons; [
+            user-agent-string-switcher
+            adblocker-ultimate
+            stylus
+          ];
         };
       };
     };
