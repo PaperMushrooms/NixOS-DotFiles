@@ -129,6 +129,7 @@
         ./modules/shared/system
 
         home-manager.darwinModules.home-manager
+        stylix.darwinModules.stylix
         nix-homebrew.darwinModules.nix-homebrew
 
         {

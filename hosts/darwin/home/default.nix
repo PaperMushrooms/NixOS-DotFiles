@@ -1,6 +1,7 @@
 { inputs, config, pkgs, lib, ... }: {
   imports = [
     ./home-options.nix
+    ../../../modules/nixos/home/firefox.nix
   ];
 
   home.username = "matthew";
