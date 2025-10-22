@@ -51,12 +51,6 @@ with lib; {
                 url = "https://github.com/";
               }
               {
-                name = "NixOS & Flakes Book";
-                tags = [ "Education" ];
-                keyword = "NixManual";
-                url = "https://nixos-and-flakes.thiscute.world/";
-              }
-              {
                 toolbar = true;
                 bookmarks = [
                   {
@@ -89,12 +83,6 @@ with lib; {
                     keyword = "Git";
                     url = "https://github.com/";
                   }
-                  {
-                    name = "NixOS & Flakes Book";
-                    tags = [ "Education" ];
-                    keyword = "NixManual";
-                    url = "https://nixos-and-flakes.thiscute.world/";
-                  }
                 ];
               }
             ];
@@ -122,8 +110,5 @@ with lib; {
         "x-scheme-handler/unknown" = [ "firefox.desktop" ];
       };
     };
-
-    # Apply Stylix Theming
-    stylix.targets.firefox.profileNames = [ "default" ];
   };
 }
