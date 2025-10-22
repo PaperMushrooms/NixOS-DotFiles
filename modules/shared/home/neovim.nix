@@ -18,17 +18,22 @@
 
         languages = {
           enableTreesitter = true;
+          enableFormat = true;
 
           ts.enable = true;
 
           nix = {
             enable = true;
             lsp.enable = true;
-            lsp.package = pkgs.nil;
+            treesitter.enable = true;
             format.enable = true;
           };
 
-          python.enable = true;
+          python = { 
+            enable = true;
+            lsp.enable = true;
+            treesitter.enable = true;
+          };
         };
       };
     };
