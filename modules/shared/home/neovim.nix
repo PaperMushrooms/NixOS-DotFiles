@@ -17,7 +17,11 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
 
-#       lsp = { enable = true; };
+        lsp = { 
+          enable = true; 
+          lspconfig.enable = true;
+        };
+
 
         languages = {
           enableTreesitter = true;
