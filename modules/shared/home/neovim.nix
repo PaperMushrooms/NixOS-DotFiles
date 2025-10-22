@@ -18,22 +18,21 @@
 
         lsp = {
           enable = true;
-          lspconfig.enable = false;
         };
 
 
         languages = {
           enableTreesitter = true;
 
-#         ts.enable = true;
+          ts.enable = true;
 
           nix = {
             enable = true;
-            lsp.enable = false;
+            lsp.enable = true;
             format.enable = true;
           };
 
-#         python.enable = true;
+          python.enable = true;
         };
       };
     };
