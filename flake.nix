@@ -50,7 +50,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, stylix, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
     nixosConfigurations = {
       satanix = nixpkgs.lib.nixosSystem {
         system = "x86-linux";
@@ -63,7 +63,7 @@
           ./modules/shared/system
 
           home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
+          stylix.nixosModules.stylix
 
           {
             home-manager = {
@@ -95,7 +95,7 @@
           ./modules/shared/system
 
           home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
+          stylix.nixosModules.stylix
 
           {
             home-manager = {
