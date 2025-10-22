@@ -25,7 +25,7 @@
         languages = {
           enableTreesitter = true;
 
-          ts.enable = true;
+#         ts.enable = true;
 
           nix = {
             enable = true;
