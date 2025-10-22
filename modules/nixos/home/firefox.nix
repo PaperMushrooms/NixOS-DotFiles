@@ -1,5 +1,10 @@
-{ inputs, config, lib, pkgs, ... }:
-with lib; {
+{ inputs, config, lib, pkgs, ... }: with lib;
+
+let
+  addons = inputs.firefox-addons.packages.${pkgs.system};
+in 
+
+{
   options = { firefox.enable = mkEnableOption "Enable and Configure Firefox"; };
 
   config = mkIf config.firefox.enable {
@@ -88,7 +93,7 @@ with lib; {
             ];
           };
           extensions.packages =
-            with inputs.firefox-addons.packages."x86_64-linux"; [
+            with addons; [
               user-agent-string-switcher
               adblocker-ultimate
               stylus
