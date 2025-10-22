@@ -6,6 +6,7 @@
     ./plasma.nix
     ./firefox.nix
     ./packages.nix
+    ./stylix.nix
     ./vscodium.nix
   ];
 }

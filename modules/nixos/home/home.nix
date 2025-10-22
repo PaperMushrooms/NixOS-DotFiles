@@ -19,7 +19,6 @@
   stylix.targets.kde = {
     enable = false;
     decorations.enable = false;
-    useWallpaper == null
   };
 
   # Let Home Manager install and manage itself.
