@@ -29,11 +29,11 @@
 
           nix = {
             enable = true;
-            lsp.enable = true;
+            lsp.enable = false;
             format.enable = true;
           };
 
-          python.enable = true;
+#         python.enable = true;
         };
       };
     };
