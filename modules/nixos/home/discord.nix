@@ -12,7 +12,7 @@
       ];
       frameless = true; # Set some Vencord options
       plugins = {
-        hideAttachments.enable = true; # Enable a Vencord plugin
+#       hideAttachments.enable = true; # Enable a Vencord plugin
         ignoreActivities = {
           # Enable a plugin and set some options
           enable = true;
