@@ -2,7 +2,7 @@
 
 let
   addons = inputs.firefox-addons.packages.${pkgs.system};
-in 
+in
 
 {
   options = { firefox.enable = mkEnableOption "Enable and Configure Firefox"; };

@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-   # nixpkgs.url = "github:NixOS/nixpkgs?ref=master";
+    # nixpkgs.url = "github:NixOS/nixpkgs?ref=master";
 
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -52,7 +52,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, stylix, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nix-darwin, stylix, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, nixcord, ... }@inputs: {
     nixosConfigurations = {
       satanix = nixpkgs.lib.nixosSystem {
         system = "x86-linux";
@@ -74,6 +74,7 @@
               sharedModules = [
                 plasma-manager.homeModules.plasma-manager
                 nvf.homeManagerModules.default
+                nixcord.homeModules.nixcord
               ];
 
               extraSpecialArgs = { inherit inputs; };
@@ -106,6 +107,7 @@
               sharedModules = [
                 plasma-manager.homeModules.plasma-manager
                 nvf.homeManagerModules.default
+                nixcord.homeModules.nixcord
               ];
 
               extraSpecialArgs = { inherit inputs; };
