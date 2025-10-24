@@ -44,6 +44,8 @@
     hyprland.url = "github:hyprwm/Hyprland";
     iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
 
+    nixcord.url = "github:kaylorben/nixcord";
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
