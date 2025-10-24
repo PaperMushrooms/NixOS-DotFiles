@@ -6,6 +6,7 @@
     ./plasma.nix
     ./mimeapps.nix
     ./firefox.nix
+    ./discord.nix
     ./packages.nix
     ./stylix.nix
     ./vscodium.nix
