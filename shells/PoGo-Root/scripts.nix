@@ -123,6 +123,14 @@
     cd ..
   '')
 
+  (pkgs.writeShellScriptBin "scrcpy-all" ''
+    #!/bin/bash
+
+    for device in $(adb devices | grep device$ | cut -f1); do
+    scrcpy -s "$device" &
+    done
+  '')
+
   (pkgs.writeShellScriptBin "pixel-bootloader-unlock" ''
     #!/bin/bash
 
