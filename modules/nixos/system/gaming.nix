@@ -30,7 +30,7 @@ with lib; {
       mesa # Open-source AMD drivers
       minicom # [ To be listed... ]
       mangohud # System performance heads-up display for OpenGL and Vulkan applications
-      protonup
+      protonup-ng
       gamescope
       vkd3d
       dxvk
