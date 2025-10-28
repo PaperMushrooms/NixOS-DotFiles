@@ -3,7 +3,7 @@
 
   home.packages = with pkgs; [
     dunst # Notification Manager
-#   discord # Messenger
+    #   discord # Messenger
     gimp # Photo Editor
     ungoogled-chromium # Web Browser
     telegram-desktop # Private Messenger
