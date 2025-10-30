@@ -1,8 +1,8 @@
 { inputs, config, lib, pkgs, ... }: with lib;
 
-#  let
-#    addons = inputs.firefox-addons.packages.${pkgs.system};
-#  in
+let
+  addons = inputs.firefox-addons.packages.${pkgs.system};
+in
 
 {
   options = { firefox.enable = mkEnableOption "Enable and Configure Firefox"; };
