@@ -48,7 +48,7 @@
 
   environment.systemPackages = with pkgs; [
     jq
-    inputs.iio-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    inputs.iio-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   boot.kernelModules = [ "usbnet" "cdc_ether" ];
