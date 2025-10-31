@@ -3,9 +3,8 @@
 
   home.packages = with pkgs; [
     dunst # Notification Manager
-    #   discord # Messenger
     gimp # Photo Editor
-    ungoogled-chromium # Web Browser
+#   ungoogled-chromium # Web Browser
     telegram-desktop # Private Messenger
     neofetch # System Specs Reader
     btop # System Monitor
