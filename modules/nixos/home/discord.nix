@@ -1,7 +1,7 @@
 { inputs, config, lib, pkgs, ... }: {
   programs.nixcord = {
     enable = true; # Enable Nixcord (It also installs Discord)
-    vesktop.enable = true; # Vesktop
+    vesktop.enable = false; # Vesktop
     dorion.enable = false; # Dorion
     quickCss = "some CSS"; # quickCSS file
     config = {
