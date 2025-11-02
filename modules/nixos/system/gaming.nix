@@ -21,8 +21,6 @@ with lib; {
       pokemmo-installer
       runescape
       runelite
-      libGL
-      libGLU
       lutris # Open-source game manager for Linux
       heroic
       #     rpcs3
@@ -57,12 +55,13 @@ with lib; {
       graphics.enable32Bit = true;
       enableRedistributableFirmware = true;
       nvidia = {
+        dynamicBoost.enable = true;
         modesetting.enable = true;
         powerManagement = {
           enable = false;
           finegrained = false;
         };
-        open = false;
+        open = true;
         nvidiaSettings = true;
       };
     };
