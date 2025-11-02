@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 with lib; {
-  imports = [ ./monitors.nix ./keybindings.nix ./appearance.nix ./waybar.nix ];
+  imports = [ ./rofi.nix ./monitors.nix ./keybindings.nix ./appearance.nix ./waybar.nix ];
 
   options = {
     hyprhome.enable = mkEnableOption "Enable Hyprland Home-Manager settings";
@@ -20,7 +20,6 @@ with lib; {
     # Install extras for better Hyprland user experience
     home.packages = with pkgs; [
       waybar
-      rofi
       dunst
       swww
       networkmanagerapplet
