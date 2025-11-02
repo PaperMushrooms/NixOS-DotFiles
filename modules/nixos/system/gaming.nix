@@ -21,6 +21,8 @@ with lib; {
       pokemmo-installer
       runescape
       runelite
+      libGL
+      libGLU
       lutris # Open-source game manager for Linux
       heroic
       #     rpcs3
