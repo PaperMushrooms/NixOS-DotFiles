@@ -23,7 +23,7 @@ with lib; {
       runelite
       lutris # Open-source game manager for Linux
       heroic
-#     rpcs3
+      #     rpcs3
       vulkan-tools # Vulkan utilities like vulkaninfo
       vulkan-loader # Vulkan loader
       vulkan-validation-layers
