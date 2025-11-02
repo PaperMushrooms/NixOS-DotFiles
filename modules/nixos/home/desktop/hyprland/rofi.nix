@@ -1,13 +1,20 @@
 { inputs, pkgs, lib, ... }: {
   programs.rofi = {
     enable = true;
-    extraConfig = ''
+
+    # This part is for actual configuration options
+    extraConfig = {
+      modi = "drun,run";
+      show-icons = true;
+      terminal = "kitty";
+    };
+
+    # This is where your theme (the Rasi code) goes
+    theme = ''
       configuration {
         font: "Roboto 12";
-
         background-color: transparent;
         text-color: @fg0;
-
         margin: 0px;
         padding: 0px;
         spacing: 0px;
@@ -21,9 +28,7 @@
         background-color: @bg0;
       }
 
-      mainbox {
-        padding: 12px;
-      }
+      mainbox { padding: 12px; }
 
       inputbar {
         background-color: @bg1;
@@ -35,9 +40,7 @@
         children: [ prompt, entry ];
       }
 
-      prompt {
-        text-color: @fg2;
-      }
+      prompt { text-color: @fg2; }
 
       entry {
         placeholder: "Search";
@@ -51,9 +54,7 @@
         background-color: @bg2;
       }
 
-      textbox {
-        padding: 8px 24px;
-      }
+      textbox { padding: 8px 24px; }
 
       listview {
         background-color: transparent;
@@ -69,13 +70,8 @@
         border-radius: 16px;
       }
 
-      element normal active {
-        text-color: @bg3;
-      }
-
-      element alternate active {
-        text-color: @bg3;
-      }
+      element normal active { text-color: @bg3; }
+      element alternate active { text-color: @bg3; }
 
       element selected normal,
       element selected active {
@@ -87,9 +83,8 @@
         vertical-align: 0.5;
       }
 
-      element-text {
-        text-color: inherit;
-      }
+      element-text { text-color: inherit; }
     '';
   };
 }
+
