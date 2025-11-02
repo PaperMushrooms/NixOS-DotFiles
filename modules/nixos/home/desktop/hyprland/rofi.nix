@@ -2,13 +2,6 @@
   programs.rofi = {
     enable = true;
 
-    # This part is for actual configuration options
-    extraConfig = {
-      modi = "drun,run";
-      show-icons = true;
-      terminal = "kitty";
-    };
-
     # This is where your theme (the Rasi code) goes
     theme = ''
       configuration {
