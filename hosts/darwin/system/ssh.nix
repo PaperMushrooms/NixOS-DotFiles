@@ -8,13 +8,13 @@
         IdentityFile ~/.ssh/GitHub
         IdentitiesOnly yes
   
-      Host satanix
+      Host alienix
         User dex
         Port 44906
         IdentityFile ~/.ssh/nixathon
         IdentitiesOnly yes
 
-       Host nixspawn
+       Host drone
         User dex
         Port 44906
         IdentityFile ~/.ssh/nixathon

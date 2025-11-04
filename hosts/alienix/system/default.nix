@@ -7,5 +7,5 @@
   ];
 
   # Set the hostname.
-  networking.hostName = "satanix"; # Define your hostname.
+  networking.hostName = "alienix"; # Define your hostname.
 }

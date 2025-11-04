@@ -7,5 +7,5 @@
   ];
 
   # Set the hostname.
-  networking.hostName = "nixspawn";
+  networking.hostName = "drone";
 }

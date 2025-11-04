@@ -1,4 +1,6 @@
 {
+  asus.enable = true;
+
   # Enable Display Manager Configuration
   displaymanager.enable = true;
 

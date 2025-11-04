@@ -54,13 +54,13 @@
 
   outputs = { self, nixpkgs, home-manager, nix-darwin, stylix, plasma-manager, nvf, hyprland, nix-homebrew, homebrew-core, homebrew-cask, nixcord, ... }@inputs: {
     nixosConfigurations = {
-      satanix = nixpkgs.lib.nixosSystem {
+      alienix = nixpkgs.lib.nixosSystem {
         system = "x86-linux";
 
         specialArgs = { inherit inputs; };
 
         modules = [
-          ./hosts/satanix/system
+          ./hosts/alienix/system
           ./modules/nixos/system
           ./modules/shared/system
 
@@ -79,7 +79,7 @@
 
               extraSpecialArgs = { inherit inputs; };
               users.dex.imports = [
-                ./hosts/satanix/home
+                ./hosts/alienix/home
                 ./modules/shared/home
               ];
             };
@@ -87,13 +87,13 @@
         ];
       };
 
-      nixspawn = nixpkgs.lib.nixosSystem {
+      drone = nixpkgs.lib.nixosSystem {
         system = "x86-linux";
 
         specialArgs = { inherit inputs; };
 
         modules = [
-          ./hosts/nixspawn/system
+          ./hosts/drone/system
           ./modules/nixos/system
           ./modules/shared/system
 
@@ -112,7 +112,7 @@
 
               extraSpecialArgs = { inherit inputs; };
               users.dex.imports = [
-                ./hosts/nixspawn/home
+                ./hosts/drone/home
                 ./modules/shared/home
               ];
             };
