@@ -11,13 +11,13 @@
   virtualisationconf.enable = true;
 
   # Enable Gaming Configuration and Tools
-  gaming.enable = true;
+  gaming.enable = false;
 
   # Enable Gnome System-Level Configuration
   gnomesys.enable = true;
 
   # Enable LibreOffice Toolbox
-  libreoffice.enable = true;
+  libreoffice.enable = false;
 
   # Enable Hyprland Configuration
   hyprconf.enable = true;
