@@ -7,6 +7,7 @@
     ./stylix.nix
     ./time-and-date.nix
     ./audio.nix
+    ./graphics.nix
     ./gaming.nix
     ./asus.nix
     ./bootloader.nix
