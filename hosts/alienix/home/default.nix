@@ -6,5 +6,5 @@
 
   home.username = "dex";
   home.homeDirectory = "/home/dex";
-  home.stateVersion = "24.05";
+  home.stateVersion = "25.11";
 }
