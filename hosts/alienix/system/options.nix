@@ -17,7 +17,7 @@
   gnomesys.enable = true;
 
   # Enable LibreOffice Toolbox
-  libreoffice.enable = true;
+  libreoffice.enable = false;
 
   # Enable Hyprland Configuration
   hyprconf.enable = true;
