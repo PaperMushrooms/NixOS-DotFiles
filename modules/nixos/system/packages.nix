@@ -9,6 +9,7 @@
     anydesk
     bat
     zip
+    brightnessctl
     unzip
     curl
     fastfetch
