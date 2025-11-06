@@ -11,7 +11,7 @@
   virtualisationconf.enable = true;
 
   # Enable Gaming Configuration and Tools
-  gaming.enable = false;
+  gaming.enable = true;
 
   # Enable Gnome System-Level Configuration
   gnomesys.enable = true;
