@@ -14,7 +14,7 @@
   gaming.enable = true;
 
   # Enable Gnome System-Level Configuration
-  gnomesys.enable = true;
+  gnomesys.enable = false;
 
   # Enable LibreOffice Toolbox
   libreoffice.enable = false;

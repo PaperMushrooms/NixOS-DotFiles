@@ -1,6 +1,6 @@
 {
   vscodium.enable = true;
-  gnomehome.enable = true;
+  gnomehome.enable = false;
   hyprhome.enable = true;
   git.enable = true;
   firefox.enable = true;
