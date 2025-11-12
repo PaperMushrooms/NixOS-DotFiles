@@ -14,6 +14,8 @@
         "$mainMod, L, exec, swaylock" # launch lock screen
         "$mainMod, Escape, exit" # exit Hyprland
         # "Ctrl+Alt, W, exec, killall waybar || waybar"   # toggle waybar without reloading
+        # Screenshot Shortcuts
+        "$mainMod, v, exec, grim -g '$(slurp)'" # capture selected area
 
         # Application Shortcuts
         "$mainMod, W, exec, kitty" # launch terminal emulator

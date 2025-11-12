@@ -12,6 +12,8 @@
     brightnessctl
     unzip
     curl
+    grim
+    slurp
     fastfetch
     freecad
     git
